@@ -14,16 +14,16 @@ def driver():
             USE bookstore;
 
             CREATE TABLE Publishers(
-                PublisherID varchar(10) primary key,
-                Name varchar(30),
+                PublisherID varchar(10) NOT NULL primary key,
+                Name varchar(30) NOT NULL,
                 Email varchar(55)
             );
 
             CREATE TABLE Books(
-                BookID varchar(10) primary key,
-                Title varchar(55),
+                BookID varchar(10) NOT NULL primary key,
+                Title varchar(55) NOT NULL,
                 Author varchar(30),
-                PublisherID varchar(10),
+                PublisherID varchar(10) NOT NULL,
                 Published_year int,
                 Pages_num int,
                 Price float(2),
@@ -31,7 +31,7 @@ def driver():
             );
 
             CREATE TABLE Customers(
-                CustomerID varchar(10) primary key,
+                CustomerID varchar(10) NOT NULL primary key,
                 First_name varchar(15),
                 Last_name varchar(15),
                 Credit_card_no varchar(20),
@@ -40,20 +40,20 @@ def driver():
             );
 
             CREATE TABLE Orders(
-                OrderID varchar(10) primary key,
-                CustomerID varchar(10),
+                OrderID varchar(10) NOT NULL primary key,
+                CustomerID varchar(10) NOT NULL,
                 Order_date date
             );
 
             CREATE TABLE Order_Items(
-                ItemID varchar(10) primary key,
-                OrderID varchar(10),
-                BookID varchar(10)
+                ItemID varchar(10) NOT NULL primary key,
+                OrderID varchar(10) NOT NULL,
+                BookID varchar(10) NOT NULL
             );
 
             CREATE TABLE Returns(
-                ReturnID varchar(10) primary key,
-                ItemID varchar(10),
+                ReturnID varchar(10) NOT NULL primary key,
+                ItemID varchar(10) NOT NULL,
                 Return_date date
             );
         '''
