@@ -1,16 +1,13 @@
 
             CREATE DATABASE bookstore;
-
             USE bookstore;
-
             CREATE TABLE Publishers(
-                PublisherID varchar(10) NOT NULL primary key,
+                PublisherID varchar(10) primary key,
                 Name varchar(30) NOT NULL,
                 Email varchar(55)
             );
-
             CREATE TABLE Books(
-                BookID varchar(10) NOT NULL primary key,
+                BookID varchar(10) primary key,
                 Title varchar(55) NOT NULL,
                 Author varchar(30),
                 PublisherID varchar(10) NOT NULL,
@@ -19,30 +16,26 @@
                 Price float(2),
                 Rating float(1)
             );
-
             CREATE TABLE Customers(
-                CustomerID varchar(10) NOT NULL primary key,
+                CustomerID varchar(10) primary key,
                 First_name varchar(15),
                 Last_name varchar(15),
                 Credit_card_no varchar(20),
                 Email varchar(55),
                 Phone varchar(20)
             );
-
             CREATE TABLE Orders(
-                OrderID varchar(10) NOT NULL primary key,
+                OrderID varchar(10) primary key,
                 CustomerID varchar(10) NOT NULL,
                 Order_date date
             );
-
             CREATE TABLE Order_Items(
-                ItemID varchar(10) NOT NULL primary key,
+                ItemID varchar(10) primary key,
                 OrderID varchar(10) NOT NULL,
                 BookID varchar(10) NOT NULL
             );
-
             CREATE TABLE Returns(
-                ReturnID varchar(10) NOT NULL primary key,
+                ReturnID varchar(10) primary key,
                 ItemID varchar(10) NOT NULL,
                 Return_date date
             );
@@ -3225,3919 +3218,3915 @@
             VALUES("CU038", "Ezra", "Sparks", "8846-8305-6711", "SparksE@univ.edu", "963.555.9390");
             
         INSERT INTO Orders
-        VALUES("OD000", "CU007", STR_TO_DATE("2002-12-2", "%Y-%m-%d"));
+        VALUES("OD000", "CU022", STR_TO_DATE("2015-6-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD001", "CU018", STR_TO_DATE("2000-1-21", "%Y-%m-%d"));
+        VALUES("OD001", "CU030", STR_TO_DATE("2004-6-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD002", "CU035", STR_TO_DATE("2006-10-27", "%Y-%m-%d"));
+        VALUES("OD002", "CU037", STR_TO_DATE("2009-5-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD003", "CU034", STR_TO_DATE("2019-6-12", "%Y-%m-%d"));
+        VALUES("OD003", "CU010", STR_TO_DATE("2011-8-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD004", "CU034", STR_TO_DATE("2009-10-4", "%Y-%m-%d"));
+        VALUES("OD004", "CU004", STR_TO_DATE("2011-2-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD005", "CU031", STR_TO_DATE("2010-2-24", "%Y-%m-%d"));
+        VALUES("OD005", "CU028", STR_TO_DATE("2003-11-21", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD006", "CU029", STR_TO_DATE("2014-8-20", "%Y-%m-%d"));
+        VALUES("OD006", "CU028", STR_TO_DATE("2016-11-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD007", "CU006", STR_TO_DATE("2015-12-28", "%Y-%m-%d"));
+        VALUES("OD007", "CU033", STR_TO_DATE("2000-1-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD008", "CU030", STR_TO_DATE("2000-10-11", "%Y-%m-%d"));
+        VALUES("OD008", "CU029", STR_TO_DATE("2010-12-10", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD009", "CU006", STR_TO_DATE("2002-7-25", "%Y-%m-%d"));
+        VALUES("OD009", "CU017", STR_TO_DATE("2005-1-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD010", "CU019", STR_TO_DATE("2017-9-27", "%Y-%m-%d"));
+        VALUES("OD010", "CU012", STR_TO_DATE("2019-1-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD011", "CU038", STR_TO_DATE("2007-4-10", "%Y-%m-%d"));
+        VALUES("OD011", "CU033", STR_TO_DATE("2016-8-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD012", "CU019", STR_TO_DATE("2015-4-17", "%Y-%m-%d"));
+        VALUES("OD012", "CU032", STR_TO_DATE("2011-12-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD013", "CU025", STR_TO_DATE("2011-10-19", "%Y-%m-%d"));
+        VALUES("OD013", "CU024", STR_TO_DATE("2020-6-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD014", "CU011", STR_TO_DATE("2006-6-3", "%Y-%m-%d"));
+        VALUES("OD014", "CU024", STR_TO_DATE("2015-4-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD015", "CU005", STR_TO_DATE("2020-2-21", "%Y-%m-%d"));
+        VALUES("OD015", "CU005", STR_TO_DATE("2005-4-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD016", "CU008", STR_TO_DATE("2011-8-12", "%Y-%m-%d"));
+        VALUES("OD016", "CU037", STR_TO_DATE("2012-1-3", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD017", "CU021", STR_TO_DATE("2002-2-20", "%Y-%m-%d"));
+        VALUES("OD017", "CU033", STR_TO_DATE("2006-2-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD018", "CU003", STR_TO_DATE("2008-7-21", "%Y-%m-%d"));
+        VALUES("OD018", "CU012", STR_TO_DATE("2000-8-3", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD019", "CU012", STR_TO_DATE("2002-7-27", "%Y-%m-%d"));
+        VALUES("OD019", "CU029", STR_TO_DATE("2015-10-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD020", "CU001", STR_TO_DATE("2005-8-13", "%Y-%m-%d"));
+        VALUES("OD020", "CU010", STR_TO_DATE("2016-1-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD021", "CU007", STR_TO_DATE("2005-7-4", "%Y-%m-%d"));
+        VALUES("OD021", "CU022", STR_TO_DATE("2007-8-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD022", "CU023", STR_TO_DATE("2018-8-16", "%Y-%m-%d"));
+        VALUES("OD022", "CU010", STR_TO_DATE("2015-6-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD023", "CU033", STR_TO_DATE("2003-9-5", "%Y-%m-%d"));
+        VALUES("OD023", "CU038", STR_TO_DATE("2006-7-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD024", "CU001", STR_TO_DATE("2002-2-5", "%Y-%m-%d"));
+        VALUES("OD024", "CU006", STR_TO_DATE("2002-4-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD025", "CU022", STR_TO_DATE("2010-3-22", "%Y-%m-%d"));
+        VALUES("OD025", "CU002", STR_TO_DATE("2009-11-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD026", "CU019", STR_TO_DATE("2020-12-18", "%Y-%m-%d"));
+        VALUES("OD026", "CU008", STR_TO_DATE("2004-9-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD027", "CU007", STR_TO_DATE("2004-2-22", "%Y-%m-%d"));
+        VALUES("OD027", "CU036", STR_TO_DATE("2015-10-28", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD028", "CU030", STR_TO_DATE("2008-9-1", "%Y-%m-%d"));
+        VALUES("OD028", "CU035", STR_TO_DATE("2002-1-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD029", "CU033", STR_TO_DATE("2015-9-25", "%Y-%m-%d"));
+        VALUES("OD029", "CU030", STR_TO_DATE("2020-7-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD030", "CU032", STR_TO_DATE("2005-11-17", "%Y-%m-%d"));
+        VALUES("OD030", "CU001", STR_TO_DATE("2008-8-10", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD031", "CU003", STR_TO_DATE("2012-10-12", "%Y-%m-%d"));
+        VALUES("OD031", "CU014", STR_TO_DATE("2017-10-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD032", "CU025", STR_TO_DATE("2011-10-24", "%Y-%m-%d"));
+        VALUES("OD032", "CU034", STR_TO_DATE("2020-11-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD033", "CU031", STR_TO_DATE("2005-8-13", "%Y-%m-%d"));
+        VALUES("OD033", "CU030", STR_TO_DATE("2005-3-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD034", "CU019", STR_TO_DATE("2014-8-9", "%Y-%m-%d"));
+        VALUES("OD034", "CU011", STR_TO_DATE("2000-5-15", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD035", "CU009", STR_TO_DATE("2004-5-5", "%Y-%m-%d"));
+        VALUES("OD035", "CU007", STR_TO_DATE("2008-12-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD036", "CU028", STR_TO_DATE("2000-11-14", "%Y-%m-%d"));
+        VALUES("OD036", "CU004", STR_TO_DATE("2003-8-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD037", "CU015", STR_TO_DATE("2018-12-19", "%Y-%m-%d"));
+        VALUES("OD037", "CU012", STR_TO_DATE("2007-6-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD038", "CU034", STR_TO_DATE("2008-2-18", "%Y-%m-%d"));
+        VALUES("OD038", "CU002", STR_TO_DATE("2011-4-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD039", "CU002", STR_TO_DATE("2012-1-10", "%Y-%m-%d"));
+        VALUES("OD039", "CU020", STR_TO_DATE("2016-11-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD040", "CU021", STR_TO_DATE("2009-8-25", "%Y-%m-%d"));
+        VALUES("OD040", "CU035", STR_TO_DATE("2013-9-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD041", "CU037", STR_TO_DATE("2008-9-14", "%Y-%m-%d"));
+        VALUES("OD041", "CU030", STR_TO_DATE("2014-12-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD042", "CU003", STR_TO_DATE("2007-2-9", "%Y-%m-%d"));
+        VALUES("OD042", "CU010", STR_TO_DATE("2003-3-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD043", "CU036", STR_TO_DATE("2000-1-5", "%Y-%m-%d"));
+        VALUES("OD043", "CU014", STR_TO_DATE("2007-12-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD044", "CU028", STR_TO_DATE("2011-2-11", "%Y-%m-%d"));
+        VALUES("OD044", "CU011", STR_TO_DATE("2016-9-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD045", "CU026", STR_TO_DATE("2007-12-27", "%Y-%m-%d"));
+        VALUES("OD045", "CU030", STR_TO_DATE("2013-12-13", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD046", "CU000", STR_TO_DATE("2011-3-27", "%Y-%m-%d"));
+        VALUES("OD046", "CU033", STR_TO_DATE("2013-4-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD047", "CU006", STR_TO_DATE("2010-12-28", "%Y-%m-%d"));
+        VALUES("OD047", "CU017", STR_TO_DATE("2014-7-8", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD048", "CU013", STR_TO_DATE("2015-7-28", "%Y-%m-%d"));
+        VALUES("OD048", "CU028", STR_TO_DATE("2015-11-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD049", "CU006", STR_TO_DATE("2013-7-6", "%Y-%m-%d"));
+        VALUES("OD049", "CU026", STR_TO_DATE("2019-2-14", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD050", "CU033", STR_TO_DATE("2006-8-4", "%Y-%m-%d"));
+        VALUES("OD050", "CU015", STR_TO_DATE("2009-9-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD051", "CU033", STR_TO_DATE("2004-1-8", "%Y-%m-%d"));
+        VALUES("OD051", "CU036", STR_TO_DATE("2007-3-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD052", "CU012", STR_TO_DATE("2013-3-21", "%Y-%m-%d"));
+        VALUES("OD052", "CU027", STR_TO_DATE("2002-7-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD053", "CU026", STR_TO_DATE("2003-2-21", "%Y-%m-%d"));
+        VALUES("OD053", "CU005", STR_TO_DATE("2014-9-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD054", "CU010", STR_TO_DATE("2012-4-26", "%Y-%m-%d"));
+        VALUES("OD054", "CU002", STR_TO_DATE("2014-5-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD055", "CU029", STR_TO_DATE("2002-10-2", "%Y-%m-%d"));
+        VALUES("OD055", "CU029", STR_TO_DATE("2003-6-14", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD056", "CU028", STR_TO_DATE("2018-5-1", "%Y-%m-%d"));
+        VALUES("OD056", "CU024", STR_TO_DATE("2007-2-15", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD057", "CU002", STR_TO_DATE("2017-2-17", "%Y-%m-%d"));
+        VALUES("OD057", "CU006", STR_TO_DATE("2014-12-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD058", "CU019", STR_TO_DATE("2005-2-23", "%Y-%m-%d"));
+        VALUES("OD058", "CU032", STR_TO_DATE("2012-12-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD059", "CU010", STR_TO_DATE("2010-10-22", "%Y-%m-%d"));
+        VALUES("OD059", "CU007", STR_TO_DATE("2010-4-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD060", "CU023", STR_TO_DATE("2015-7-17", "%Y-%m-%d"));
+        VALUES("OD060", "CU017", STR_TO_DATE("2013-11-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD061", "CU014", STR_TO_DATE("2019-7-17", "%Y-%m-%d"));
+        VALUES("OD061", "CU032", STR_TO_DATE("2007-4-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD062", "CU025", STR_TO_DATE("2016-8-1", "%Y-%m-%d"));
+        VALUES("OD062", "CU012", STR_TO_DATE("2010-12-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD063", "CU008", STR_TO_DATE("2014-6-9", "%Y-%m-%d"));
+        VALUES("OD063", "CU016", STR_TO_DATE("2016-6-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD064", "CU032", STR_TO_DATE("2015-4-23", "%Y-%m-%d"));
+        VALUES("OD064", "CU029", STR_TO_DATE("2014-6-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD065", "CU009", STR_TO_DATE("2016-5-27", "%Y-%m-%d"));
+        VALUES("OD065", "CU028", STR_TO_DATE("2005-8-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD066", "CU003", STR_TO_DATE("2010-5-17", "%Y-%m-%d"));
+        VALUES("OD066", "CU005", STR_TO_DATE("2019-3-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD067", "CU014", STR_TO_DATE("2010-5-24", "%Y-%m-%d"));
+        VALUES("OD067", "CU028", STR_TO_DATE("2009-11-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD068", "CU011", STR_TO_DATE("2014-4-15", "%Y-%m-%d"));
+        VALUES("OD068", "CU034", STR_TO_DATE("2007-1-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD069", "CU033", STR_TO_DATE("2006-4-24", "%Y-%m-%d"));
+        VALUES("OD069", "CU016", STR_TO_DATE("2016-8-3", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD070", "CU014", STR_TO_DATE("2006-2-20", "%Y-%m-%d"));
+        VALUES("OD070", "CU011", STR_TO_DATE("2010-6-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD071", "CU025", STR_TO_DATE("2001-7-27", "%Y-%m-%d"));
+        VALUES("OD071", "CU003", STR_TO_DATE("2004-8-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD072", "CU013", STR_TO_DATE("2007-4-10", "%Y-%m-%d"));
+        VALUES("OD072", "CU011", STR_TO_DATE("2016-5-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD073", "CU034", STR_TO_DATE("2013-8-26", "%Y-%m-%d"));
+        VALUES("OD073", "CU022", STR_TO_DATE("2006-9-21", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD074", "CU008", STR_TO_DATE("2002-7-22", "%Y-%m-%d"));
+        VALUES("OD074", "CU005", STR_TO_DATE("2007-3-21", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD075", "CU004", STR_TO_DATE("2000-3-4", "%Y-%m-%d"));
+        VALUES("OD075", "CU026", STR_TO_DATE("2011-12-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD076", "CU016", STR_TO_DATE("2019-4-14", "%Y-%m-%d"));
+        VALUES("OD076", "CU012", STR_TO_DATE("2005-7-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD077", "CU022", STR_TO_DATE("2011-1-20", "%Y-%m-%d"));
+        VALUES("OD077", "CU001", STR_TO_DATE("2007-11-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD078", "CU010", STR_TO_DATE("2012-11-19", "%Y-%m-%d"));
+        VALUES("OD078", "CU032", STR_TO_DATE("2020-9-10", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD079", "CU006", STR_TO_DATE("2004-7-18", "%Y-%m-%d"));
+        VALUES("OD079", "CU018", STR_TO_DATE("2002-6-14", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD080", "CU016", STR_TO_DATE("2001-10-27", "%Y-%m-%d"));
+        VALUES("OD080", "CU012", STR_TO_DATE("2010-1-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD081", "CU001", STR_TO_DATE("2014-3-9", "%Y-%m-%d"));
+        VALUES("OD081", "CU018", STR_TO_DATE("2009-3-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD082", "CU007", STR_TO_DATE("2018-6-1", "%Y-%m-%d"));
+        VALUES("OD082", "CU006", STR_TO_DATE("2020-11-3", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD083", "CU016", STR_TO_DATE("2003-12-15", "%Y-%m-%d"));
+        VALUES("OD083", "CU005", STR_TO_DATE("2020-9-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD084", "CU005", STR_TO_DATE("2007-11-8", "%Y-%m-%d"));
+        VALUES("OD084", "CU032", STR_TO_DATE("2005-7-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD085", "CU008", STR_TO_DATE("2010-7-4", "%Y-%m-%d"));
+        VALUES("OD085", "CU028", STR_TO_DATE("2011-1-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD086", "CU009", STR_TO_DATE("2005-9-23", "%Y-%m-%d"));
+        VALUES("OD086", "CU033", STR_TO_DATE("2006-11-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD087", "CU033", STR_TO_DATE("2008-6-13", "%Y-%m-%d"));
+        VALUES("OD087", "CU030", STR_TO_DATE("2001-1-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD088", "CU006", STR_TO_DATE("2008-11-1", "%Y-%m-%d"));
+        VALUES("OD088", "CU016", STR_TO_DATE("2014-10-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD089", "CU022", STR_TO_DATE("2018-9-24", "%Y-%m-%d"));
+        VALUES("OD089", "CU012", STR_TO_DATE("2008-4-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD090", "CU017", STR_TO_DATE("2017-3-19", "%Y-%m-%d"));
+        VALUES("OD090", "CU013", STR_TO_DATE("2003-9-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD091", "CU008", STR_TO_DATE("2005-1-17", "%Y-%m-%d"));
+        VALUES("OD091", "CU014", STR_TO_DATE("2003-11-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD092", "CU032", STR_TO_DATE("2010-8-15", "%Y-%m-%d"));
+        VALUES("OD092", "CU017", STR_TO_DATE("2008-1-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD093", "CU010", STR_TO_DATE("2016-8-22", "%Y-%m-%d"));
+        VALUES("OD093", "CU024", STR_TO_DATE("2004-11-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD094", "CU019", STR_TO_DATE("2007-11-20", "%Y-%m-%d"));
+        VALUES("OD094", "CU038", STR_TO_DATE("2016-7-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD095", "CU001", STR_TO_DATE("2004-8-10", "%Y-%m-%d"));
+        VALUES("OD095", "CU019", STR_TO_DATE("2009-3-15", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD096", "CU013", STR_TO_DATE("2011-8-5", "%Y-%m-%d"));
+        VALUES("OD096", "CU032", STR_TO_DATE("2002-3-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD097", "CU020", STR_TO_DATE("2007-2-28", "%Y-%m-%d"));
+        VALUES("OD097", "CU024", STR_TO_DATE("2019-7-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD098", "CU006", STR_TO_DATE("2010-10-11", "%Y-%m-%d"));
+        VALUES("OD098", "CU025", STR_TO_DATE("2019-12-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD099", "CU007", STR_TO_DATE("2009-5-10", "%Y-%m-%d"));
+        VALUES("OD099", "CU009", STR_TO_DATE("2015-8-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD100", "CU014", STR_TO_DATE("2015-5-15", "%Y-%m-%d"));
+        VALUES("OD100", "CU012", STR_TO_DATE("2001-6-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD101", "CU023", STR_TO_DATE("2010-8-24", "%Y-%m-%d"));
+        VALUES("OD101", "CU000", STR_TO_DATE("2007-9-15", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD102", "CU033", STR_TO_DATE("2008-1-2", "%Y-%m-%d"));
+        VALUES("OD102", "CU002", STR_TO_DATE("2004-6-15", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD103", "CU006", STR_TO_DATE("2007-8-22", "%Y-%m-%d"));
+        VALUES("OD103", "CU005", STR_TO_DATE("2012-9-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD104", "CU007", STR_TO_DATE("2018-11-25", "%Y-%m-%d"));
+        VALUES("OD104", "CU018", STR_TO_DATE("2020-9-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD105", "CU014", STR_TO_DATE("2004-6-9", "%Y-%m-%d"));
+        VALUES("OD105", "CU030", STR_TO_DATE("2003-8-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD106", "CU027", STR_TO_DATE("2018-11-23", "%Y-%m-%d"));
+        VALUES("OD106", "CU014", STR_TO_DATE("2007-8-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD107", "CU002", STR_TO_DATE("2015-5-3", "%Y-%m-%d"));
+        VALUES("OD107", "CU022", STR_TO_DATE("2007-6-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD108", "CU016", STR_TO_DATE("2003-7-22", "%Y-%m-%d"));
+        VALUES("OD108", "CU016", STR_TO_DATE("2018-3-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD109", "CU032", STR_TO_DATE("2013-11-11", "%Y-%m-%d"));
+        VALUES("OD109", "CU007", STR_TO_DATE("2012-5-8", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD110", "CU038", STR_TO_DATE("2011-9-25", "%Y-%m-%d"));
+        VALUES("OD110", "CU007", STR_TO_DATE("2010-6-5", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD111", "CU005", STR_TO_DATE("2015-10-28", "%Y-%m-%d"));
+        VALUES("OD111", "CU027", STR_TO_DATE("2005-4-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD112", "CU028", STR_TO_DATE("2011-10-11", "%Y-%m-%d"));
+        VALUES("OD112", "CU021", STR_TO_DATE("2020-10-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD113", "CU004", STR_TO_DATE("2020-10-6", "%Y-%m-%d"));
+        VALUES("OD113", "CU033", STR_TO_DATE("2003-7-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD114", "CU011", STR_TO_DATE("2001-4-5", "%Y-%m-%d"));
+        VALUES("OD114", "CU034", STR_TO_DATE("2010-10-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD115", "CU034", STR_TO_DATE("2013-7-1", "%Y-%m-%d"));
+        VALUES("OD115", "CU010", STR_TO_DATE("2019-4-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD116", "CU027", STR_TO_DATE("2005-3-19", "%Y-%m-%d"));
+        VALUES("OD116", "CU028", STR_TO_DATE("2015-9-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD117", "CU037", STR_TO_DATE("2005-6-12", "%Y-%m-%d"));
+        VALUES("OD117", "CU021", STR_TO_DATE("2012-4-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD118", "CU030", STR_TO_DATE("2006-11-23", "%Y-%m-%d"));
+        VALUES("OD118", "CU001", STR_TO_DATE("2014-5-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD119", "CU016", STR_TO_DATE("2002-1-2", "%Y-%m-%d"));
+        VALUES("OD119", "CU024", STR_TO_DATE("2007-1-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD120", "CU014", STR_TO_DATE("2013-4-10", "%Y-%m-%d"));
+        VALUES("OD120", "CU013", STR_TO_DATE("2000-11-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD121", "CU027", STR_TO_DATE("2000-12-4", "%Y-%m-%d"));
+        VALUES("OD121", "CU025", STR_TO_DATE("2011-6-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD122", "CU037", STR_TO_DATE("2014-6-21", "%Y-%m-%d"));
+        VALUES("OD122", "CU037", STR_TO_DATE("2017-6-3", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD123", "CU025", STR_TO_DATE("2014-7-2", "%Y-%m-%d"));
+        VALUES("OD123", "CU010", STR_TO_DATE("2013-2-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD124", "CU008", STR_TO_DATE("2018-9-26", "%Y-%m-%d"));
+        VALUES("OD124", "CU004", STR_TO_DATE("2009-1-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD125", "CU009", STR_TO_DATE("2014-3-25", "%Y-%m-%d"));
+        VALUES("OD125", "CU038", STR_TO_DATE("2003-12-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD126", "CU006", STR_TO_DATE("2012-5-27", "%Y-%m-%d"));
+        VALUES("OD126", "CU027", STR_TO_DATE("2014-3-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD127", "CU015", STR_TO_DATE("2012-3-6", "%Y-%m-%d"));
+        VALUES("OD127", "CU007", STR_TO_DATE("2010-6-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD128", "CU024", STR_TO_DATE("2007-3-5", "%Y-%m-%d"));
+        VALUES("OD128", "CU016", STR_TO_DATE("2004-4-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD129", "CU008", STR_TO_DATE("2004-1-3", "%Y-%m-%d"));
+        VALUES("OD129", "CU022", STR_TO_DATE("2019-7-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD130", "CU035", STR_TO_DATE("2019-12-18", "%Y-%m-%d"));
+        VALUES("OD130", "CU002", STR_TO_DATE("2005-1-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD131", "CU011", STR_TO_DATE("2004-8-21", "%Y-%m-%d"));
+        VALUES("OD131", "CU038", STR_TO_DATE("2008-12-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD132", "CU012", STR_TO_DATE("2002-12-4", "%Y-%m-%d"));
+        VALUES("OD132", "CU010", STR_TO_DATE("2017-1-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD133", "CU010", STR_TO_DATE("2013-5-15", "%Y-%m-%d"));
+        VALUES("OD133", "CU001", STR_TO_DATE("2015-3-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD134", "CU037", STR_TO_DATE("2005-11-10", "%Y-%m-%d"));
+        VALUES("OD134", "CU013", STR_TO_DATE("2005-7-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD135", "CU007", STR_TO_DATE("2006-1-28", "%Y-%m-%d"));
+        VALUES("OD135", "CU032", STR_TO_DATE("2006-10-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD136", "CU028", STR_TO_DATE("2000-3-8", "%Y-%m-%d"));
+        VALUES("OD136", "CU031", STR_TO_DATE("2004-3-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD137", "CU029", STR_TO_DATE("2007-10-27", "%Y-%m-%d"));
+        VALUES("OD137", "CU013", STR_TO_DATE("2008-9-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD138", "CU012", STR_TO_DATE("2007-5-15", "%Y-%m-%d"));
+        VALUES("OD138", "CU035", STR_TO_DATE("2011-11-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD139", "CU008", STR_TO_DATE("2008-2-24", "%Y-%m-%d"));
+        VALUES("OD139", "CU004", STR_TO_DATE("2014-11-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD140", "CU018", STR_TO_DATE("2019-3-18", "%Y-%m-%d"));
+        VALUES("OD140", "CU025", STR_TO_DATE("2004-6-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD141", "CU025", STR_TO_DATE("2020-10-12", "%Y-%m-%d"));
+        VALUES("OD141", "CU035", STR_TO_DATE("2019-12-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD142", "CU017", STR_TO_DATE("2014-9-3", "%Y-%m-%d"));
+        VALUES("OD142", "CU029", STR_TO_DATE("2004-7-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD143", "CU031", STR_TO_DATE("2008-8-27", "%Y-%m-%d"));
+        VALUES("OD143", "CU036", STR_TO_DATE("2007-4-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD144", "CU022", STR_TO_DATE("2004-4-6", "%Y-%m-%d"));
+        VALUES("OD144", "CU002", STR_TO_DATE("2008-12-13", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD145", "CU004", STR_TO_DATE("2003-9-14", "%Y-%m-%d"));
+        VALUES("OD145", "CU034", STR_TO_DATE("2019-12-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD146", "CU037", STR_TO_DATE("2001-3-8", "%Y-%m-%d"));
+        VALUES("OD146", "CU020", STR_TO_DATE("2004-6-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD147", "CU029", STR_TO_DATE("2009-2-24", "%Y-%m-%d"));
+        VALUES("OD147", "CU024", STR_TO_DATE("2010-3-15", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD148", "CU015", STR_TO_DATE("2000-12-18", "%Y-%m-%d"));
+        VALUES("OD148", "CU020", STR_TO_DATE("2001-3-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD149", "CU021", STR_TO_DATE("2012-8-28", "%Y-%m-%d"));
+        VALUES("OD149", "CU001", STR_TO_DATE("2014-10-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD150", "CU036", STR_TO_DATE("2010-4-11", "%Y-%m-%d"));
+        VALUES("OD150", "CU006", STR_TO_DATE("2020-11-13", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD151", "CU021", STR_TO_DATE("2004-1-10", "%Y-%m-%d"));
+        VALUES("OD151", "CU007", STR_TO_DATE("2005-12-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD152", "CU027", STR_TO_DATE("2004-3-19", "%Y-%m-%d"));
+        VALUES("OD152", "CU021", STR_TO_DATE("2007-7-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD153", "CU029", STR_TO_DATE("2019-7-16", "%Y-%m-%d"));
+        VALUES("OD153", "CU021", STR_TO_DATE("2006-7-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD154", "CU021", STR_TO_DATE("2013-8-23", "%Y-%m-%d"));
+        VALUES("OD154", "CU031", STR_TO_DATE("2002-7-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD155", "CU023", STR_TO_DATE("2013-7-5", "%Y-%m-%d"));
+        VALUES("OD155", "CU013", STR_TO_DATE("2009-7-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD156", "CU010", STR_TO_DATE("2008-10-21", "%Y-%m-%d"));
+        VALUES("OD156", "CU037", STR_TO_DATE("2017-7-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD157", "CU028", STR_TO_DATE("2005-4-13", "%Y-%m-%d"));
+        VALUES("OD157", "CU026", STR_TO_DATE("2020-1-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD158", "CU004", STR_TO_DATE("2001-8-13", "%Y-%m-%d"));
+        VALUES("OD158", "CU006", STR_TO_DATE("2000-12-25", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD159", "CU038", STR_TO_DATE("2001-4-11", "%Y-%m-%d"));
+        VALUES("OD159", "CU012", STR_TO_DATE("2009-12-10", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD160", "CU026", STR_TO_DATE("2012-8-6", "%Y-%m-%d"));
+        VALUES("OD160", "CU002", STR_TO_DATE("2011-1-13", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD161", "CU027", STR_TO_DATE("2007-10-5", "%Y-%m-%d"));
+        VALUES("OD161", "CU002", STR_TO_DATE("2006-11-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD162", "CU000", STR_TO_DATE("2016-2-24", "%Y-%m-%d"));
+        VALUES("OD162", "CU033", STR_TO_DATE("2014-5-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD163", "CU031", STR_TO_DATE("2001-6-15", "%Y-%m-%d"));
+        VALUES("OD163", "CU015", STR_TO_DATE("2019-1-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD164", "CU028", STR_TO_DATE("2020-8-22", "%Y-%m-%d"));
+        VALUES("OD164", "CU012", STR_TO_DATE("2009-6-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD165", "CU025", STR_TO_DATE("2015-1-5", "%Y-%m-%d"));
+        VALUES("OD165", "CU026", STR_TO_DATE("2008-1-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD166", "CU017", STR_TO_DATE("2009-7-16", "%Y-%m-%d"));
+        VALUES("OD166", "CU017", STR_TO_DATE("2020-1-8", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD167", "CU026", STR_TO_DATE("2006-12-21", "%Y-%m-%d"));
+        VALUES("OD167", "CU031", STR_TO_DATE("2018-5-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD168", "CU009", STR_TO_DATE("2012-2-19", "%Y-%m-%d"));
+        VALUES("OD168", "CU022", STR_TO_DATE("2008-7-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD169", "CU025", STR_TO_DATE("2003-8-1", "%Y-%m-%d"));
+        VALUES("OD169", "CU038", STR_TO_DATE("2005-8-13", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD170", "CU029", STR_TO_DATE("2012-1-8", "%Y-%m-%d"));
+        VALUES("OD170", "CU001", STR_TO_DATE("2012-10-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD171", "CU026", STR_TO_DATE("2001-2-22", "%Y-%m-%d"));
+        VALUES("OD171", "CU024", STR_TO_DATE("2020-1-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD172", "CU012", STR_TO_DATE("2017-5-5", "%Y-%m-%d"));
+        VALUES("OD172", "CU032", STR_TO_DATE("2010-7-8", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD173", "CU031", STR_TO_DATE("2016-5-19", "%Y-%m-%d"));
+        VALUES("OD173", "CU036", STR_TO_DATE("2013-9-21", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD174", "CU038", STR_TO_DATE("2017-6-21", "%Y-%m-%d"));
+        VALUES("OD174", "CU023", STR_TO_DATE("2012-2-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD175", "CU007", STR_TO_DATE("2002-1-9", "%Y-%m-%d"));
+        VALUES("OD175", "CU033", STR_TO_DATE("2001-1-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD176", "CU000", STR_TO_DATE("2015-11-18", "%Y-%m-%d"));
+        VALUES("OD176", "CU023", STR_TO_DATE("2018-8-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD177", "CU017", STR_TO_DATE("2007-9-27", "%Y-%m-%d"));
+        VALUES("OD177", "CU006", STR_TO_DATE("2012-12-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD178", "CU012", STR_TO_DATE("2016-9-10", "%Y-%m-%d"));
+        VALUES("OD178", "CU033", STR_TO_DATE("2002-1-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD179", "CU028", STR_TO_DATE("2007-2-7", "%Y-%m-%d"));
+        VALUES("OD179", "CU034", STR_TO_DATE("2018-2-13", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD180", "CU020", STR_TO_DATE("2000-1-28", "%Y-%m-%d"));
+        VALUES("OD180", "CU034", STR_TO_DATE("2019-12-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD181", "CU029", STR_TO_DATE("2018-9-6", "%Y-%m-%d"));
+        VALUES("OD181", "CU008", STR_TO_DATE("2009-12-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD182", "CU035", STR_TO_DATE("2003-6-14", "%Y-%m-%d"));
+        VALUES("OD182", "CU016", STR_TO_DATE("2020-5-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD183", "CU009", STR_TO_DATE("2017-11-2", "%Y-%m-%d"));
+        VALUES("OD183", "CU015", STR_TO_DATE("2017-6-14", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD184", "CU001", STR_TO_DATE("2008-2-14", "%Y-%m-%d"));
+        VALUES("OD184", "CU030", STR_TO_DATE("2000-10-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD185", "CU037", STR_TO_DATE("2002-9-24", "%Y-%m-%d"));
+        VALUES("OD185", "CU002", STR_TO_DATE("2016-8-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD186", "CU009", STR_TO_DATE("2015-2-13", "%Y-%m-%d"));
+        VALUES("OD186", "CU005", STR_TO_DATE("2016-6-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD187", "CU014", STR_TO_DATE("2009-11-25", "%Y-%m-%d"));
+        VALUES("OD187", "CU006", STR_TO_DATE("2015-12-23", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD188", "CU030", STR_TO_DATE("2001-11-18", "%Y-%m-%d"));
+        VALUES("OD188", "CU006", STR_TO_DATE("2002-12-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD189", "CU026", STR_TO_DATE("2006-1-6", "%Y-%m-%d"));
+        VALUES("OD189", "CU001", STR_TO_DATE("2019-12-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD190", "CU007", STR_TO_DATE("2017-6-1", "%Y-%m-%d"));
+        VALUES("OD190", "CU028", STR_TO_DATE("2016-5-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD191", "CU035", STR_TO_DATE("2009-4-2", "%Y-%m-%d"));
+        VALUES("OD191", "CU029", STR_TO_DATE("2004-5-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD192", "CU021", STR_TO_DATE("2003-8-5", "%Y-%m-%d"));
+        VALUES("OD192", "CU009", STR_TO_DATE("2000-3-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD193", "CU024", STR_TO_DATE("2005-8-24", "%Y-%m-%d"));
+        VALUES("OD193", "CU037", STR_TO_DATE("2020-1-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD194", "CU029", STR_TO_DATE("2016-8-12", "%Y-%m-%d"));
+        VALUES("OD194", "CU026", STR_TO_DATE("2003-3-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD195", "CU032", STR_TO_DATE("2020-2-19", "%Y-%m-%d"));
+        VALUES("OD195", "CU019", STR_TO_DATE("2000-11-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD196", "CU005", STR_TO_DATE("2006-9-26", "%Y-%m-%d"));
+        VALUES("OD196", "CU032", STR_TO_DATE("2016-6-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD197", "CU003", STR_TO_DATE("2010-1-6", "%Y-%m-%d"));
+        VALUES("OD197", "CU015", STR_TO_DATE("2012-9-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD198", "CU006", STR_TO_DATE("2003-12-21", "%Y-%m-%d"));
+        VALUES("OD198", "CU030", STR_TO_DATE("2016-6-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD199", "CU011", STR_TO_DATE("2010-2-22", "%Y-%m-%d"));
+        VALUES("OD199", "CU001", STR_TO_DATE("2018-10-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD200", "CU018", STR_TO_DATE("2002-12-10", "%Y-%m-%d"));
+        VALUES("OD200", "CU030", STR_TO_DATE("2012-7-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD201", "CU030", STR_TO_DATE("2007-5-9", "%Y-%m-%d"));
+        VALUES("OD201", "CU010", STR_TO_DATE("2001-7-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD202", "CU013", STR_TO_DATE("2009-11-25", "%Y-%m-%d"));
+        VALUES("OD202", "CU030", STR_TO_DATE("2006-2-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD203", "CU006", STR_TO_DATE("2000-11-14", "%Y-%m-%d"));
+        VALUES("OD203", "CU011", STR_TO_DATE("2014-2-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD204", "CU021", STR_TO_DATE("2004-12-3", "%Y-%m-%d"));
+        VALUES("OD204", "CU015", STR_TO_DATE("2013-7-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD205", "CU038", STR_TO_DATE("2012-1-26", "%Y-%m-%d"));
+        VALUES("OD205", "CU001", STR_TO_DATE("2019-5-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD206", "CU020", STR_TO_DATE("2014-9-12", "%Y-%m-%d"));
+        VALUES("OD206", "CU032", STR_TO_DATE("2017-1-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD207", "CU016", STR_TO_DATE("2020-5-23", "%Y-%m-%d"));
+        VALUES("OD207", "CU014", STR_TO_DATE("2006-9-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD208", "CU030", STR_TO_DATE("2008-6-1", "%Y-%m-%d"));
+        VALUES("OD208", "CU021", STR_TO_DATE("2020-8-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD209", "CU031", STR_TO_DATE("2005-5-26", "%Y-%m-%d"));
+        VALUES("OD209", "CU020", STR_TO_DATE("2004-7-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD210", "CU006", STR_TO_DATE("2020-7-25", "%Y-%m-%d"));
+        VALUES("OD210", "CU008", STR_TO_DATE("2004-5-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD211", "CU028", STR_TO_DATE("2001-8-22", "%Y-%m-%d"));
+        VALUES("OD211", "CU004", STR_TO_DATE("2018-7-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD212", "CU001", STR_TO_DATE("2004-9-11", "%Y-%m-%d"));
+        VALUES("OD212", "CU009", STR_TO_DATE("2002-12-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD213", "CU028", STR_TO_DATE("2005-8-14", "%Y-%m-%d"));
+        VALUES("OD213", "CU017", STR_TO_DATE("2002-6-6", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD214", "CU038", STR_TO_DATE("2014-5-8", "%Y-%m-%d"));
+        VALUES("OD214", "CU003", STR_TO_DATE("2006-6-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD215", "CU001", STR_TO_DATE("2020-4-3", "%Y-%m-%d"));
+        VALUES("OD215", "CU030", STR_TO_DATE("2017-7-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD216", "CU025", STR_TO_DATE("2019-6-9", "%Y-%m-%d"));
+        VALUES("OD216", "CU033", STR_TO_DATE("2000-12-4", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD217", "CU013", STR_TO_DATE("2008-4-2", "%Y-%m-%d"));
+        VALUES("OD217", "CU006", STR_TO_DATE("2009-3-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD218", "CU025", STR_TO_DATE("2012-9-10", "%Y-%m-%d"));
+        VALUES("OD218", "CU026", STR_TO_DATE("2018-10-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD219", "CU037", STR_TO_DATE("2017-6-9", "%Y-%m-%d"));
+        VALUES("OD219", "CU031", STR_TO_DATE("2014-11-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD220", "CU008", STR_TO_DATE("2019-5-16", "%Y-%m-%d"));
+        VALUES("OD220", "CU013", STR_TO_DATE("2008-6-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD221", "CU017", STR_TO_DATE("2010-3-4", "%Y-%m-%d"));
+        VALUES("OD221", "CU019", STR_TO_DATE("2010-11-24", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD222", "CU003", STR_TO_DATE("2019-11-12", "%Y-%m-%d"));
+        VALUES("OD222", "CU000", STR_TO_DATE("2016-2-14", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD223", "CU014", STR_TO_DATE("2005-7-26", "%Y-%m-%d"));
+        VALUES("OD223", "CU009", STR_TO_DATE("2005-8-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD224", "CU020", STR_TO_DATE("2018-10-22", "%Y-%m-%d"));
+        VALUES("OD224", "CU020", STR_TO_DATE("2013-5-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD225", "CU025", STR_TO_DATE("2017-3-24", "%Y-%m-%d"));
+        VALUES("OD225", "CU019", STR_TO_DATE("2013-9-20", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD226", "CU036", STR_TO_DATE("2003-12-3", "%Y-%m-%d"));
+        VALUES("OD226", "CU038", STR_TO_DATE("2006-6-2", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD227", "CU017", STR_TO_DATE("2006-12-26", "%Y-%m-%d"));
+        VALUES("OD227", "CU010", STR_TO_DATE("2016-9-28", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD228", "CU035", STR_TO_DATE("2007-8-15", "%Y-%m-%d"));
+        VALUES("OD228", "CU006", STR_TO_DATE("2003-1-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD229", "CU017", STR_TO_DATE("2004-10-11", "%Y-%m-%d"));
+        VALUES("OD229", "CU006", STR_TO_DATE("2007-3-11", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD230", "CU004", STR_TO_DATE("2001-12-17", "%Y-%m-%d"));
+        VALUES("OD230", "CU010", STR_TO_DATE("2002-3-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD231", "CU000", STR_TO_DATE("2001-8-9", "%Y-%m-%d"));
+        VALUES("OD231", "CU020", STR_TO_DATE("2007-5-17", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD232", "CU020", STR_TO_DATE("2015-12-20", "%Y-%m-%d"));
+        VALUES("OD232", "CU034", STR_TO_DATE("2018-1-12", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD233", "CU028", STR_TO_DATE("2018-5-12", "%Y-%m-%d"));
+        VALUES("OD233", "CU014", STR_TO_DATE("2004-8-10", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD234", "CU014", STR_TO_DATE("2009-7-27", "%Y-%m-%d"));
+        VALUES("OD234", "CU006", STR_TO_DATE("2005-8-1", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD235", "CU004", STR_TO_DATE("2003-4-26", "%Y-%m-%d"));
+        VALUES("OD235", "CU017", STR_TO_DATE("2004-1-26", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD236", "CU017", STR_TO_DATE("2014-6-21", "%Y-%m-%d"));
+        VALUES("OD236", "CU037", STR_TO_DATE("2010-9-21", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD237", "CU009", STR_TO_DATE("2002-11-3", "%Y-%m-%d"));
+        VALUES("OD237", "CU035", STR_TO_DATE("2012-8-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD238", "CU007", STR_TO_DATE("2005-8-13", "%Y-%m-%d"));
+        VALUES("OD238", "CU025", STR_TO_DATE("2010-12-16", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD239", "CU032", STR_TO_DATE("2003-10-15", "%Y-%m-%d"));
+        VALUES("OD239", "CU010", STR_TO_DATE("2017-6-19", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD240", "CU028", STR_TO_DATE("2002-3-4", "%Y-%m-%d"));
+        VALUES("OD240", "CU019", STR_TO_DATE("2013-8-14", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD241", "CU024", STR_TO_DATE("2011-8-15", "%Y-%m-%d"));
+        VALUES("OD241", "CU012", STR_TO_DATE("2016-3-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD242", "CU034", STR_TO_DATE("2015-12-12", "%Y-%m-%d"));
+        VALUES("OD242", "CU016", STR_TO_DATE("2017-8-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD243", "CU035", STR_TO_DATE("2016-1-10", "%Y-%m-%d"));
+        VALUES("OD243", "CU006", STR_TO_DATE("2006-7-18", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD244", "CU029", STR_TO_DATE("2018-5-15", "%Y-%m-%d"));
+        VALUES("OD244", "CU038", STR_TO_DATE("2002-1-9", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD245", "CU029", STR_TO_DATE("2000-3-20", "%Y-%m-%d"));
+        VALUES("OD245", "CU004", STR_TO_DATE("2003-5-8", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD246", "CU008", STR_TO_DATE("2016-7-25", "%Y-%m-%d"));
+        VALUES("OD246", "CU002", STR_TO_DATE("2003-2-7", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD247", "CU032", STR_TO_DATE("2017-12-16", "%Y-%m-%d"));
+        VALUES("OD247", "CU030", STR_TO_DATE("2005-6-22", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD248", "CU015", STR_TO_DATE("2012-6-8", "%Y-%m-%d"));
+        VALUES("OD248", "CU026", STR_TO_DATE("2008-8-27", "%Y-%m-%d"));
         
         INSERT INTO Orders
-        VALUES("OD249", "CU005", STR_TO_DATE("2010-7-19", "%Y-%m-%d"));
+        VALUES("OD249", "CU007", STR_TO_DATE("2004-3-4", "%Y-%m-%d"));
         
         INSERT INTO Order_Items
-        VALUES("IT000", "OD007", "BO541");
+        VALUES("IT000", "OD209", "BO956");
         
         INSERT INTO Order_Items
-        VALUES("IT001", "OD231", "BO972");
+        VALUES("IT001", "OD169", "BO930");
         
         INSERT INTO Order_Items
-        VALUES("IT002", "OD062", "BO705");
+        VALUES("IT002", "OD220", "BO184");
         
         INSERT INTO Order_Items
-        VALUES("IT003", "OD246", "BO273");
+        VALUES("IT003", "OD186", "BO219");
         
         INSERT INTO Order_Items
-        VALUES("IT004", "OD240", "BO007");
+        VALUES("IT004", "OD044", "BO881");
         
         INSERT INTO Order_Items
-        VALUES("IT005", "OD130", "BO612");
+        VALUES("IT005", "OD066", "BO901");
         
         INSERT INTO Order_Items
-        VALUES("IT006", "OD000", "BO968");
+        VALUES("IT006", "OD165", "BO034");
         
         INSERT INTO Order_Items
-        VALUES("IT007", "OD129", "BO142");
+        VALUES("IT007", "OD175", "BO575");
         
         INSERT INTO Order_Items
-        VALUES("IT008", "OD207", "BO211");
+        VALUES("IT008", "OD231", "BO668");
         
         INSERT INTO Order_Items
-        VALUES("IT009", "OD131", "BO660");
+        VALUES("IT009", "OD092", "BO395");
         
         INSERT INTO Order_Items
-        VALUES("IT010", "OD249", "BO468");
+        VALUES("IT010", "OD050", "BO335");
         
         INSERT INTO Order_Items
-        VALUES("IT011", "OD072", "BO024");
+        VALUES("IT011", "OD059", "BO085");
         
         INSERT INTO Order_Items
-        VALUES("IT012", "OD123", "BO671");
+        VALUES("IT012", "OD045", "BO027");
         
         INSERT INTO Order_Items
-        VALUES("IT013", "OD143", "BO339");
+        VALUES("IT013", "OD231", "BO015");
         
         INSERT INTO Order_Items
-        VALUES("IT014", "OD180", "BO388");
+        VALUES("IT014", "OD010", "BO456");
         
         INSERT INTO Order_Items
-        VALUES("IT015", "OD052", "BO419");
+        VALUES("IT015", "OD163", "BO570");
         
         INSERT INTO Order_Items
-        VALUES("IT016", "OD130", "BO665");
+        VALUES("IT016", "OD216", "BO080");
         
         INSERT INTO Order_Items
-        VALUES("IT017", "OD050", "BO890");
+        VALUES("IT017", "OD240", "BO161");
         
         INSERT INTO Order_Items
-        VALUES("IT018", "OD204", "BO161");
+        VALUES("IT018", "OD162", "BO883");
         
         INSERT INTO Order_Items
-        VALUES("IT019", "OD036", "BO980");
+        VALUES("IT019", "OD103", "BO940");
         
         INSERT INTO Order_Items
-        VALUES("IT020", "OD234", "BO764");
+        VALUES("IT020", "OD003", "BO342");
         
         INSERT INTO Order_Items
-        VALUES("IT021", "OD174", "BO764");
+        VALUES("IT021", "OD082", "BO792");
         
         INSERT INTO Order_Items
-        VALUES("IT022", "OD197", "BO461");
+        VALUES("IT022", "OD096", "BO372");
         
         INSERT INTO Order_Items
-        VALUES("IT023", "OD070", "BO183");
+        VALUES("IT023", "OD236", "BO472");
         
         INSERT INTO Order_Items
-        VALUES("IT024", "OD116", "BO533");
+        VALUES("IT024", "OD205", "BO726");
         
         INSERT INTO Order_Items
-        VALUES("IT025", "OD161", "BO397");
+        VALUES("IT025", "OD200", "BO127");
         
         INSERT INTO Order_Items
-        VALUES("IT026", "OD106", "BO713");
+        VALUES("IT026", "OD112", "BO844");
         
         INSERT INTO Order_Items
-        VALUES("IT027", "OD085", "BO710");
+        VALUES("IT027", "OD182", "BO644");
         
         INSERT INTO Order_Items
-        VALUES("IT028", "OD198", "BO368");
+        VALUES("IT028", "OD200", "BO795");
         
         INSERT INTO Order_Items
-        VALUES("IT029", "OD224", "BO188");
+        VALUES("IT029", "OD080", "BO733");
         
         INSERT INTO Order_Items
-        VALUES("IT030", "OD225", "BO742");
+        VALUES("IT030", "OD028", "BO790");
         
         INSERT INTO Order_Items
-        VALUES("IT031", "OD210", "BO334");
+        VALUES("IT031", "OD179", "BO800");
         
         INSERT INTO Order_Items
-        VALUES("IT032", "OD143", "BO351");
+        VALUES("IT032", "OD028", "BO022");
         
         INSERT INTO Order_Items
-        VALUES("IT033", "OD017", "BO148");
+        VALUES("IT033", "OD165", "BO340");
         
         INSERT INTO Order_Items
-        VALUES("IT034", "OD245", "BO220");
+        VALUES("IT034", "OD064", "BO155");
         
         INSERT INTO Order_Items
-        VALUES("IT035", "OD089", "BO530");
+        VALUES("IT035", "OD082", "BO463");
         
         INSERT INTO Order_Items
-        VALUES("IT036", "OD230", "BO490");
+        VALUES("IT036", "OD087", "BO983");
         
         INSERT INTO Order_Items
-        VALUES("IT037", "OD127", "BO993");
+        VALUES("IT037", "OD230", "BO868");
         
         INSERT INTO Order_Items
-        VALUES("IT038", "OD040", "BO943");
+        VALUES("IT038", "OD005", "BO342");
         
         INSERT INTO Order_Items
-        VALUES("IT039", "OD002", "BO014");
+        VALUES("IT039", "OD190", "BO344");
         
         INSERT INTO Order_Items
-        VALUES("IT040", "OD097", "BO461");
+        VALUES("IT040", "OD207", "BO216");
         
         INSERT INTO Order_Items
-        VALUES("IT041", "OD051", "BO217");
+        VALUES("IT041", "OD137", "BO791");
         
         INSERT INTO Order_Items
-        VALUES("IT042", "OD044", "BO569");
+        VALUES("IT042", "OD098", "BO430");
         
         INSERT INTO Order_Items
-        VALUES("IT043", "OD108", "BO784");
+        VALUES("IT043", "OD105", "BO636");
         
         INSERT INTO Order_Items
-        VALUES("IT044", "OD073", "BO485");
+        VALUES("IT044", "OD241", "BO879");
         
         INSERT INTO Order_Items
-        VALUES("IT045", "OD005", "BO356");
+        VALUES("IT045", "OD126", "BO125");
         
         INSERT INTO Order_Items
-        VALUES("IT046", "OD008", "BO388");
+        VALUES("IT046", "OD157", "BO906");
         
         INSERT INTO Order_Items
-        VALUES("IT047", "OD172", "BO566");
+        VALUES("IT047", "OD244", "BO130");
         
         INSERT INTO Order_Items
-        VALUES("IT048", "OD007", "BO012");
+        VALUES("IT048", "OD152", "BO763");
         
         INSERT INTO Order_Items
-        VALUES("IT049", "OD070", "BO605");
+        VALUES("IT049", "OD155", "BO483");
         
         INSERT INTO Order_Items
-        VALUES("IT050", "OD087", "BO139");
+        VALUES("IT050", "OD019", "BO106");
         
         INSERT INTO Order_Items
-        VALUES("IT051", "OD191", "BO979");
+        VALUES("IT051", "OD174", "BO530");
         
         INSERT INTO Order_Items
-        VALUES("IT052", "OD232", "BO050");
+        VALUES("IT052", "OD122", "BO378");
         
         INSERT INTO Order_Items
-        VALUES("IT053", "OD140", "BO912");
+        VALUES("IT053", "OD026", "BO289");
         
         INSERT INTO Order_Items
-        VALUES("IT054", "OD169", "BO221");
+        VALUES("IT054", "OD226", "BO346");
         
         INSERT INTO Order_Items
-        VALUES("IT055", "OD161", "BO736");
+        VALUES("IT055", "OD242", "BO661");
         
         INSERT INTO Order_Items
-        VALUES("IT056", "OD005", "BO997");
+        VALUES("IT056", "OD195", "BO855");
         
         INSERT INTO Order_Items
-        VALUES("IT057", "OD196", "BO818");
+        VALUES("IT057", "OD243", "BO452");
         
         INSERT INTO Order_Items
-        VALUES("IT058", "OD215", "BO906");
+        VALUES("IT058", "OD224", "BO317");
         
         INSERT INTO Order_Items
-        VALUES("IT059", "OD210", "BO811");
+        VALUES("IT059", "OD225", "BO276");
         
         INSERT INTO Order_Items
-        VALUES("IT060", "OD140", "BO853");
+        VALUES("IT060", "OD098", "BO427");
         
         INSERT INTO Order_Items
-        VALUES("IT061", "OD103", "BO564");
+        VALUES("IT061", "OD236", "BO075");
         
         INSERT INTO Order_Items
-        VALUES("IT062", "OD175", "BO658");
+        VALUES("IT062", "OD098", "BO835");
         
         INSERT INTO Order_Items
-        VALUES("IT063", "OD117", "BO502");
+        VALUES("IT063", "OD023", "BO778");
         
         INSERT INTO Order_Items
-        VALUES("IT064", "OD083", "BO450");
+        VALUES("IT064", "OD200", "BO265");
         
         INSERT INTO Order_Items
-        VALUES("IT065", "OD178", "BO105");
+        VALUES("IT065", "OD018", "BO420");
         
         INSERT INTO Order_Items
-        VALUES("IT066", "OD153", "BO574");
+        VALUES("IT066", "OD104", "BO231");
         
         INSERT INTO Order_Items
-        VALUES("IT067", "OD156", "BO512");
+        VALUES("IT067", "OD212", "BO437");
         
         INSERT INTO Order_Items
-        VALUES("IT068", "OD029", "BO951");
+        VALUES("IT068", "OD151", "BO112");
         
         INSERT INTO Order_Items
-        VALUES("IT069", "OD057", "BO080");
+        VALUES("IT069", "OD174", "BO938");
         
         INSERT INTO Order_Items
-        VALUES("IT070", "OD217", "BO466");
+        VALUES("IT070", "OD221", "BO748");
         
         INSERT INTO Order_Items
-        VALUES("IT071", "OD204", "BO044");
+        VALUES("IT071", "OD026", "BO550");
         
         INSERT INTO Order_Items
-        VALUES("IT072", "OD134", "BO632");
+        VALUES("IT072", "OD184", "BO358");
         
         INSERT INTO Order_Items
-        VALUES("IT073", "OD071", "BO296");
+        VALUES("IT073", "OD214", "BO872");
         
         INSERT INTO Order_Items
-        VALUES("IT074", "OD191", "BO630");
+        VALUES("IT074", "OD243", "BO869");
         
         INSERT INTO Order_Items
-        VALUES("IT075", "OD089", "BO331");
+        VALUES("IT075", "OD008", "BO460");
         
         INSERT INTO Order_Items
-        VALUES("IT076", "OD122", "BO040");
+        VALUES("IT076", "OD249", "BO932");
         
         INSERT INTO Order_Items
-        VALUES("IT077", "OD095", "BO838");
+        VALUES("IT077", "OD139", "BO669");
         
         INSERT INTO Order_Items
-        VALUES("IT078", "OD231", "BO911");
+        VALUES("IT078", "OD177", "BO552");
         
         INSERT INTO Order_Items
-        VALUES("IT079", "OD062", "BO136");
+        VALUES("IT079", "OD077", "BO774");
         
         INSERT INTO Order_Items
-        VALUES("IT080", "OD114", "BO558");
+        VALUES("IT080", "OD241", "BO053");
         
         INSERT INTO Order_Items
-        VALUES("IT081", "OD052", "BO116");
+        VALUES("IT081", "OD246", "BO671");
         
         INSERT INTO Order_Items
-        VALUES("IT082", "OD019", "BO499");
+        VALUES("IT082", "OD001", "BO474");
         
         INSERT INTO Order_Items
-        VALUES("IT083", "OD171", "BO897");
+        VALUES("IT083", "OD190", "BO560");
         
         INSERT INTO Order_Items
-        VALUES("IT084", "OD026", "BO651");
+        VALUES("IT084", "OD245", "BO206");
         
         INSERT INTO Order_Items
-        VALUES("IT085", "OD062", "BO257");
+        VALUES("IT085", "OD115", "BO310");
         
         INSERT INTO Order_Items
-        VALUES("IT086", "OD064", "BO934");
+        VALUES("IT086", "OD081", "BO948");
         
         INSERT INTO Order_Items
-        VALUES("IT087", "OD242", "BO541");
+        VALUES("IT087", "OD196", "BO768");
         
         INSERT INTO Order_Items
-        VALUES("IT088", "OD044", "BO533");
+        VALUES("IT088", "OD188", "BO887");
         
         INSERT INTO Order_Items
-        VALUES("IT089", "OD244", "BO451");
+        VALUES("IT089", "OD226", "BO875");
         
         INSERT INTO Order_Items
-        VALUES("IT090", "OD240", "BO901");
+        VALUES("IT090", "OD091", "BO747");
         
         INSERT INTO Order_Items
-        VALUES("IT091", "OD215", "BO839");
+        VALUES("IT091", "OD231", "BO022");
         
         INSERT INTO Order_Items
-        VALUES("IT092", "OD227", "BO892");
+        VALUES("IT092", "OD071", "BO452");
         
         INSERT INTO Order_Items
-        VALUES("IT093", "OD187", "BO423");
+        VALUES("IT093", "OD054", "BO298");
         
         INSERT INTO Order_Items
-        VALUES("IT094", "OD091", "BO844");
+        VALUES("IT094", "OD046", "BO066");
         
         INSERT INTO Order_Items
-        VALUES("IT095", "OD157", "BO310");
+        VALUES("IT095", "OD039", "BO347");
         
         INSERT INTO Order_Items
-        VALUES("IT096", "OD206", "BO514");
+        VALUES("IT096", "OD017", "BO263");
         
         INSERT INTO Order_Items
-        VALUES("IT097", "OD249", "BO311");
+        VALUES("IT097", "OD217", "BO654");
         
         INSERT INTO Order_Items
-        VALUES("IT098", "OD142", "BO647");
+        VALUES("IT098", "OD103", "BO989");
         
         INSERT INTO Order_Items
-        VALUES("IT099", "OD188", "BO876");
+        VALUES("IT099", "OD122", "BO811");
         
         INSERT INTO Order_Items
-        VALUES("IT100", "OD085", "BO999");
+        VALUES("IT100", "OD114", "BO507");
         
         INSERT INTO Order_Items
-        VALUES("IT101", "OD115", "BO390");
+        VALUES("IT101", "OD221", "BO406");
         
         INSERT INTO Order_Items
-        VALUES("IT102", "OD187", "BO211");
+        VALUES("IT102", "OD003", "BO581");
         
         INSERT INTO Order_Items
-        VALUES("IT103", "OD212", "BO288");
+        VALUES("IT103", "OD211", "BO305");
         
         INSERT INTO Order_Items
-        VALUES("IT104", "OD138", "BO817");
+        VALUES("IT104", "OD086", "BO588");
         
         INSERT INTO Order_Items
-        VALUES("IT105", "OD112", "BO295");
+        VALUES("IT105", "OD004", "BO095");
         
         INSERT INTO Order_Items
-        VALUES("IT106", "OD210", "BO863");
+        VALUES("IT106", "OD084", "BO344");
         
         INSERT INTO Order_Items
-        VALUES("IT107", "OD006", "BO863");
+        VALUES("IT107", "OD079", "BO721");
         
         INSERT INTO Order_Items
-        VALUES("IT108", "OD153", "BO159");
+        VALUES("IT108", "OD087", "BO239");
         
         INSERT INTO Order_Items
-        VALUES("IT109", "OD208", "BO778");
+        VALUES("IT109", "OD211", "BO565");
         
         INSERT INTO Order_Items
-        VALUES("IT110", "OD120", "BO582");
+        VALUES("IT110", "OD231", "BO162");
         
         INSERT INTO Order_Items
-        VALUES("IT111", "OD104", "BO468");
+        VALUES("IT111", "OD247", "BO935");
         
         INSERT INTO Order_Items
-        VALUES("IT112", "OD186", "BO311");
+        VALUES("IT112", "OD052", "BO217");
         
         INSERT INTO Order_Items
-        VALUES("IT113", "OD121", "BO578");
+        VALUES("IT113", "OD226", "BO270");
         
         INSERT INTO Order_Items
-        VALUES("IT114", "OD249", "BO583");
+        VALUES("IT114", "OD247", "BO603");
         
         INSERT INTO Order_Items
-        VALUES("IT115", "OD139", "BO969");
+        VALUES("IT115", "OD081", "BO508");
         
         INSERT INTO Order_Items
-        VALUES("IT116", "OD150", "BO618");
+        VALUES("IT116", "OD223", "BO906");
         
         INSERT INTO Order_Items
-        VALUES("IT117", "OD088", "BO154");
+        VALUES("IT117", "OD022", "BO182");
         
         INSERT INTO Order_Items
-        VALUES("IT118", "OD163", "BO954");
+        VALUES("IT118", "OD101", "BO320");
         
         INSERT INTO Order_Items
-        VALUES("IT119", "OD091", "BO671");
+        VALUES("IT119", "OD089", "BO149");
         
         INSERT INTO Order_Items
-        VALUES("IT120", "OD074", "BO635");
+        VALUES("IT120", "OD229", "BO139");
         
         INSERT INTO Order_Items
-        VALUES("IT121", "OD047", "BO636");
+        VALUES("IT121", "OD058", "BO838");
         
         INSERT INTO Order_Items
-        VALUES("IT122", "OD088", "BO488");
+        VALUES("IT122", "OD070", "BO557");
         
         INSERT INTO Order_Items
-        VALUES("IT123", "OD225", "BO087");
+        VALUES("IT123", "OD013", "BO369");
         
         INSERT INTO Order_Items
-        VALUES("IT124", "OD048", "BO320");
+        VALUES("IT124", "OD209", "BO987");
         
         INSERT INTO Order_Items
-        VALUES("IT125", "OD146", "BO697");
+        VALUES("IT125", "OD026", "BO703");
         
         INSERT INTO Order_Items
-        VALUES("IT126", "OD237", "BO740");
+        VALUES("IT126", "OD241", "BO493");
         
         INSERT INTO Order_Items
-        VALUES("IT127", "OD060", "BO565");
+        VALUES("IT127", "OD004", "BO731");
         
         INSERT INTO Order_Items
-        VALUES("IT128", "OD101", "BO895");
+        VALUES("IT128", "OD127", "BO410");
         
         INSERT INTO Order_Items
-        VALUES("IT129", "OD086", "BO010");
+        VALUES("IT129", "OD015", "BO384");
         
         INSERT INTO Order_Items
-        VALUES("IT130", "OD062", "BO160");
+        VALUES("IT130", "OD079", "BO736");
         
         INSERT INTO Order_Items
-        VALUES("IT131", "OD101", "BO737");
+        VALUES("IT131", "OD063", "BO852");
         
         INSERT INTO Order_Items
-        VALUES("IT132", "OD045", "BO696");
+        VALUES("IT132", "OD014", "BO049");
         
         INSERT INTO Order_Items
-        VALUES("IT133", "OD001", "BO460");
+        VALUES("IT133", "OD033", "BO096");
         
         INSERT INTO Order_Items
-        VALUES("IT134", "OD141", "BO402");
+        VALUES("IT134", "OD187", "BO004");
         
         INSERT INTO Order_Items
-        VALUES("IT135", "OD219", "BO797");
+        VALUES("IT135", "OD153", "BO944");
         
         INSERT INTO Order_Items
-        VALUES("IT136", "OD086", "BO726");
+        VALUES("IT136", "OD015", "BO864");
         
         INSERT INTO Order_Items
-        VALUES("IT137", "OD005", "BO845");
+        VALUES("IT137", "OD216", "BO793");
         
         INSERT INTO Order_Items
-        VALUES("IT138", "OD096", "BO769");
+        VALUES("IT138", "OD163", "BO404");
         
         INSERT INTO Order_Items
-        VALUES("IT139", "OD032", "BO537");
+        VALUES("IT139", "OD065", "BO083");
         
         INSERT INTO Order_Items
-        VALUES("IT140", "OD214", "BO696");
+        VALUES("IT140", "OD169", "BO518");
         
         INSERT INTO Order_Items
-        VALUES("IT141", "OD000", "BO277");
+        VALUES("IT141", "OD099", "BO291");
         
         INSERT INTO Order_Items
-        VALUES("IT142", "OD181", "BO982");
+        VALUES("IT142", "OD146", "BO529");
         
         INSERT INTO Order_Items
-        VALUES("IT143", "OD001", "BO321");
+        VALUES("IT143", "OD151", "BO321");
         
         INSERT INTO Order_Items
-        VALUES("IT144", "OD106", "BO976");
+        VALUES("IT144", "OD046", "BO967");
         
         INSERT INTO Order_Items
-        VALUES("IT145", "OD109", "BO559");
+        VALUES("IT145", "OD243", "BO940");
         
         INSERT INTO Order_Items
-        VALUES("IT146", "OD047", "BO158");
+        VALUES("IT146", "OD061", "BO291");
         
         INSERT INTO Order_Items
-        VALUES("IT147", "OD117", "BO915");
+        VALUES("IT147", "OD232", "BO193");
         
         INSERT INTO Order_Items
-        VALUES("IT148", "OD126", "BO950");
+        VALUES("IT148", "OD119", "BO801");
         
         INSERT INTO Order_Items
-        VALUES("IT149", "OD135", "BO106");
+        VALUES("IT149", "OD040", "BO800");
         
         INSERT INTO Order_Items
-        VALUES("IT150", "OD234", "BO438");
+        VALUES("IT150", "OD027", "BO618");
         
         INSERT INTO Order_Items
-        VALUES("IT151", "OD065", "BO324");
+        VALUES("IT151", "OD000", "BO307");
         
         INSERT INTO Order_Items
-        VALUES("IT152", "OD101", "BO347");
+        VALUES("IT152", "OD185", "BO860");
         
         INSERT INTO Order_Items
-        VALUES("IT153", "OD015", "BO218");
+        VALUES("IT153", "OD217", "BO702");
         
         INSERT INTO Order_Items
-        VALUES("IT154", "OD050", "BO224");
+        VALUES("IT154", "OD090", "BO952");
         
         INSERT INTO Order_Items
-        VALUES("IT155", "OD148", "BO044");
+        VALUES("IT155", "OD131", "BO313");
         
         INSERT INTO Order_Items
-        VALUES("IT156", "OD010", "BO207");
+        VALUES("IT156", "OD248", "BO385");
         
         INSERT INTO Order_Items
-        VALUES("IT157", "OD117", "BO320");
+        VALUES("IT157", "OD231", "BO736");
         
         INSERT INTO Order_Items
-        VALUES("IT158", "OD117", "BO438");
+        VALUES("IT158", "OD189", "BO777");
         
         INSERT INTO Order_Items
-        VALUES("IT159", "OD083", "BO998");
+        VALUES("IT159", "OD155", "BO053");
         
         INSERT INTO Order_Items
-        VALUES("IT160", "OD153", "BO112");
+        VALUES("IT160", "OD242", "BO448");
         
         INSERT INTO Order_Items
-        VALUES("IT161", "OD229", "BO870");
+        VALUES("IT161", "OD145", "BO079");
         
         INSERT INTO Order_Items
-        VALUES("IT162", "OD245", "BO501");
+        VALUES("IT162", "OD179", "BO284");
         
         INSERT INTO Order_Items
-        VALUES("IT163", "OD061", "BO192");
+        VALUES("IT163", "OD241", "BO770");
         
         INSERT INTO Order_Items
-        VALUES("IT164", "OD235", "BO061");
+        VALUES("IT164", "OD141", "BO359");
         
         INSERT INTO Order_Items
-        VALUES("IT165", "OD208", "BO590");
+        VALUES("IT165", "OD138", "BO979");
         
         INSERT INTO Order_Items
-        VALUES("IT166", "OD103", "BO538");
+        VALUES("IT166", "OD128", "BO275");
         
         INSERT INTO Order_Items
-        VALUES("IT167", "OD116", "BO298");
+        VALUES("IT167", "OD170", "BO540");
         
         INSERT INTO Order_Items
-        VALUES("IT168", "OD159", "BO883");
+        VALUES("IT168", "OD100", "BO850");
         
         INSERT INTO Order_Items
-        VALUES("IT169", "OD014", "BO640");
+        VALUES("IT169", "OD047", "BO951");
         
         INSERT INTO Order_Items
-        VALUES("IT170", "OD126", "BO949");
+        VALUES("IT170", "OD179", "BO653");
         
         INSERT INTO Order_Items
-        VALUES("IT171", "OD015", "BO019");
+        VALUES("IT171", "OD249", "BO320");
         
         INSERT INTO Order_Items
-        VALUES("IT172", "OD081", "BO978");
+        VALUES("IT172", "OD168", "BO049");
         
         INSERT INTO Order_Items
-        VALUES("IT173", "OD197", "BO151");
+        VALUES("IT173", "OD001", "BO169");
         
         INSERT INTO Order_Items
-        VALUES("IT174", "OD068", "BO050");
+        VALUES("IT174", "OD060", "BO749");
         
         INSERT INTO Order_Items
-        VALUES("IT175", "OD166", "BO006");
+        VALUES("IT175", "OD025", "BO488");
         
         INSERT INTO Order_Items
-        VALUES("IT176", "OD116", "BO291");
+        VALUES("IT176", "OD097", "BO985");
         
         INSERT INTO Order_Items
-        VALUES("IT177", "OD211", "BO652");
+        VALUES("IT177", "OD014", "BO649");
         
         INSERT INTO Order_Items
-        VALUES("IT178", "OD099", "BO734");
+        VALUES("IT178", "OD160", "BO036");
         
         INSERT INTO Order_Items
-        VALUES("IT179", "OD166", "BO115");
+        VALUES("IT179", "OD113", "BO860");
         
         INSERT INTO Order_Items
-        VALUES("IT180", "OD234", "BO654");
+        VALUES("IT180", "OD242", "BO093");
         
         INSERT INTO Order_Items
-        VALUES("IT181", "OD144", "BO260");
+        VALUES("IT181", "OD057", "BO737");
         
         INSERT INTO Order_Items
-        VALUES("IT182", "OD018", "BO295");
+        VALUES("IT182", "OD089", "BO463");
         
         INSERT INTO Order_Items
-        VALUES("IT183", "OD110", "BO073");
+        VALUES("IT183", "OD051", "BO584");
         
         INSERT INTO Order_Items
-        VALUES("IT184", "OD121", "BO545");
+        VALUES("IT184", "OD232", "BO284");
         
         INSERT INTO Order_Items
-        VALUES("IT185", "OD097", "BO618");
+        VALUES("IT185", "OD032", "BO975");
         
         INSERT INTO Order_Items
-        VALUES("IT186", "OD029", "BO650");
+        VALUES("IT186", "OD095", "BO042");
         
         INSERT INTO Order_Items
-        VALUES("IT187", "OD012", "BO807");
+        VALUES("IT187", "OD135", "BO122");
         
         INSERT INTO Order_Items
-        VALUES("IT188", "OD014", "BO320");
+        VALUES("IT188", "OD052", "BO594");
         
         INSERT INTO Order_Items
-        VALUES("IT189", "OD059", "BO930");
+        VALUES("IT189", "OD078", "BO546");
         
         INSERT INTO Order_Items
-        VALUES("IT190", "OD018", "BO908");
+        VALUES("IT190", "OD232", "BO020");
         
         INSERT INTO Order_Items
-        VALUES("IT191", "OD175", "BO991");
+        VALUES("IT191", "OD102", "BO394");
         
         INSERT INTO Order_Items
-        VALUES("IT192", "OD152", "BO860");
+        VALUES("IT192", "OD214", "BO935");
         
         INSERT INTO Order_Items
-        VALUES("IT193", "OD027", "BO863");
+        VALUES("IT193", "OD178", "BO968");
         
         INSERT INTO Order_Items
-        VALUES("IT194", "OD161", "BO488");
+        VALUES("IT194", "OD028", "BO734");
         
         INSERT INTO Order_Items
-        VALUES("IT195", "OD162", "BO476");
+        VALUES("IT195", "OD080", "BO732");
         
         INSERT INTO Order_Items
-        VALUES("IT196", "OD070", "BO894");
+        VALUES("IT196", "OD017", "BO381");
         
         INSERT INTO Order_Items
-        VALUES("IT197", "OD054", "BO999");
+        VALUES("IT197", "OD210", "BO625");
         
         INSERT INTO Order_Items
-        VALUES("IT198", "OD009", "BO123");
+        VALUES("IT198", "OD048", "BO826");
         
         INSERT INTO Order_Items
-        VALUES("IT199", "OD232", "BO371");
+        VALUES("IT199", "OD067", "BO380");
         
         INSERT INTO Order_Items
-        VALUES("IT200", "OD167", "BO458");
+        VALUES("IT200", "OD129", "BO770");
         
         INSERT INTO Order_Items
-        VALUES("IT201", "OD231", "BO770");
+        VALUES("IT201", "OD217", "BO051");
         
         INSERT INTO Order_Items
-        VALUES("IT202", "OD089", "BO156");
+        VALUES("IT202", "OD020", "BO929");
         
         INSERT INTO Order_Items
-        VALUES("IT203", "OD140", "BO607");
+        VALUES("IT203", "OD098", "BO216");
         
         INSERT INTO Order_Items
-        VALUES("IT204", "OD246", "BO924");
+        VALUES("IT204", "OD005", "BO090");
         
         INSERT INTO Order_Items
-        VALUES("IT205", "OD214", "BO396");
+        VALUES("IT205", "OD021", "BO038");
         
         INSERT INTO Order_Items
-        VALUES("IT206", "OD190", "BO027");
+        VALUES("IT206", "OD137", "BO293");
         
         INSERT INTO Order_Items
-        VALUES("IT207", "OD059", "BO028");
+        VALUES("IT207", "OD081", "BO954");
         
         INSERT INTO Order_Items
-        VALUES("IT208", "OD202", "BO353");
+        VALUES("IT208", "OD166", "BO292");
         
         INSERT INTO Order_Items
-        VALUES("IT209", "OD211", "BO840");
+        VALUES("IT209", "OD207", "BO897");
         
         INSERT INTO Order_Items
-        VALUES("IT210", "OD226", "BO996");
+        VALUES("IT210", "OD176", "BO055");
         
         INSERT INTO Order_Items
-        VALUES("IT211", "OD085", "BO276");
+        VALUES("IT211", "OD114", "BO993");
         
         INSERT INTO Order_Items
-        VALUES("IT212", "OD113", "BO310");
+        VALUES("IT212", "OD057", "BO212");
         
         INSERT INTO Order_Items
-        VALUES("IT213", "OD124", "BO565");
+        VALUES("IT213", "OD038", "BO566");
         
         INSERT INTO Order_Items
-        VALUES("IT214", "OD237", "BO588");
+        VALUES("IT214", "OD001", "BO870");
         
         INSERT INTO Order_Items
-        VALUES("IT215", "OD242", "BO144");
+        VALUES("IT215", "OD006", "BO598");
         
         INSERT INTO Order_Items
-        VALUES("IT216", "OD093", "BO986");
+        VALUES("IT216", "OD182", "BO802");
         
         INSERT INTO Order_Items
-        VALUES("IT217", "OD119", "BO285");
+        VALUES("IT217", "OD030", "BO394");
         
         INSERT INTO Order_Items
-        VALUES("IT218", "OD000", "BO900");
+        VALUES("IT218", "OD188", "BO703");
         
         INSERT INTO Order_Items
-        VALUES("IT219", "OD123", "BO122");
+        VALUES("IT219", "OD090", "BO495");
         
         INSERT INTO Order_Items
-        VALUES("IT220", "OD141", "BO815");
+        VALUES("IT220", "OD021", "BO493");
         
         INSERT INTO Order_Items
-        VALUES("IT221", "OD112", "BO251");
+        VALUES("IT221", "OD183", "BO012");
         
         INSERT INTO Order_Items
-        VALUES("IT222", "OD232", "BO596");
+        VALUES("IT222", "OD016", "BO926");
         
         INSERT INTO Order_Items
-        VALUES("IT223", "OD231", "BO506");
+        VALUES("IT223", "OD238", "BO299");
         
         INSERT INTO Order_Items
-        VALUES("IT224", "OD077", "BO467");
+        VALUES("IT224", "OD019", "BO208");
         
         INSERT INTO Order_Items
-        VALUES("IT225", "OD212", "BO268");
+        VALUES("IT225", "OD084", "BO562");
         
         INSERT INTO Order_Items
-        VALUES("IT226", "OD187", "BO531");
+        VALUES("IT226", "OD159", "BO054");
         
         INSERT INTO Order_Items
-        VALUES("IT227", "OD186", "BO060");
+        VALUES("IT227", "OD209", "BO107");
         
         INSERT INTO Order_Items
-        VALUES("IT228", "OD191", "BO449");
+        VALUES("IT228", "OD162", "BO695");
         
         INSERT INTO Order_Items
-        VALUES("IT229", "OD107", "BO350");
+        VALUES("IT229", "OD074", "BO579");
         
         INSERT INTO Order_Items
-        VALUES("IT230", "OD135", "BO728");
+        VALUES("IT230", "OD158", "BO650");
         
         INSERT INTO Order_Items
-        VALUES("IT231", "OD112", "BO369");
+        VALUES("IT231", "OD076", "BO521");
         
         INSERT INTO Order_Items
-        VALUES("IT232", "OD008", "BO129");
+        VALUES("IT232", "OD029", "BO444");
         
         INSERT INTO Order_Items
-        VALUES("IT233", "OD008", "BO618");
+        VALUES("IT233", "OD151", "BO352");
         
         INSERT INTO Order_Items
-        VALUES("IT234", "OD127", "BO040");
+        VALUES("IT234", "OD044", "BO780");
         
         INSERT INTO Order_Items
-        VALUES("IT235", "OD122", "BO895");
+        VALUES("IT235", "OD077", "BO852");
         
         INSERT INTO Order_Items
-        VALUES("IT236", "OD138", "BO762");
+        VALUES("IT236", "OD127", "BO625");
         
         INSERT INTO Order_Items
-        VALUES("IT237", "OD103", "BO465");
+        VALUES("IT237", "OD205", "BO356");
         
         INSERT INTO Order_Items
-        VALUES("IT238", "OD189", "BO269");
+        VALUES("IT238", "OD033", "BO099");
         
         INSERT INTO Order_Items
-        VALUES("IT239", "OD139", "BO113");
+        VALUES("IT239", "OD158", "BO610");
         
         INSERT INTO Order_Items
-        VALUES("IT240", "OD141", "BO989");
+        VALUES("IT240", "OD158", "BO718");
         
         INSERT INTO Order_Items
-        VALUES("IT241", "OD015", "BO313");
+        VALUES("IT241", "OD070", "BO440");
         
         INSERT INTO Order_Items
-        VALUES("IT242", "OD130", "BO389");
+        VALUES("IT242", "OD189", "BO952");
         
         INSERT INTO Order_Items
-        VALUES("IT243", "OD137", "BO598");
+        VALUES("IT243", "OD004", "BO723");
         
         INSERT INTO Order_Items
-        VALUES("IT244", "OD137", "BO944");
+        VALUES("IT244", "OD045", "BO334");
         
         INSERT INTO Order_Items
-        VALUES("IT245", "OD040", "BO714");
+        VALUES("IT245", "OD159", "BO586");
         
         INSERT INTO Order_Items
-        VALUES("IT246", "OD189", "BO754");
+        VALUES("IT246", "OD107", "BO812");
         
         INSERT INTO Order_Items
-        VALUES("IT247", "OD235", "BO829");
+        VALUES("IT247", "OD071", "BO966");
         
         INSERT INTO Order_Items
-        VALUES("IT248", "OD167", "BO200");
+        VALUES("IT248", "OD013", "BO538");
         
         INSERT INTO Order_Items
-        VALUES("IT249", "OD164", "BO581");
+        VALUES("IT249", "OD148", "BO171");
         
         INSERT INTO Order_Items
-        VALUES("IT250", "OD058", "BO424");
+        VALUES("IT250", "OD161", "BO968");
         
         INSERT INTO Order_Items
-        VALUES("IT251", "OD072", "BO016");
+        VALUES("IT251", "OD047", "BO479");
         
         INSERT INTO Order_Items
-        VALUES("IT252", "OD200", "BO627");
+        VALUES("IT252", "OD115", "BO342");
         
         INSERT INTO Order_Items
-        VALUES("IT253", "OD033", "BO837");
+        VALUES("IT253", "OD165", "BO204");
         
         INSERT INTO Order_Items
-        VALUES("IT254", "OD242", "BO842");
+        VALUES("IT254", "OD119", "BO877");
         
         INSERT INTO Order_Items
-        VALUES("IT255", "OD204", "BO116");
+        VALUES("IT255", "OD201", "BO363");
         
         INSERT INTO Order_Items
-        VALUES("IT256", "OD140", "BO574");
+        VALUES("IT256", "OD091", "BO699");
         
         INSERT INTO Order_Items
-        VALUES("IT257", "OD012", "BO559");
+        VALUES("IT257", "OD137", "BO868");
         
         INSERT INTO Order_Items
-        VALUES("IT258", "OD244", "BO899");
+        VALUES("IT258", "OD197", "BO100");
         
         INSERT INTO Order_Items
-        VALUES("IT259", "OD073", "BO991");
+        VALUES("IT259", "OD000", "BO335");
         
         INSERT INTO Order_Items
-        VALUES("IT260", "OD215", "BO966");
+        VALUES("IT260", "OD199", "BO866");
         
         INSERT INTO Order_Items
-        VALUES("IT261", "OD182", "BO146");
+        VALUES("IT261", "OD153", "BO956");
         
         INSERT INTO Order_Items
-        VALUES("IT262", "OD025", "BO780");
+        VALUES("IT262", "OD059", "BO920");
         
         INSERT INTO Order_Items
-        VALUES("IT263", "OD233", "BO846");
+        VALUES("IT263", "OD226", "BO506");
         
         INSERT INTO Order_Items
-        VALUES("IT264", "OD219", "BO442");
+        VALUES("IT264", "OD196", "BO689");
         
         INSERT INTO Order_Items
-        VALUES("IT265", "OD238", "BO322");
+        VALUES("IT265", "OD036", "BO777");
         
         INSERT INTO Order_Items
-        VALUES("IT266", "OD098", "BO319");
+        VALUES("IT266", "OD135", "BO267");
         
         INSERT INTO Order_Items
-        VALUES("IT267", "OD018", "BO481");
+        VALUES("IT267", "OD193", "BO490");
         
         INSERT INTO Order_Items
-        VALUES("IT268", "OD086", "BO325");
+        VALUES("IT268", "OD060", "BO884");
         
         INSERT INTO Order_Items
-        VALUES("IT269", "OD043", "BO354");
+        VALUES("IT269", "OD080", "BO845");
         
         INSERT INTO Order_Items
-        VALUES("IT270", "OD038", "BO076");
+        VALUES("IT270", "OD070", "BO874");
         
         INSERT INTO Order_Items
-        VALUES("IT271", "OD157", "BO670");
+        VALUES("IT271", "OD078", "BO395");
         
         INSERT INTO Order_Items
-        VALUES("IT272", "OD213", "BO368");
+        VALUES("IT272", "OD232", "BO382");
         
         INSERT INTO Order_Items
-        VALUES("IT273", "OD076", "BO046");
+        VALUES("IT273", "OD028", "BO076");
         
         INSERT INTO Order_Items
-        VALUES("IT274", "OD023", "BO536");
+        VALUES("IT274", "OD136", "BO901");
         
         INSERT INTO Order_Items
-        VALUES("IT275", "OD063", "BO691");
+        VALUES("IT275", "OD246", "BO180");
         
         INSERT INTO Order_Items
-        VALUES("IT276", "OD123", "BO459");
+        VALUES("IT276", "OD037", "BO111");
         
         INSERT INTO Order_Items
-        VALUES("IT277", "OD118", "BO347");
+        VALUES("IT277", "OD001", "BO098");
         
         INSERT INTO Order_Items
-        VALUES("IT278", "OD248", "BO951");
+        VALUES("IT278", "OD118", "BO825");
         
         INSERT INTO Order_Items
-        VALUES("IT279", "OD226", "BO979");
+        VALUES("IT279", "OD238", "BO656");
         
         INSERT INTO Order_Items
-        VALUES("IT280", "OD045", "BO744");
+        VALUES("IT280", "OD078", "BO122");
         
         INSERT INTO Order_Items
-        VALUES("IT281", "OD077", "BO597");
+        VALUES("IT281", "OD059", "BO467");
         
         INSERT INTO Order_Items
-        VALUES("IT282", "OD135", "BO649");
+        VALUES("IT282", "OD094", "BO041");
         
         INSERT INTO Order_Items
-        VALUES("IT283", "OD038", "BO498");
+        VALUES("IT283", "OD172", "BO019");
         
         INSERT INTO Order_Items
-        VALUES("IT284", "OD147", "BO081");
+        VALUES("IT284", "OD200", "BO998");
         
         INSERT INTO Order_Items
-        VALUES("IT285", "OD092", "BO643");
+        VALUES("IT285", "OD233", "BO763");
         
         INSERT INTO Order_Items
-        VALUES("IT286", "OD204", "BO898");
+        VALUES("IT286", "OD007", "BO806");
         
         INSERT INTO Order_Items
-        VALUES("IT287", "OD116", "BO081");
+        VALUES("IT287", "OD246", "BO842");
         
         INSERT INTO Order_Items
-        VALUES("IT288", "OD245", "BO763");
+        VALUES("IT288", "OD024", "BO614");
         
         INSERT INTO Order_Items
-        VALUES("IT289", "OD246", "BO943");
+        VALUES("IT289", "OD191", "BO658");
         
         INSERT INTO Order_Items
-        VALUES("IT290", "OD158", "BO620");
+        VALUES("IT290", "OD028", "BO241");
         
         INSERT INTO Order_Items
-        VALUES("IT291", "OD228", "BO940");
+        VALUES("IT291", "OD195", "BO106");
         
         INSERT INTO Order_Items
-        VALUES("IT292", "OD114", "BO092");
+        VALUES("IT292", "OD169", "BO801");
         
         INSERT INTO Order_Items
-        VALUES("IT293", "OD088", "BO747");
+        VALUES("IT293", "OD018", "BO211");
         
         INSERT INTO Order_Items
-        VALUES("IT294", "OD070", "BO055");
+        VALUES("IT294", "OD008", "BO343");
         
         INSERT INTO Order_Items
-        VALUES("IT295", "OD059", "BO752");
+        VALUES("IT295", "OD179", "BO013");
         
         INSERT INTO Order_Items
-        VALUES("IT296", "OD196", "BO806");
+        VALUES("IT296", "OD187", "BO027");
         
         INSERT INTO Order_Items
-        VALUES("IT297", "OD008", "BO826");
+        VALUES("IT297", "OD077", "BO447");
         
         INSERT INTO Order_Items
-        VALUES("IT298", "OD178", "BO032");
+        VALUES("IT298", "OD152", "BO812");
         
         INSERT INTO Order_Items
-        VALUES("IT299", "OD155", "BO503");
+        VALUES("IT299", "OD140", "BO217");
         
         INSERT INTO Order_Items
-        VALUES("IT300", "OD238", "BO281");
+        VALUES("IT300", "OD175", "BO510");
         
         INSERT INTO Order_Items
-        VALUES("IT301", "OD145", "BO631");
+        VALUES("IT301", "OD083", "BO467");
         
         INSERT INTO Order_Items
-        VALUES("IT302", "OD203", "BO858");
+        VALUES("IT302", "OD079", "BO818");
         
         INSERT INTO Order_Items
-        VALUES("IT303", "OD081", "BO289");
+        VALUES("IT303", "OD181", "BO293");
         
         INSERT INTO Order_Items
-        VALUES("IT304", "OD051", "BO170");
+        VALUES("IT304", "OD048", "BO005");
         
         INSERT INTO Order_Items
-        VALUES("IT305", "OD014", "BO764");
+        VALUES("IT305", "OD029", "BO288");
         
         INSERT INTO Order_Items
-        VALUES("IT306", "OD194", "BO575");
+        VALUES("IT306", "OD167", "BO991");
         
         INSERT INTO Order_Items
-        VALUES("IT307", "OD046", "BO631");
+        VALUES("IT307", "OD168", "BO530");
         
         INSERT INTO Order_Items
-        VALUES("IT308", "OD116", "BO083");
+        VALUES("IT308", "OD156", "BO380");
         
         INSERT INTO Order_Items
-        VALUES("IT309", "OD101", "BO599");
+        VALUES("IT309", "OD245", "BO603");
         
         INSERT INTO Order_Items
-        VALUES("IT310", "OD091", "BO250");
+        VALUES("IT310", "OD243", "BO925");
         
         INSERT INTO Order_Items
-        VALUES("IT311", "OD110", "BO403");
+        VALUES("IT311", "OD035", "BO986");
         
         INSERT INTO Order_Items
-        VALUES("IT312", "OD128", "BO946");
+        VALUES("IT312", "OD224", "BO340");
         
         INSERT INTO Order_Items
-        VALUES("IT313", "OD185", "BO150");
+        VALUES("IT313", "OD171", "BO506");
         
         INSERT INTO Order_Items
-        VALUES("IT314", "OD098", "BO589");
+        VALUES("IT314", "OD038", "BO506");
         
         INSERT INTO Order_Items
-        VALUES("IT315", "OD189", "BO114");
+        VALUES("IT315", "OD009", "BO590");
         
         INSERT INTO Order_Items
-        VALUES("IT316", "OD157", "BO258");
+        VALUES("IT316", "OD027", "BO392");
         
         INSERT INTO Order_Items
-        VALUES("IT317", "OD122", "BO775");
+        VALUES("IT317", "OD123", "BO430");
         
         INSERT INTO Order_Items
-        VALUES("IT318", "OD048", "BO185");
+        VALUES("IT318", "OD126", "BO098");
         
         INSERT INTO Order_Items
-        VALUES("IT319", "OD018", "BO346");
+        VALUES("IT319", "OD061", "BO814");
         
         INSERT INTO Order_Items
-        VALUES("IT320", "OD151", "BO892");
+        VALUES("IT320", "OD050", "BO982");
         
         INSERT INTO Order_Items
-        VALUES("IT321", "OD146", "BO764");
+        VALUES("IT321", "OD073", "BO032");
         
         INSERT INTO Order_Items
-        VALUES("IT322", "OD211", "BO521");
+        VALUES("IT322", "OD208", "BO816");
         
         INSERT INTO Order_Items
-        VALUES("IT323", "OD027", "BO166");
+        VALUES("IT323", "OD219", "BO731");
         
         INSERT INTO Order_Items
-        VALUES("IT324", "OD196", "BO954");
+        VALUES("IT324", "OD134", "BO195");
         
         INSERT INTO Order_Items
-        VALUES("IT325", "OD233", "BO799");
+        VALUES("IT325", "OD086", "BO215");
         
         INSERT INTO Order_Items
-        VALUES("IT326", "OD074", "BO655");
+        VALUES("IT326", "OD040", "BO587");
         
         INSERT INTO Order_Items
-        VALUES("IT327", "OD130", "BO149");
+        VALUES("IT327", "OD156", "BO200");
         
         INSERT INTO Order_Items
-        VALUES("IT328", "OD161", "BO965");
+        VALUES("IT328", "OD049", "BO099");
         
         INSERT INTO Order_Items
-        VALUES("IT329", "OD081", "BO907");
+        VALUES("IT329", "OD061", "BO238");
         
         INSERT INTO Order_Items
-        VALUES("IT330", "OD215", "BO299");
+        VALUES("IT330", "OD212", "BO358");
         
         INSERT INTO Order_Items
-        VALUES("IT331", "OD171", "BO897");
+        VALUES("IT331", "OD167", "BO334");
         
         INSERT INTO Order_Items
-        VALUES("IT332", "OD079", "BO706");
+        VALUES("IT332", "OD246", "BO590");
         
         INSERT INTO Order_Items
-        VALUES("IT333", "OD178", "BO778");
+        VALUES("IT333", "OD201", "BO942");
         
         INSERT INTO Order_Items
-        VALUES("IT334", "OD170", "BO039");
+        VALUES("IT334", "OD134", "BO126");
         
         INSERT INTO Order_Items
-        VALUES("IT335", "OD078", "BO735");
+        VALUES("IT335", "OD078", "BO148");
         
         INSERT INTO Order_Items
-        VALUES("IT336", "OD126", "BO069");
+        VALUES("IT336", "OD143", "BO387");
         
         INSERT INTO Order_Items
-        VALUES("IT337", "OD043", "BO600");
+        VALUES("IT337", "OD026", "BO868");
         
         INSERT INTO Order_Items
-        VALUES("IT338", "OD117", "BO822");
+        VALUES("IT338", "OD075", "BO888");
         
         INSERT INTO Order_Items
-        VALUES("IT339", "OD035", "BO232");
+        VALUES("IT339", "OD020", "BO586");
         
         INSERT INTO Order_Items
-        VALUES("IT340", "OD180", "BO007");
+        VALUES("IT340", "OD023", "BO246");
         
         INSERT INTO Order_Items
-        VALUES("IT341", "OD003", "BO259");
+        VALUES("IT341", "OD111", "BO946");
         
         INSERT INTO Order_Items
-        VALUES("IT342", "OD208", "BO361");
+        VALUES("IT342", "OD228", "BO155");
         
         INSERT INTO Order_Items
-        VALUES("IT343", "OD220", "BO059");
+        VALUES("IT343", "OD002", "BO463");
         
         INSERT INTO Order_Items
-        VALUES("IT344", "OD113", "BO818");
+        VALUES("IT344", "OD096", "BO549");
         
         INSERT INTO Order_Items
-        VALUES("IT345", "OD094", "BO358");
+        VALUES("IT345", "OD196", "BO057");
         
         INSERT INTO Order_Items
-        VALUES("IT346", "OD164", "BO689");
+        VALUES("IT346", "OD097", "BO465");
         
         INSERT INTO Order_Items
-        VALUES("IT347", "OD059", "BO332");
+        VALUES("IT347", "OD104", "BO261");
         
         INSERT INTO Order_Items
-        VALUES("IT348", "OD218", "BO004");
+        VALUES("IT348", "OD103", "BO756");
         
         INSERT INTO Order_Items
-        VALUES("IT349", "OD208", "BO180");
+        VALUES("IT349", "OD192", "BO433");
         
         INSERT INTO Order_Items
-        VALUES("IT350", "OD248", "BO460");
+        VALUES("IT350", "OD189", "BO018");
         
         INSERT INTO Order_Items
-        VALUES("IT351", "OD041", "BO920");
+        VALUES("IT351", "OD122", "BO782");
         
         INSERT INTO Order_Items
-        VALUES("IT352", "OD039", "BO423");
+        VALUES("IT352", "OD120", "BO243");
         
         INSERT INTO Order_Items
-        VALUES("IT353", "OD115", "BO762");
+        VALUES("IT353", "OD024", "BO127");
         
         INSERT INTO Order_Items
-        VALUES("IT354", "OD240", "BO257");
+        VALUES("IT354", "OD062", "BO881");
         
         INSERT INTO Order_Items
-        VALUES("IT355", "OD237", "BO037");
+        VALUES("IT355", "OD049", "BO441");
         
         INSERT INTO Order_Items
-        VALUES("IT356", "OD194", "BO555");
+        VALUES("IT356", "OD127", "BO807");
         
         INSERT INTO Order_Items
-        VALUES("IT357", "OD204", "BO405");
+        VALUES("IT357", "OD128", "BO859");
         
         INSERT INTO Order_Items
-        VALUES("IT358", "OD200", "BO813");
+        VALUES("IT358", "OD039", "BO286");
         
         INSERT INTO Order_Items
-        VALUES("IT359", "OD206", "BO516");
+        VALUES("IT359", "OD218", "BO993");
         
         INSERT INTO Order_Items
-        VALUES("IT360", "OD061", "BO656");
+        VALUES("IT360", "OD137", "BO197");
         
         INSERT INTO Order_Items
-        VALUES("IT361", "OD184", "BO072");
+        VALUES("IT361", "OD049", "BO489");
         
         INSERT INTO Order_Items
-        VALUES("IT362", "OD148", "BO753");
+        VALUES("IT362", "OD219", "BO047");
         
         INSERT INTO Order_Items
-        VALUES("IT363", "OD068", "BO528");
+        VALUES("IT363", "OD049", "BO145");
         
         INSERT INTO Order_Items
-        VALUES("IT364", "OD162", "BO290");
+        VALUES("IT364", "OD117", "BO945");
         
         INSERT INTO Order_Items
-        VALUES("IT365", "OD107", "BO287");
+        VALUES("IT365", "OD097", "BO162");
         
         INSERT INTO Order_Items
-        VALUES("IT366", "OD155", "BO782");
+        VALUES("IT366", "OD213", "BO238");
         
         INSERT INTO Order_Items
-        VALUES("IT367", "OD226", "BO178");
+        VALUES("IT367", "OD143", "BO176");
         
         INSERT INTO Order_Items
-        VALUES("IT368", "OD123", "BO924");
+        VALUES("IT368", "OD108", "BO782");
         
         INSERT INTO Order_Items
-        VALUES("IT369", "OD182", "BO317");
+        VALUES("IT369", "OD100", "BO163");
         
         INSERT INTO Order_Items
-        VALUES("IT370", "OD131", "BO960");
+        VALUES("IT370", "OD108", "BO293");
         
         INSERT INTO Order_Items
-        VALUES("IT371", "OD102", "BO633");
+        VALUES("IT371", "OD202", "BO581");
         
         INSERT INTO Order_Items
-        VALUES("IT372", "OD134", "BO405");
+        VALUES("IT372", "OD186", "BO131");
         
         INSERT INTO Order_Items
-        VALUES("IT373", "OD213", "BO286");
+        VALUES("IT373", "OD207", "BO208");
         
         INSERT INTO Order_Items
-        VALUES("IT374", "OD151", "BO277");
+        VALUES("IT374", "OD148", "BO863");
         
         INSERT INTO Order_Items
-        VALUES("IT375", "OD184", "BO489");
+        VALUES("IT375", "OD244", "BO695");
         
         INSERT INTO Order_Items
-        VALUES("IT376", "OD109", "BO095");
+        VALUES("IT376", "OD051", "BO704");
         
         INSERT INTO Order_Items
-        VALUES("IT377", "OD172", "BO097");
+        VALUES("IT377", "OD176", "BO257");
         
         INSERT INTO Order_Items
-        VALUES("IT378", "OD013", "BO796");
+        VALUES("IT378", "OD080", "BO663");
         
         INSERT INTO Order_Items
-        VALUES("IT379", "OD163", "BO817");
+        VALUES("IT379", "OD199", "BO504");
         
         INSERT INTO Order_Items
-        VALUES("IT380", "OD130", "BO182");
+        VALUES("IT380", "OD043", "BO786");
         
         INSERT INTO Order_Items
-        VALUES("IT381", "OD002", "BO083");
+        VALUES("IT381", "OD149", "BO439");
         
         INSERT INTO Order_Items
-        VALUES("IT382", "OD227", "BO140");
+        VALUES("IT382", "OD095", "BO782");
         
         INSERT INTO Order_Items
-        VALUES("IT383", "OD175", "BO398");
+        VALUES("IT383", "OD058", "BO978");
         
         INSERT INTO Order_Items
-        VALUES("IT384", "OD185", "BO250");
+        VALUES("IT384", "OD201", "BO944");
         
         INSERT INTO Order_Items
-        VALUES("IT385", "OD128", "BO781");
+        VALUES("IT385", "OD108", "BO913");
         
         INSERT INTO Order_Items
-        VALUES("IT386", "OD169", "BO221");
+        VALUES("IT386", "OD245", "BO117");
         
         INSERT INTO Order_Items
-        VALUES("IT387", "OD035", "BO748");
+        VALUES("IT387", "OD214", "BO664");
         
         INSERT INTO Order_Items
-        VALUES("IT388", "OD102", "BO666");
+        VALUES("IT388", "OD040", "BO069");
         
         INSERT INTO Order_Items
-        VALUES("IT389", "OD017", "BO547");
+        VALUES("IT389", "OD053", "BO431");
         
         INSERT INTO Order_Items
-        VALUES("IT390", "OD243", "BO949");
+        VALUES("IT390", "OD011", "BO557");
         
         INSERT INTO Order_Items
-        VALUES("IT391", "OD163", "BO161");
+        VALUES("IT391", "OD198", "BO603");
         
         INSERT INTO Order_Items
-        VALUES("IT392", "OD113", "BO549");
+        VALUES("IT392", "OD171", "BO729");
         
         INSERT INTO Order_Items
-        VALUES("IT393", "OD057", "BO507");
+        VALUES("IT393", "OD105", "BO948");
         
         INSERT INTO Order_Items
-        VALUES("IT394", "OD174", "BO404");
+        VALUES("IT394", "OD158", "BO308");
         
         INSERT INTO Order_Items
-        VALUES("IT395", "OD218", "BO462");
+        VALUES("IT395", "OD169", "BO967");
         
         INSERT INTO Order_Items
-        VALUES("IT396", "OD225", "BO740");
+        VALUES("IT396", "OD091", "BO938");
         
         INSERT INTO Order_Items
-        VALUES("IT397", "OD126", "BO887");
+        VALUES("IT397", "OD092", "BO539");
         
         INSERT INTO Order_Items
-        VALUES("IT398", "OD239", "BO519");
+        VALUES("IT398", "OD129", "BO974");
         
         INSERT INTO Order_Items
-        VALUES("IT399", "OD109", "BO359");
+        VALUES("IT399", "OD108", "BO689");
         
         INSERT INTO Order_Items
-        VALUES("IT400", "OD181", "BO932");
+        VALUES("IT400", "OD001", "BO445");
         
         INSERT INTO Order_Items
-        VALUES("IT401", "OD107", "BO070");
+        VALUES("IT401", "OD100", "BO565");
         
         INSERT INTO Order_Items
-        VALUES("IT402", "OD039", "BO946");
+        VALUES("IT402", "OD079", "BO841");
         
         INSERT INTO Order_Items
-        VALUES("IT403", "OD204", "BO368");
+        VALUES("IT403", "OD158", "BO481");
         
         INSERT INTO Order_Items
-        VALUES("IT404", "OD035", "BO204");
+        VALUES("IT404", "OD145", "BO318");
         
         INSERT INTO Order_Items
-        VALUES("IT405", "OD180", "BO939");
+        VALUES("IT405", "OD167", "BO352");
         
         INSERT INTO Order_Items
-        VALUES("IT406", "OD164", "BO147");
+        VALUES("IT406", "OD031", "BO726");
         
         INSERT INTO Order_Items
-        VALUES("IT407", "OD059", "BO655");
+        VALUES("IT407", "OD186", "BO178");
         
         INSERT INTO Order_Items
-        VALUES("IT408", "OD174", "BO764");
+        VALUES("IT408", "OD159", "BO152");
         
         INSERT INTO Order_Items
-        VALUES("IT409", "OD077", "BO189");
+        VALUES("IT409", "OD188", "BO619");
         
         INSERT INTO Order_Items
-        VALUES("IT410", "OD215", "BO074");
+        VALUES("IT410", "OD005", "BO890");
         
         INSERT INTO Order_Items
-        VALUES("IT411", "OD134", "BO507");
+        VALUES("IT411", "OD168", "BO042");
         
         INSERT INTO Order_Items
-        VALUES("IT412", "OD167", "BO337");
+        VALUES("IT412", "OD080", "BO811");
         
         INSERT INTO Order_Items
-        VALUES("IT413", "OD227", "BO785");
+        VALUES("IT413", "OD160", "BO213");
         
         INSERT INTO Order_Items
-        VALUES("IT414", "OD105", "BO864");
+        VALUES("IT414", "OD101", "BO465");
         
         INSERT INTO Order_Items
-        VALUES("IT415", "OD072", "BO117");
+        VALUES("IT415", "OD096", "BO056");
         
         INSERT INTO Order_Items
-        VALUES("IT416", "OD095", "BO297");
+        VALUES("IT416", "OD025", "BO515");
         
         INSERT INTO Order_Items
-        VALUES("IT417", "OD083", "BO042");
+        VALUES("IT417", "OD199", "BO454");
         
         INSERT INTO Order_Items
-        VALUES("IT418", "OD017", "BO419");
+        VALUES("IT418", "OD160", "BO351");
         
         INSERT INTO Order_Items
-        VALUES("IT419", "OD216", "BO696");
+        VALUES("IT419", "OD083", "BO582");
         
         INSERT INTO Order_Items
-        VALUES("IT420", "OD164", "BO613");
+        VALUES("IT420", "OD106", "BO482");
         
         INSERT INTO Order_Items
-        VALUES("IT421", "OD003", "BO461");
+        VALUES("IT421", "OD047", "BO491");
         
         INSERT INTO Order_Items
-        VALUES("IT422", "OD010", "BO400");
+        VALUES("IT422", "OD103", "BO733");
         
         INSERT INTO Order_Items
-        VALUES("IT423", "OD056", "BO196");
+        VALUES("IT423", "OD213", "BO122");
         
         INSERT INTO Order_Items
-        VALUES("IT424", "OD018", "BO694");
+        VALUES("IT424", "OD011", "BO272");
         
         INSERT INTO Order_Items
-        VALUES("IT425", "OD247", "BO717");
+        VALUES("IT425", "OD220", "BO951");
         
         INSERT INTO Order_Items
-        VALUES("IT426", "OD066", "BO358");
+        VALUES("IT426", "OD126", "BO000");
         
         INSERT INTO Order_Items
-        VALUES("IT427", "OD248", "BO247");
+        VALUES("IT427", "OD053", "BO390");
         
         INSERT INTO Order_Items
-        VALUES("IT428", "OD108", "BO901");
+        VALUES("IT428", "OD086", "BO801");
         
         INSERT INTO Order_Items
-        VALUES("IT429", "OD183", "BO963");
+        VALUES("IT429", "OD217", "BO946");
         
         INSERT INTO Order_Items
-        VALUES("IT430", "OD165", "BO115");
+        VALUES("IT430", "OD117", "BO431");
         
         INSERT INTO Order_Items
-        VALUES("IT431", "OD104", "BO804");
+        VALUES("IT431", "OD108", "BO915");
         
         INSERT INTO Order_Items
-        VALUES("IT432", "OD123", "BO140");
+        VALUES("IT432", "OD116", "BO032");
         
         INSERT INTO Order_Items
-        VALUES("IT433", "OD054", "BO877");
+        VALUES("IT433", "OD052", "BO478");
         
         INSERT INTO Order_Items
-        VALUES("IT434", "OD122", "BO155");
+        VALUES("IT434", "OD094", "BO203");
         
         INSERT INTO Order_Items
-        VALUES("IT435", "OD073", "BO767");
+        VALUES("IT435", "OD026", "BO571");
         
         INSERT INTO Order_Items
-        VALUES("IT436", "OD163", "BO297");
+        VALUES("IT436", "OD078", "BO859");
         
         INSERT INTO Order_Items
-        VALUES("IT437", "OD205", "BO062");
+        VALUES("IT437", "OD045", "BO056");
         
         INSERT INTO Order_Items
-        VALUES("IT438", "OD239", "BO378");
+        VALUES("IT438", "OD005", "BO140");
         
         INSERT INTO Order_Items
-        VALUES("IT439", "OD086", "BO287");
+        VALUES("IT439", "OD005", "BO390");
         
         INSERT INTO Order_Items
-        VALUES("IT440", "OD024", "BO051");
+        VALUES("IT440", "OD100", "BO959");
         
         INSERT INTO Order_Items
-        VALUES("IT441", "OD107", "BO039");
+        VALUES("IT441", "OD239", "BO736");
         
         INSERT INTO Order_Items
-        VALUES("IT442", "OD156", "BO584");
+        VALUES("IT442", "OD174", "BO528");
         
         INSERT INTO Order_Items
-        VALUES("IT443", "OD078", "BO458");
+        VALUES("IT443", "OD225", "BO751");
         
         INSERT INTO Order_Items
-        VALUES("IT444", "OD022", "BO256");
+        VALUES("IT444", "OD166", "BO545");
         
         INSERT INTO Order_Items
-        VALUES("IT445", "OD140", "BO087");
+        VALUES("IT445", "OD066", "BO406");
         
         INSERT INTO Order_Items
-        VALUES("IT446", "OD167", "BO802");
+        VALUES("IT446", "OD038", "BO515");
         
         INSERT INTO Order_Items
-        VALUES("IT447", "OD003", "BO996");
+        VALUES("IT447", "OD194", "BO713");
         
         INSERT INTO Order_Items
-        VALUES("IT448", "OD218", "BO435");
+        VALUES("IT448", "OD105", "BO249");
         
         INSERT INTO Order_Items
-        VALUES("IT449", "OD047", "BO851");
+        VALUES("IT449", "OD237", "BO847");
         
         INSERT INTO Order_Items
-        VALUES("IT450", "OD112", "BO562");
+        VALUES("IT450", "OD168", "BO738");
         
         INSERT INTO Order_Items
-        VALUES("IT451", "OD054", "BO847");
+        VALUES("IT451", "OD092", "BO958");
         
         INSERT INTO Order_Items
-        VALUES("IT452", "OD221", "BO811");
+        VALUES("IT452", "OD093", "BO138");
         
         INSERT INTO Order_Items
-        VALUES("IT453", "OD100", "BO158");
+        VALUES("IT453", "OD009", "BO434");
         
         INSERT INTO Order_Items
-        VALUES("IT454", "OD226", "BO383");
+        VALUES("IT454", "OD196", "BO809");
         
         INSERT INTO Order_Items
-        VALUES("IT455", "OD025", "BO611");
+        VALUES("IT455", "OD152", "BO320");
         
         INSERT INTO Order_Items
-        VALUES("IT456", "OD094", "BO855");
+        VALUES("IT456", "OD099", "BO556");
         
         INSERT INTO Order_Items
-        VALUES("IT457", "OD026", "BO437");
+        VALUES("IT457", "OD055", "BO024");
         
         INSERT INTO Order_Items
-        VALUES("IT458", "OD204", "BO244");
+        VALUES("IT458", "OD080", "BO782");
         
         INSERT INTO Order_Items
-        VALUES("IT459", "OD058", "BO356");
+        VALUES("IT459", "OD188", "BO868");
         
         INSERT INTO Order_Items
-        VALUES("IT460", "OD069", "BO693");
+        VALUES("IT460", "OD208", "BO107");
         
         INSERT INTO Order_Items
-        VALUES("IT461", "OD093", "BO903");
+        VALUES("IT461", "OD189", "BO229");
         
         INSERT INTO Order_Items
-        VALUES("IT462", "OD141", "BO136");
+        VALUES("IT462", "OD189", "BO695");
         
         INSERT INTO Order_Items
-        VALUES("IT463", "OD055", "BO822");
+        VALUES("IT463", "OD171", "BO321");
         
         INSERT INTO Order_Items
-        VALUES("IT464", "OD016", "BO622");
+        VALUES("IT464", "OD025", "BO489");
         
         INSERT INTO Order_Items
-        VALUES("IT465", "OD155", "BO021");
+        VALUES("IT465", "OD213", "BO704");
         
         INSERT INTO Order_Items
-        VALUES("IT466", "OD127", "BO981");
+        VALUES("IT466", "OD003", "BO394");
         
         INSERT INTO Order_Items
-        VALUES("IT467", "OD103", "BO931");
+        VALUES("IT467", "OD157", "BO430");
         
         INSERT INTO Order_Items
-        VALUES("IT468", "OD175", "BO878");
+        VALUES("IT468", "OD038", "BO240");
         
         INSERT INTO Order_Items
-        VALUES("IT469", "OD057", "BO399");
+        VALUES("IT469", "OD158", "BO709");
         
         INSERT INTO Order_Items
-        VALUES("IT470", "OD227", "BO345");
+        VALUES("IT470", "OD123", "BO842");
         
         INSERT INTO Order_Items
-        VALUES("IT471", "OD029", "BO813");
+        VALUES("IT471", "OD225", "BO868");
         
         INSERT INTO Order_Items
-        VALUES("IT472", "OD172", "BO167");
+        VALUES("IT472", "OD241", "BO405");
         
         INSERT INTO Order_Items
-        VALUES("IT473", "OD103", "BO132");
+        VALUES("IT473", "OD189", "BO568");
         
         INSERT INTO Order_Items
-        VALUES("IT474", "OD072", "BO572");
+        VALUES("IT474", "OD003", "BO279");
         
         INSERT INTO Order_Items
-        VALUES("IT475", "OD120", "BO178");
+        VALUES("IT475", "OD039", "BO915");
         
         INSERT INTO Order_Items
-        VALUES("IT476", "OD225", "BO515");
+        VALUES("IT476", "OD145", "BO199");
         
         INSERT INTO Order_Items
-        VALUES("IT477", "OD100", "BO942");
+        VALUES("IT477", "OD226", "BO071");
         
         INSERT INTO Order_Items
-        VALUES("IT478", "OD192", "BO588");
+        VALUES("IT478", "OD058", "BO647");
         
         INSERT INTO Order_Items
-        VALUES("IT479", "OD225", "BO629");
+        VALUES("IT479", "OD029", "BO669");
         
         INSERT INTO Order_Items
-        VALUES("IT480", "OD231", "BO280");
+        VALUES("IT480", "OD015", "BO283");
         
         INSERT INTO Order_Items
-        VALUES("IT481", "OD240", "BO831");
+        VALUES("IT481", "OD064", "BO500");
         
         INSERT INTO Order_Items
-        VALUES("IT482", "OD161", "BO442");
+        VALUES("IT482", "OD107", "BO840");
         
         INSERT INTO Order_Items
-        VALUES("IT483", "OD094", "BO909");
+        VALUES("IT483", "OD210", "BO558");
         
         INSERT INTO Order_Items
-        VALUES("IT484", "OD182", "BO582");
+        VALUES("IT484", "OD049", "BO400");
         
         INSERT INTO Order_Items
-        VALUES("IT485", "OD230", "BO331");
+        VALUES("IT485", "OD172", "BO710");
         
         INSERT INTO Order_Items
-        VALUES("IT486", "OD141", "BO660");
+        VALUES("IT486", "OD057", "BO591");
         
         INSERT INTO Order_Items
-        VALUES("IT487", "OD080", "BO750");
+        VALUES("IT487", "OD147", "BO377");
         
         INSERT INTO Order_Items
-        VALUES("IT488", "OD054", "BO209");
+        VALUES("IT488", "OD050", "BO597");
         
         INSERT INTO Order_Items
-        VALUES("IT489", "OD110", "BO521");
+        VALUES("IT489", "OD143", "BO984");
         
         INSERT INTO Order_Items
-        VALUES("IT490", "OD193", "BO925");
+        VALUES("IT490", "OD152", "BO886");
         
         INSERT INTO Order_Items
-        VALUES("IT491", "OD181", "BO216");
+        VALUES("IT491", "OD185", "BO359");
         
         INSERT INTO Order_Items
-        VALUES("IT492", "OD106", "BO354");
+        VALUES("IT492", "OD099", "BO812");
         
         INSERT INTO Order_Items
-        VALUES("IT493", "OD235", "BO460");
+        VALUES("IT493", "OD124", "BO556");
         
         INSERT INTO Order_Items
-        VALUES("IT494", "OD147", "BO269");
+        VALUES("IT494", "OD048", "BO835");
         
         INSERT INTO Order_Items
-        VALUES("IT495", "OD228", "BO544");
+        VALUES("IT495", "OD036", "BO590");
         
         INSERT INTO Order_Items
-        VALUES("IT496", "OD028", "BO671");
+        VALUES("IT496", "OD158", "BO518");
         
         INSERT INTO Order_Items
-        VALUES("IT497", "OD156", "BO532");
+        VALUES("IT497", "OD210", "BO320");
         
         INSERT INTO Order_Items
-        VALUES("IT498", "OD026", "BO988");
+        VALUES("IT498", "OD070", "BO679");
         
         INSERT INTO Order_Items
-        VALUES("IT499", "OD181", "BO522");
+        VALUES("IT499", "OD133", "BO776");
         
         INSERT INTO Order_Items
-        VALUES("IT500", "OD179", "BO435");
+        VALUES("IT500", "OD190", "BO987");
         
         INSERT INTO Order_Items
-        VALUES("IT501", "OD063", "BO845");
+        VALUES("IT501", "OD022", "BO892");
         
         INSERT INTO Order_Items
-        VALUES("IT502", "OD108", "BO082");
+        VALUES("IT502", "OD175", "BO257");
         
         INSERT INTO Order_Items
-        VALUES("IT503", "OD010", "BO577");
+        VALUES("IT503", "OD179", "BO092");
         
         INSERT INTO Order_Items
-        VALUES("IT504", "OD062", "BO958");
+        VALUES("IT504", "OD053", "BO233");
         
         INSERT INTO Order_Items
-        VALUES("IT505", "OD151", "BO112");
+        VALUES("IT505", "OD184", "BO121");
         
         INSERT INTO Order_Items
-        VALUES("IT506", "OD132", "BO733");
+        VALUES("IT506", "OD134", "BO215");
         
         INSERT INTO Order_Items
-        VALUES("IT507", "OD209", "BO011");
+        VALUES("IT507", "OD178", "BO943");
         
         INSERT INTO Order_Items
-        VALUES("IT508", "OD166", "BO595");
+        VALUES("IT508", "OD215", "BO466");
         
         INSERT INTO Order_Items
-        VALUES("IT509", "OD075", "BO286");
+        VALUES("IT509", "OD092", "BO678");
         
         INSERT INTO Order_Items
-        VALUES("IT510", "OD045", "BO854");
+        VALUES("IT510", "OD092", "BO200");
         
         INSERT INTO Order_Items
-        VALUES("IT511", "OD035", "BO334");
+        VALUES("IT511", "OD108", "BO287");
         
         INSERT INTO Order_Items
-        VALUES("IT512", "OD218", "BO119");
+        VALUES("IT512", "OD131", "BO054");
         
         INSERT INTO Order_Items
-        VALUES("IT513", "OD160", "BO093");
+        VALUES("IT513", "OD181", "BO119");
         
         INSERT INTO Order_Items
-        VALUES("IT514", "OD161", "BO625");
+        VALUES("IT514", "OD049", "BO630");
         
         INSERT INTO Order_Items
-        VALUES("IT515", "OD084", "BO456");
+        VALUES("IT515", "OD018", "BO815");
         
         INSERT INTO Order_Items
-        VALUES("IT516", "OD208", "BO385");
+        VALUES("IT516", "OD249", "BO090");
         
         INSERT INTO Order_Items
-        VALUES("IT517", "OD033", "BO968");
+        VALUES("IT517", "OD030", "BO756");
         
         INSERT INTO Order_Items
-        VALUES("IT518", "OD225", "BO603");
+        VALUES("IT518", "OD203", "BO651");
         
         INSERT INTO Order_Items
-        VALUES("IT519", "OD201", "BO918");
+        VALUES("IT519", "OD001", "BO030");
         
         INSERT INTO Order_Items
-        VALUES("IT520", "OD030", "BO631");
+        VALUES("IT520", "OD196", "BO948");
         
         INSERT INTO Order_Items
-        VALUES("IT521", "OD001", "BO321");
+        VALUES("IT521", "OD122", "BO211");
         
         INSERT INTO Order_Items
-        VALUES("IT522", "OD112", "BO041");
+        VALUES("IT522", "OD015", "BO885");
         
         INSERT INTO Order_Items
-        VALUES("IT523", "OD030", "BO425");
+        VALUES("IT523", "OD234", "BO811");
         
         INSERT INTO Order_Items
-        VALUES("IT524", "OD202", "BO315");
+        VALUES("IT524", "OD140", "BO227");
         
         INSERT INTO Order_Items
-        VALUES("IT525", "OD117", "BO385");
+        VALUES("IT525", "OD198", "BO604");
         
         INSERT INTO Order_Items
-        VALUES("IT526", "OD131", "BO771");
+        VALUES("IT526", "OD042", "BO336");
         
         INSERT INTO Order_Items
-        VALUES("IT527", "OD101", "BO863");
+        VALUES("IT527", "OD245", "BO988");
         
         INSERT INTO Order_Items
-        VALUES("IT528", "OD166", "BO541");
+        VALUES("IT528", "OD160", "BO351");
         
         INSERT INTO Order_Items
-        VALUES("IT529", "OD091", "BO382");
+        VALUES("IT529", "OD094", "BO449");
         
         INSERT INTO Order_Items
-        VALUES("IT530", "OD204", "BO123");
+        VALUES("IT530", "OD024", "BO826");
         
         INSERT INTO Order_Items
-        VALUES("IT531", "OD156", "BO187");
+        VALUES("IT531", "OD000", "BO911");
         
         INSERT INTO Order_Items
-        VALUES("IT532", "OD137", "BO621");
+        VALUES("IT532", "OD170", "BO626");
         
         INSERT INTO Order_Items
-        VALUES("IT533", "OD246", "BO809");
+        VALUES("IT533", "OD247", "BO640");
         
         INSERT INTO Order_Items
-        VALUES("IT534", "OD007", "BO371");
+        VALUES("IT534", "OD045", "BO074");
         
         INSERT INTO Order_Items
-        VALUES("IT535", "OD023", "BO067");
+        VALUES("IT535", "OD248", "BO294");
         
         INSERT INTO Order_Items
-        VALUES("IT536", "OD190", "BO479");
+        VALUES("IT536", "OD130", "BO140");
         
         INSERT INTO Order_Items
-        VALUES("IT537", "OD011", "BO473");
+        VALUES("IT537", "OD214", "BO303");
         
         INSERT INTO Order_Items
-        VALUES("IT538", "OD102", "BO900");
+        VALUES("IT538", "OD182", "BO807");
         
         INSERT INTO Order_Items
-        VALUES("IT539", "OD169", "BO990");
+        VALUES("IT539", "OD204", "BO150");
         
         INSERT INTO Order_Items
-        VALUES("IT540", "OD161", "BO691");
+        VALUES("IT540", "OD073", "BO013");
         
         INSERT INTO Order_Items
-        VALUES("IT541", "OD103", "BO340");
+        VALUES("IT541", "OD246", "BO924");
         
         INSERT INTO Order_Items
-        VALUES("IT542", "OD248", "BO396");
+        VALUES("IT542", "OD051", "BO310");
         
         INSERT INTO Order_Items
-        VALUES("IT543", "OD116", "BO190");
+        VALUES("IT543", "OD097", "BO964");
         
         INSERT INTO Order_Items
-        VALUES("IT544", "OD101", "BO258");
+        VALUES("IT544", "OD229", "BO236");
         
         INSERT INTO Order_Items
-        VALUES("IT545", "OD155", "BO165");
+        VALUES("IT545", "OD085", "BO358");
         
         INSERT INTO Order_Items
-        VALUES("IT546", "OD051", "BO356");
+        VALUES("IT546", "OD156", "BO056");
         
         INSERT INTO Order_Items
-        VALUES("IT547", "OD129", "BO647");
+        VALUES("IT547", "OD199", "BO515");
         
         INSERT INTO Order_Items
-        VALUES("IT548", "OD086", "BO603");
+        VALUES("IT548", "OD140", "BO598");
         
         INSERT INTO Order_Items
-        VALUES("IT549", "OD042", "BO404");
+        VALUES("IT549", "OD065", "BO427");
         
         INSERT INTO Order_Items
-        VALUES("IT550", "OD235", "BO808");
+        VALUES("IT550", "OD137", "BO645");
         
         INSERT INTO Order_Items
-        VALUES("IT551", "OD152", "BO678");
+        VALUES("IT551", "OD241", "BO681");
         
         INSERT INTO Order_Items
-        VALUES("IT552", "OD225", "BO968");
+        VALUES("IT552", "OD241", "BO546");
         
         INSERT INTO Order_Items
-        VALUES("IT553", "OD177", "BO147");
+        VALUES("IT553", "OD112", "BO035");
         
         INSERT INTO Order_Items
-        VALUES("IT554", "OD095", "BO388");
+        VALUES("IT554", "OD164", "BO405");
         
         INSERT INTO Order_Items
-        VALUES("IT555", "OD083", "BO597");
+        VALUES("IT555", "OD017", "BO839");
         
         INSERT INTO Order_Items
-        VALUES("IT556", "OD162", "BO311");
+        VALUES("IT556", "OD005", "BO623");
         
         INSERT INTO Order_Items
-        VALUES("IT557", "OD241", "BO624");
+        VALUES("IT557", "OD066", "BO524");
         
         INSERT INTO Order_Items
-        VALUES("IT558", "OD172", "BO259");
+        VALUES("IT558", "OD116", "BO122");
         
         INSERT INTO Order_Items
-        VALUES("IT559", "OD064", "BO943");
+        VALUES("IT559", "OD134", "BO505");
         
         INSERT INTO Order_Items
-        VALUES("IT560", "OD199", "BO839");
+        VALUES("IT560", "OD193", "BO335");
         
         INSERT INTO Order_Items
-        VALUES("IT561", "OD174", "BO832");
+        VALUES("IT561", "OD067", "BO492");
         
         INSERT INTO Order_Items
-        VALUES("IT562", "OD037", "BO045");
+        VALUES("IT562", "OD053", "BO040");
         
         INSERT INTO Order_Items
-        VALUES("IT563", "OD101", "BO330");
+        VALUES("IT563", "OD228", "BO614");
         
         INSERT INTO Order_Items
-        VALUES("IT564", "OD199", "BO912");
+        VALUES("IT564", "OD040", "BO518");
         
         INSERT INTO Order_Items
-        VALUES("IT565", "OD138", "BO894");
+        VALUES("IT565", "OD155", "BO356");
         
         INSERT INTO Order_Items
-        VALUES("IT566", "OD173", "BO144");
+        VALUES("IT566", "OD210", "BO705");
         
         INSERT INTO Order_Items
-        VALUES("IT567", "OD069", "BO202");
+        VALUES("IT567", "OD067", "BO773");
         
         INSERT INTO Order_Items
-        VALUES("IT568", "OD089", "BO758");
+        VALUES("IT568", "OD019", "BO228");
         
         INSERT INTO Order_Items
-        VALUES("IT569", "OD042", "BO552");
+        VALUES("IT569", "OD102", "BO951");
         
         INSERT INTO Order_Items
-        VALUES("IT570", "OD129", "BO977");
+        VALUES("IT570", "OD212", "BO972");
         
         INSERT INTO Order_Items
-        VALUES("IT571", "OD172", "BO802");
+        VALUES("IT571", "OD193", "BO986");
         
         INSERT INTO Order_Items
-        VALUES("IT572", "OD167", "BO775");
+        VALUES("IT572", "OD053", "BO826");
         
         INSERT INTO Order_Items
-        VALUES("IT573", "OD156", "BO623");
+        VALUES("IT573", "OD012", "BO189");
         
         INSERT INTO Order_Items
-        VALUES("IT574", "OD232", "BO966");
+        VALUES("IT574", "OD176", "BO967");
         
         INSERT INTO Order_Items
-        VALUES("IT575", "OD021", "BO338");
+        VALUES("IT575", "OD157", "BO434");
         
         INSERT INTO Order_Items
-        VALUES("IT576", "OD019", "BO651");
+        VALUES("IT576", "OD118", "BO057");
         
         INSERT INTO Order_Items
-        VALUES("IT577", "OD208", "BO447");
+        VALUES("IT577", "OD186", "BO239");
         
         INSERT INTO Order_Items
-        VALUES("IT578", "OD037", "BO018");
+        VALUES("IT578", "OD214", "BO742");
         
         INSERT INTO Order_Items
-        VALUES("IT579", "OD220", "BO236");
+        VALUES("IT579", "OD007", "BO080");
         
         INSERT INTO Order_Items
-        VALUES("IT580", "OD247", "BO656");
+        VALUES("IT580", "OD107", "BO596");
         
         INSERT INTO Order_Items
-        VALUES("IT581", "OD072", "BO350");
+        VALUES("IT581", "OD070", "BO175");
         
         INSERT INTO Order_Items
-        VALUES("IT582", "OD058", "BO489");
+        VALUES("IT582", "OD159", "BO559");
         
         INSERT INTO Order_Items
-        VALUES("IT583", "OD062", "BO506");
+        VALUES("IT583", "OD089", "BO433");
         
         INSERT INTO Order_Items
-        VALUES("IT584", "OD232", "BO401");
+        VALUES("IT584", "OD159", "BO401");
         
         INSERT INTO Order_Items
-        VALUES("IT585", "OD213", "BO883");
+        VALUES("IT585", "OD206", "BO399");
         
         INSERT INTO Order_Items
-        VALUES("IT586", "OD199", "BO019");
+        VALUES("IT586", "OD160", "BO130");
         
         INSERT INTO Order_Items
-        VALUES("IT587", "OD014", "BO800");
+        VALUES("IT587", "OD200", "BO935");
         
         INSERT INTO Order_Items
-        VALUES("IT588", "OD222", "BO055");
+        VALUES("IT588", "OD017", "BO018");
         
         INSERT INTO Order_Items
-        VALUES("IT589", "OD104", "BO103");
+        VALUES("IT589", "OD155", "BO752");
         
         INSERT INTO Order_Items
-        VALUES("IT590", "OD235", "BO639");
+        VALUES("IT590", "OD105", "BO722");
         
         INSERT INTO Order_Items
-        VALUES("IT591", "OD131", "BO748");
+        VALUES("IT591", "OD132", "BO455");
         
         INSERT INTO Order_Items
-        VALUES("IT592", "OD209", "BO934");
+        VALUES("IT592", "OD028", "BO702");
         
         INSERT INTO Order_Items
-        VALUES("IT593", "OD110", "BO461");
+        VALUES("IT593", "OD010", "BO611");
         
         INSERT INTO Order_Items
-        VALUES("IT594", "OD051", "BO922");
+        VALUES("IT594", "OD070", "BO786");
         
         INSERT INTO Order_Items
-        VALUES("IT595", "OD213", "BO039");
+        VALUES("IT595", "OD043", "BO936");
         
         INSERT INTO Order_Items
-        VALUES("IT596", "OD100", "BO183");
+        VALUES("IT596", "OD027", "BO999");
         
         INSERT INTO Order_Items
-        VALUES("IT597", "OD042", "BO068");
+        VALUES("IT597", "OD105", "BO090");
         
         INSERT INTO Order_Items
-        VALUES("IT598", "OD081", "BO634");
+        VALUES("IT598", "OD139", "BO198");
         
         INSERT INTO Order_Items
-        VALUES("IT599", "OD162", "BO726");
+        VALUES("IT599", "OD210", "BO763");
         
         INSERT INTO Order_Items
-        VALUES("IT600", "OD006", "BO180");
+        VALUES("IT600", "OD018", "BO082");
         
         INSERT INTO Order_Items
-        VALUES("IT601", "OD153", "BO716");
+        VALUES("IT601", "OD010", "BO723");
         
         INSERT INTO Order_Items
-        VALUES("IT602", "OD151", "BO297");
+        VALUES("IT602", "OD239", "BO464");
         
         INSERT INTO Order_Items
-        VALUES("IT603", "OD207", "BO568");
+        VALUES("IT603", "OD166", "BO023");
         
         INSERT INTO Order_Items
-        VALUES("IT604", "OD116", "BO599");
+        VALUES("IT604", "OD024", "BO460");
         
         INSERT INTO Order_Items
-        VALUES("IT605", "OD010", "BO348");
+        VALUES("IT605", "OD041", "BO068");
         
         INSERT INTO Order_Items
-        VALUES("IT606", "OD027", "BO638");
+        VALUES("IT606", "OD194", "BO629");
         
         INSERT INTO Order_Items
-        VALUES("IT607", "OD095", "BO491");
+        VALUES("IT607", "OD243", "BO563");
         
         INSERT INTO Order_Items
-        VALUES("IT608", "OD084", "BO638");
+        VALUES("IT608", "OD233", "BO380");
         
         INSERT INTO Order_Items
-        VALUES("IT609", "OD101", "BO972");
+        VALUES("IT609", "OD189", "BO348");
         
         INSERT INTO Order_Items
-        VALUES("IT610", "OD051", "BO321");
+        VALUES("IT610", "OD132", "BO298");
         
         INSERT INTO Order_Items
-        VALUES("IT611", "OD192", "BO476");
+        VALUES("IT611", "OD042", "BO692");
         
         INSERT INTO Order_Items
-        VALUES("IT612", "OD077", "BO896");
+        VALUES("IT612", "OD141", "BO634");
         
         INSERT INTO Order_Items
-        VALUES("IT613", "OD207", "BO418");
+        VALUES("IT613", "OD106", "BO673");
         
         INSERT INTO Order_Items
-        VALUES("IT614", "OD246", "BO391");
+        VALUES("IT614", "OD087", "BO515");
         
         INSERT INTO Order_Items
-        VALUES("IT615", "OD041", "BO084");
+        VALUES("IT615", "OD079", "BO496");
         
         INSERT INTO Order_Items
-        VALUES("IT616", "OD111", "BO089");
+        VALUES("IT616", "OD092", "BO591");
         
         INSERT INTO Order_Items
-        VALUES("IT617", "OD127", "BO968");
+        VALUES("IT617", "OD171", "BO308");
         
         INSERT INTO Order_Items
-        VALUES("IT618", "OD050", "BO712");
+        VALUES("IT618", "OD086", "BO309");
         
         INSERT INTO Order_Items
-        VALUES("IT619", "OD229", "BO133");
+        VALUES("IT619", "OD127", "BO147");
         
         INSERT INTO Order_Items
-        VALUES("IT620", "OD165", "BO275");
+        VALUES("IT620", "OD035", "BO138");
         
         INSERT INTO Order_Items
-        VALUES("IT621", "OD186", "BO627");
+        VALUES("IT621", "OD181", "BO752");
         
         INSERT INTO Order_Items
-        VALUES("IT622", "OD187", "BO861");
+        VALUES("IT622", "OD153", "BO453");
         
         INSERT INTO Order_Items
-        VALUES("IT623", "OD220", "BO230");
+        VALUES("IT623", "OD054", "BO162");
         
         INSERT INTO Order_Items
-        VALUES("IT624", "OD247", "BO338");
+        VALUES("IT624", "OD218", "BO086");
         
         INSERT INTO Order_Items
-        VALUES("IT625", "OD170", "BO726");
+        VALUES("IT625", "OD014", "BO451");
         
         INSERT INTO Order_Items
-        VALUES("IT626", "OD030", "BO808");
+        VALUES("IT626", "OD214", "BO926");
         
         INSERT INTO Order_Items
-        VALUES("IT627", "OD029", "BO508");
+        VALUES("IT627", "OD068", "BO854");
         
         INSERT INTO Order_Items
-        VALUES("IT628", "OD228", "BO249");
+        VALUES("IT628", "OD125", "BO605");
         
         INSERT INTO Order_Items
-        VALUES("IT629", "OD088", "BO356");
+        VALUES("IT629", "OD169", "BO580");
         
         INSERT INTO Order_Items
-        VALUES("IT630", "OD244", "BO741");
+        VALUES("IT630", "OD112", "BO646");
         
         INSERT INTO Order_Items
-        VALUES("IT631", "OD002", "BO098");
+        VALUES("IT631", "OD092", "BO258");
         
         INSERT INTO Order_Items
-        VALUES("IT632", "OD133", "BO237");
+        VALUES("IT632", "OD123", "BO693");
         
         INSERT INTO Order_Items
-        VALUES("IT633", "OD097", "BO127");
+        VALUES("IT633", "OD240", "BO160");
         
         INSERT INTO Order_Items
-        VALUES("IT634", "OD244", "BO650");
+        VALUES("IT634", "OD024", "BO401");
         
         INSERT INTO Order_Items
-        VALUES("IT635", "OD196", "BO218");
+        VALUES("IT635", "OD054", "BO669");
         
         INSERT INTO Order_Items
-        VALUES("IT636", "OD093", "BO742");
+        VALUES("IT636", "OD110", "BO420");
         
         INSERT INTO Order_Items
-        VALUES("IT637", "OD176", "BO691");
+        VALUES("IT637", "OD200", "BO738");
         
         INSERT INTO Order_Items
-        VALUES("IT638", "OD048", "BO068");
+        VALUES("IT638", "OD051", "BO748");
         
         INSERT INTO Order_Items
-        VALUES("IT639", "OD137", "BO303");
+        VALUES("IT639", "OD156", "BO934");
         
         INSERT INTO Order_Items
-        VALUES("IT640", "OD191", "BO549");
+        VALUES("IT640", "OD212", "BO194");
         
         INSERT INTO Order_Items
-        VALUES("IT641", "OD017", "BO156");
+        VALUES("IT641", "OD093", "BO516");
         
         INSERT INTO Order_Items
-        VALUES("IT642", "OD228", "BO859");
+        VALUES("IT642", "OD069", "BO586");
         
         INSERT INTO Order_Items
-        VALUES("IT643", "OD246", "BO916");
+        VALUES("IT643", "OD214", "BO093");
         
         INSERT INTO Order_Items
-        VALUES("IT644", "OD235", "BO313");
+        VALUES("IT644", "OD197", "BO278");
         
         INSERT INTO Order_Items
-        VALUES("IT645", "OD232", "BO174");
+        VALUES("IT645", "OD043", "BO538");
         
         INSERT INTO Order_Items
-        VALUES("IT646", "OD220", "BO644");
+        VALUES("IT646", "OD212", "BO956");
         
         INSERT INTO Order_Items
-        VALUES("IT647", "OD240", "BO418");
+        VALUES("IT647", "OD095", "BO994");
         
         INSERT INTO Order_Items
-        VALUES("IT648", "OD098", "BO449");
+        VALUES("IT648", "OD127", "BO450");
         
         INSERT INTO Order_Items
-        VALUES("IT649", "OD247", "BO007");
+        VALUES("IT649", "OD078", "BO218");
         
         INSERT INTO Order_Items
-        VALUES("IT650", "OD185", "BO468");
+        VALUES("IT650", "OD237", "BO416");
         
         INSERT INTO Order_Items
-        VALUES("IT651", "OD001", "BO567");
+        VALUES("IT651", "OD177", "BO251");
         
         INSERT INTO Order_Items
-        VALUES("IT652", "OD139", "BO916");
+        VALUES("IT652", "OD040", "BO150");
         
         INSERT INTO Order_Items
-        VALUES("IT653", "OD010", "BO335");
+        VALUES("IT653", "OD247", "BO813");
         
         INSERT INTO Order_Items
-        VALUES("IT654", "OD221", "BO900");
+        VALUES("IT654", "OD201", "BO237");
         
         INSERT INTO Order_Items
-        VALUES("IT655", "OD086", "BO723");
+        VALUES("IT655", "OD130", "BO438");
         
         INSERT INTO Order_Items
-        VALUES("IT656", "OD043", "BO269");
+        VALUES("IT656", "OD200", "BO394");
         
         INSERT INTO Order_Items
-        VALUES("IT657", "OD108", "BO232");
+        VALUES("IT657", "OD053", "BO229");
         
         INSERT INTO Order_Items
-        VALUES("IT658", "OD108", "BO892");
+        VALUES("IT658", "OD101", "BO096");
         
         INSERT INTO Order_Items
-        VALUES("IT659", "OD198", "BO494");
+        VALUES("IT659", "OD189", "BO007");
         
         INSERT INTO Order_Items
-        VALUES("IT660", "OD205", "BO831");
+        VALUES("IT660", "OD062", "BO702");
         
         INSERT INTO Order_Items
-        VALUES("IT661", "OD066", "BO216");
+        VALUES("IT661", "OD059", "BO288");
         
         INSERT INTO Order_Items
-        VALUES("IT662", "OD215", "BO496");
+        VALUES("IT662", "OD057", "BO314");
         
         INSERT INTO Order_Items
-        VALUES("IT663", "OD200", "BO051");
+        VALUES("IT663", "OD167", "BO443");
         
         INSERT INTO Order_Items
-        VALUES("IT664", "OD166", "BO536");
+        VALUES("IT664", "OD186", "BO799");
         
         INSERT INTO Order_Items
-        VALUES("IT665", "OD052", "BO079");
+        VALUES("IT665", "OD114", "BO882");
         
         INSERT INTO Order_Items
-        VALUES("IT666", "OD001", "BO628");
+        VALUES("IT666", "OD225", "BO751");
         
         INSERT INTO Order_Items
-        VALUES("IT667", "OD172", "BO641");
+        VALUES("IT667", "OD076", "BO536");
         
         INSERT INTO Order_Items
-        VALUES("IT668", "OD223", "BO963");
+        VALUES("IT668", "OD246", "BO083");
         
         INSERT INTO Order_Items
-        VALUES("IT669", "OD014", "BO713");
+        VALUES("IT669", "OD148", "BO435");
         
         INSERT INTO Order_Items
-        VALUES("IT670", "OD176", "BO538");
+        VALUES("IT670", "OD039", "BO274");
         
         INSERT INTO Order_Items
-        VALUES("IT671", "OD197", "BO633");
+        VALUES("IT671", "OD245", "BO906");
         
         INSERT INTO Order_Items
-        VALUES("IT672", "OD226", "BO390");
+        VALUES("IT672", "OD127", "BO564");
         
         INSERT INTO Order_Items
-        VALUES("IT673", "OD106", "BO857");
+        VALUES("IT673", "OD012", "BO027");
         
         INSERT INTO Order_Items
-        VALUES("IT674", "OD019", "BO921");
+        VALUES("IT674", "OD011", "BO697");
         
         INSERT INTO Order_Items
-        VALUES("IT675", "OD195", "BO329");
+        VALUES("IT675", "OD110", "BO990");
         
         INSERT INTO Order_Items
-        VALUES("IT676", "OD121", "BO345");
+        VALUES("IT676", "OD049", "BO823");
         
         INSERT INTO Order_Items
-        VALUES("IT677", "OD166", "BO081");
+        VALUES("IT677", "OD021", "BO510");
         
         INSERT INTO Order_Items
-        VALUES("IT678", "OD031", "BO997");
+        VALUES("IT678", "OD098", "BO395");
         
         INSERT INTO Order_Items
-        VALUES("IT679", "OD044", "BO945");
+        VALUES("IT679", "OD207", "BO943");
         
         INSERT INTO Order_Items
-        VALUES("IT680", "OD214", "BO476");
+        VALUES("IT680", "OD096", "BO139");
         
         INSERT INTO Order_Items
-        VALUES("IT681", "OD070", "BO919");
+        VALUES("IT681", "OD052", "BO677");
         
         INSERT INTO Order_Items
-        VALUES("IT682", "OD205", "BO321");
+        VALUES("IT682", "OD004", "BO981");
         
         INSERT INTO Order_Items
-        VALUES("IT683", "OD033", "BO861");
+        VALUES("IT683", "OD182", "BO234");
         
         INSERT INTO Order_Items
-        VALUES("IT684", "OD210", "BO863");
+        VALUES("IT684", "OD075", "BO756");
         
         INSERT INTO Order_Items
-        VALUES("IT685", "OD128", "BO176");
+        VALUES("IT685", "OD011", "BO669");
         
         INSERT INTO Order_Items
-        VALUES("IT686", "OD082", "BO128");
+        VALUES("IT686", "OD185", "BO107");
         
         INSERT INTO Order_Items
-        VALUES("IT687", "OD025", "BO948");
+        VALUES("IT687", "OD117", "BO490");
         
         INSERT INTO Order_Items
-        VALUES("IT688", "OD207", "BO053");
+        VALUES("IT688", "OD140", "BO900");
         
         INSERT INTO Order_Items
-        VALUES("IT689", "OD005", "BO739");
+        VALUES("IT689", "OD052", "BO811");
         
         INSERT INTO Order_Items
-        VALUES("IT690", "OD214", "BO803");
+        VALUES("IT690", "OD069", "BO040");
         
         INSERT INTO Order_Items
-        VALUES("IT691", "OD185", "BO793");
+        VALUES("IT691", "OD098", "BO900");
         
         INSERT INTO Order_Items
-        VALUES("IT692", "OD225", "BO140");
+        VALUES("IT692", "OD127", "BO990");
         
         INSERT INTO Order_Items
-        VALUES("IT693", "OD184", "BO469");
+        VALUES("IT693", "OD052", "BO114");
         
         INSERT INTO Order_Items
-        VALUES("IT694", "OD089", "BO062");
+        VALUES("IT694", "OD245", "BO552");
         
         INSERT INTO Order_Items
-        VALUES("IT695", "OD102", "BO032");
+        VALUES("IT695", "OD132", "BO997");
         
         INSERT INTO Order_Items
-        VALUES("IT696", "OD009", "BO420");
+        VALUES("IT696", "OD177", "BO471");
         
         INSERT INTO Order_Items
-        VALUES("IT697", "OD231", "BO728");
+        VALUES("IT697", "OD046", "BO080");
         
         INSERT INTO Order_Items
-        VALUES("IT698", "OD003", "BO527");
+        VALUES("IT698", "OD020", "BO250");
         
         INSERT INTO Order_Items
-        VALUES("IT699", "OD021", "BO369");
+        VALUES("IT699", "OD172", "BO763");
         
         INSERT INTO Order_Items
-        VALUES("IT700", "OD011", "BO617");
+        VALUES("IT700", "OD058", "BO011");
         
         INSERT INTO Order_Items
-        VALUES("IT701", "OD144", "BO542");
+        VALUES("IT701", "OD174", "BO058");
         
         INSERT INTO Order_Items
-        VALUES("IT702", "OD184", "BO206");
+        VALUES("IT702", "OD015", "BO055");
         
         INSERT INTO Order_Items
-        VALUES("IT703", "OD036", "BO430");
+        VALUES("IT703", "OD072", "BO005");
         
         INSERT INTO Order_Items
-        VALUES("IT704", "OD179", "BO005");
+        VALUES("IT704", "OD003", "BO823");
         
         INSERT INTO Order_Items
-        VALUES("IT705", "OD147", "BO064");
+        VALUES("IT705", "OD210", "BO032");
         
         INSERT INTO Order_Items
-        VALUES("IT706", "OD094", "BO085");
+        VALUES("IT706", "OD054", "BO842");
         
         INSERT INTO Order_Items
-        VALUES("IT707", "OD092", "BO287");
+        VALUES("IT707", "OD147", "BO954");
         
         INSERT INTO Order_Items
-        VALUES("IT708", "OD026", "BO262");
+        VALUES("IT708", "OD205", "BO775");
         
         INSERT INTO Order_Items
-        VALUES("IT709", "OD062", "BO580");
+        VALUES("IT709", "OD219", "BO067");
         
         INSERT INTO Order_Items
-        VALUES("IT710", "OD097", "BO343");
+        VALUES("IT710", "OD190", "BO302");
         
         INSERT INTO Order_Items
-        VALUES("IT711", "OD013", "BO402");
+        VALUES("IT711", "OD232", "BO217");
         
         INSERT INTO Order_Items
-        VALUES("IT712", "OD100", "BO978");
+        VALUES("IT712", "OD159", "BO129");
         
         INSERT INTO Order_Items
-        VALUES("IT713", "OD227", "BO396");
+        VALUES("IT713", "OD144", "BO008");
         
         INSERT INTO Order_Items
-        VALUES("IT714", "OD181", "BO707");
+        VALUES("IT714", "OD068", "BO758");
         
         INSERT INTO Order_Items
-        VALUES("IT715", "OD093", "BO673");
+        VALUES("IT715", "OD014", "BO503");
         
         INSERT INTO Order_Items
-        VALUES("IT716", "OD112", "BO649");
+        VALUES("IT716", "OD052", "BO853");
         
         INSERT INTO Order_Items
-        VALUES("IT717", "OD039", "BO095");
+        VALUES("IT717", "OD166", "BO404");
         
         INSERT INTO Order_Items
-        VALUES("IT718", "OD077", "BO126");
+        VALUES("IT718", "OD078", "BO784");
         
         INSERT INTO Order_Items
-        VALUES("IT719", "OD202", "BO250");
+        VALUES("IT719", "OD048", "BO640");
         
         INSERT INTO Order_Items
-        VALUES("IT720", "OD021", "BO698");
+        VALUES("IT720", "OD062", "BO384");
         
         INSERT INTO Order_Items
-        VALUES("IT721", "OD043", "BO778");
+        VALUES("IT721", "OD165", "BO703");
         
         INSERT INTO Order_Items
-        VALUES("IT722", "OD144", "BO694");
+        VALUES("IT722", "OD189", "BO940");
         
         INSERT INTO Order_Items
-        VALUES("IT723", "OD236", "BO602");
+        VALUES("IT723", "OD168", "BO044");
         
         INSERT INTO Order_Items
-        VALUES("IT724", "OD248", "BO146");
+        VALUES("IT724", "OD064", "BO187");
         
         INSERT INTO Order_Items
-        VALUES("IT725", "OD179", "BO995");
+        VALUES("IT725", "OD033", "BO377");
         
         INSERT INTO Order_Items
-        VALUES("IT726", "OD100", "BO556");
+        VALUES("IT726", "OD080", "BO191");
         
         INSERT INTO Order_Items
-        VALUES("IT727", "OD221", "BO416");
+        VALUES("IT727", "OD146", "BO508");
         
         INSERT INTO Order_Items
-        VALUES("IT728", "OD059", "BO980");
+        VALUES("IT728", "OD136", "BO175");
         
         INSERT INTO Order_Items
-        VALUES("IT729", "OD024", "BO503");
+        VALUES("IT729", "OD072", "BO046");
         
         INSERT INTO Order_Items
-        VALUES("IT730", "OD237", "BO232");
+        VALUES("IT730", "OD191", "BO555");
         
         INSERT INTO Order_Items
-        VALUES("IT731", "OD049", "BO126");
+        VALUES("IT731", "OD072", "BO766");
         
         INSERT INTO Order_Items
-        VALUES("IT732", "OD168", "BO471");
+        VALUES("IT732", "OD029", "BO759");
         
         INSERT INTO Order_Items
-        VALUES("IT733", "OD007", "BO390");
+        VALUES("IT733", "OD212", "BO237");
         
         INSERT INTO Order_Items
-        VALUES("IT734", "OD132", "BO905");
+        VALUES("IT734", "OD152", "BO689");
         
         INSERT INTO Order_Items
-        VALUES("IT735", "OD050", "BO913");
+        VALUES("IT735", "OD031", "BO834");
         
         INSERT INTO Order_Items
-        VALUES("IT736", "OD101", "BO311");
+        VALUES("IT736", "OD093", "BO416");
         
         INSERT INTO Order_Items
-        VALUES("IT737", "OD021", "BO270");
+        VALUES("IT737", "OD238", "BO978");
         
         INSERT INTO Order_Items
-        VALUES("IT738", "OD014", "BO219");
+        VALUES("IT738", "OD122", "BO974");
         
         INSERT INTO Order_Items
-        VALUES("IT739", "OD077", "BO501");
+        VALUES("IT739", "OD005", "BO391");
         
         INSERT INTO Order_Items
-        VALUES("IT740", "OD133", "BO859");
+        VALUES("IT740", "OD158", "BO564");
         
         INSERT INTO Order_Items
-        VALUES("IT741", "OD074", "BO110");
+        VALUES("IT741", "OD113", "BO491");
         
         INSERT INTO Order_Items
-        VALUES("IT742", "OD243", "BO563");
+        VALUES("IT742", "OD186", "BO632");
         
         INSERT INTO Order_Items
-        VALUES("IT743", "OD115", "BO864");
+        VALUES("IT743", "OD137", "BO614");
         
         INSERT INTO Order_Items
-        VALUES("IT744", "OD113", "BO994");
+        VALUES("IT744", "OD069", "BO428");
         
         INSERT INTO Order_Items
-        VALUES("IT745", "OD022", "BO608");
+        VALUES("IT745", "OD247", "BO295");
         
         INSERT INTO Order_Items
-        VALUES("IT746", "OD195", "BO836");
+        VALUES("IT746", "OD167", "BO765");
         
         INSERT INTO Order_Items
-        VALUES("IT747", "OD053", "BO717");
+        VALUES("IT747", "OD142", "BO434");
         
         INSERT INTO Order_Items
-        VALUES("IT748", "OD137", "BO333");
+        VALUES("IT748", "OD021", "BO810");
         
         INSERT INTO Order_Items
-        VALUES("IT749", "OD167", "BO615");
+        VALUES("IT749", "OD047", "BO051");
         
         INSERT INTO Order_Items
-        VALUES("IT750", "OD138", "BO763");
+        VALUES("IT750", "OD024", "BO128");
         
         INSERT INTO Order_Items
-        VALUES("IT751", "OD106", "BO438");
+        VALUES("IT751", "OD017", "BO263");
         
         INSERT INTO Order_Items
-        VALUES("IT752", "OD185", "BO571");
+        VALUES("IT752", "OD140", "BO609");
         
         INSERT INTO Order_Items
-        VALUES("IT753", "OD041", "BO210");
+        VALUES("IT753", "OD015", "BO562");
         
         INSERT INTO Order_Items
-        VALUES("IT754", "OD210", "BO140");
+        VALUES("IT754", "OD146", "BO326");
         
         INSERT INTO Order_Items
-        VALUES("IT755", "OD113", "BO873");
+        VALUES("IT755", "OD150", "BO361");
         
         INSERT INTO Order_Items
-        VALUES("IT756", "OD022", "BO759");
+        VALUES("IT756", "OD146", "BO888");
         
         INSERT INTO Order_Items
-        VALUES("IT757", "OD142", "BO694");
+        VALUES("IT757", "OD086", "BO248");
         
         INSERT INTO Order_Items
-        VALUES("IT758", "OD111", "BO308");
+        VALUES("IT758", "OD168", "BO237");
         
         INSERT INTO Order_Items
-        VALUES("IT759", "OD173", "BO270");
+        VALUES("IT759", "OD033", "BO636");
         
         INSERT INTO Order_Items
-        VALUES("IT760", "OD148", "BO219");
+        VALUES("IT760", "OD246", "BO192");
         
         INSERT INTO Order_Items
-        VALUES("IT761", "OD218", "BO671");
+        VALUES("IT761", "OD174", "BO414");
         
         INSERT INTO Order_Items
-        VALUES("IT762", "OD229", "BO003");
+        VALUES("IT762", "OD135", "BO999");
         
         INSERT INTO Order_Items
-        VALUES("IT763", "OD158", "BO237");
+        VALUES("IT763", "OD230", "BO440");
         
         INSERT INTO Order_Items
-        VALUES("IT764", "OD057", "BO096");
+        VALUES("IT764", "OD178", "BO492");
         
         INSERT INTO Order_Items
-        VALUES("IT765", "OD078", "BO974");
+        VALUES("IT765", "OD122", "BO230");
         
         INSERT INTO Order_Items
-        VALUES("IT766", "OD207", "BO524");
+        VALUES("IT766", "OD014", "BO821");
         
         INSERT INTO Order_Items
-        VALUES("IT767", "OD061", "BO900");
+        VALUES("IT767", "OD198", "BO632");
         
         INSERT INTO Order_Items
-        VALUES("IT768", "OD072", "BO662");
+        VALUES("IT768", "OD160", "BO635");
         
         INSERT INTO Order_Items
-        VALUES("IT769", "OD118", "BO719");
+        VALUES("IT769", "OD115", "BO332");
         
         INSERT INTO Order_Items
-        VALUES("IT770", "OD246", "BO678");
+        VALUES("IT770", "OD243", "BO019");
         
         INSERT INTO Order_Items
-        VALUES("IT771", "OD237", "BO304");
+        VALUES("IT771", "OD226", "BO517");
         
         INSERT INTO Order_Items
-        VALUES("IT772", "OD154", "BO086");
+        VALUES("IT772", "OD184", "BO774");
         
         INSERT INTO Order_Items
-        VALUES("IT773", "OD187", "BO813");
+        VALUES("IT773", "OD076", "BO739");
         
         INSERT INTO Order_Items
-        VALUES("IT774", "OD136", "BO064");
+        VALUES("IT774", "OD011", "BO944");
         
         INSERT INTO Order_Items
-        VALUES("IT775", "OD131", "BO526");
+        VALUES("IT775", "OD081", "BO896");
         
         INSERT INTO Order_Items
-        VALUES("IT776", "OD214", "BO148");
+        VALUES("IT776", "OD148", "BO416");
         
         INSERT INTO Order_Items
-        VALUES("IT777", "OD244", "BO490");
+        VALUES("IT777", "OD149", "BO895");
         
         INSERT INTO Order_Items
-        VALUES("IT778", "OD149", "BO345");
+        VALUES("IT778", "OD040", "BO231");
         
         INSERT INTO Order_Items
-        VALUES("IT779", "OD104", "BO693");
+        VALUES("IT779", "OD150", "BO041");
         
         INSERT INTO Order_Items
-        VALUES("IT780", "OD002", "BO621");
+        VALUES("IT780", "OD025", "BO910");
         
         INSERT INTO Order_Items
-        VALUES("IT781", "OD149", "BO635");
+        VALUES("IT781", "OD111", "BO825");
         
         INSERT INTO Order_Items
-        VALUES("IT782", "OD017", "BO848");
+        VALUES("IT782", "OD070", "BO825");
         
         INSERT INTO Order_Items
-        VALUES("IT783", "OD187", "BO195");
+        VALUES("IT783", "OD178", "BO562");
         
         INSERT INTO Order_Items
-        VALUES("IT784", "OD146", "BO269");
+        VALUES("IT784", "OD056", "BO165");
         
         INSERT INTO Order_Items
-        VALUES("IT785", "OD102", "BO342");
+        VALUES("IT785", "OD182", "BO068");
         
         INSERT INTO Order_Items
-        VALUES("IT786", "OD096", "BO527");
+        VALUES("IT786", "OD016", "BO347");
         
         INSERT INTO Order_Items
-        VALUES("IT787", "OD123", "BO551");
+        VALUES("IT787", "OD133", "BO593");
         
         INSERT INTO Order_Items
-        VALUES("IT788", "OD077", "BO726");
+        VALUES("IT788", "OD147", "BO994");
         
         INSERT INTO Order_Items
-        VALUES("IT789", "OD189", "BO572");
+        VALUES("IT789", "OD125", "BO709");
         
         INSERT INTO Order_Items
-        VALUES("IT790", "OD011", "BO002");
+        VALUES("IT790", "OD161", "BO772");
         
         INSERT INTO Order_Items
-        VALUES("IT791", "OD064", "BO970");
+        VALUES("IT791", "OD106", "BO081");
         
         INSERT INTO Order_Items
-        VALUES("IT792", "OD138", "BO321");
+        VALUES("IT792", "OD101", "BO783");
         
         INSERT INTO Order_Items
-        VALUES("IT793", "OD180", "BO596");
+        VALUES("IT793", "OD110", "BO433");
         
         INSERT INTO Order_Items
-        VALUES("IT794", "OD235", "BO730");
+        VALUES("IT794", "OD082", "BO540");
         
         INSERT INTO Order_Items
-        VALUES("IT795", "OD046", "BO772");
+        VALUES("IT795", "OD051", "BO226");
         
         INSERT INTO Order_Items
-        VALUES("IT796", "OD128", "BO352");
+        VALUES("IT796", "OD030", "BO038");
         
         INSERT INTO Order_Items
-        VALUES("IT797", "OD078", "BO183");
+        VALUES("IT797", "OD187", "BO887");
         
         INSERT INTO Order_Items
-        VALUES("IT798", "OD039", "BO207");
+        VALUES("IT798", "OD006", "BO269");
         
         INSERT INTO Order_Items
-        VALUES("IT799", "OD205", "BO394");
+        VALUES("IT799", "OD198", "BO071");
         
         INSERT INTO Order_Items
-        VALUES("IT800", "OD182", "BO602");
+        VALUES("IT800", "OD232", "BO611");
         
         INSERT INTO Order_Items
-        VALUES("IT801", "OD028", "BO423");
+        VALUES("IT801", "OD240", "BO448");
         
         INSERT INTO Order_Items
-        VALUES("IT802", "OD066", "BO400");
+        VALUES("IT802", "OD155", "BO416");
         
         INSERT INTO Order_Items
-        VALUES("IT803", "OD225", "BO141");
+        VALUES("IT803", "OD175", "BO189");
         
         INSERT INTO Order_Items
-        VALUES("IT804", "OD022", "BO800");
+        VALUES("IT804", "OD107", "BO539");
         
         INSERT INTO Order_Items
-        VALUES("IT805", "OD172", "BO251");
+        VALUES("IT805", "OD204", "BO269");
         
         INSERT INTO Order_Items
-        VALUES("IT806", "OD147", "BO569");
+        VALUES("IT806", "OD188", "BO280");
         
         INSERT INTO Order_Items
-        VALUES("IT807", "OD231", "BO632");
+        VALUES("IT807", "OD047", "BO211");
         
         INSERT INTO Order_Items
-        VALUES("IT808", "OD226", "BO325");
+        VALUES("IT808", "OD041", "BO730");
         
         INSERT INTO Order_Items
-        VALUES("IT809", "OD066", "BO269");
+        VALUES("IT809", "OD200", "BO503");
         
         INSERT INTO Order_Items
-        VALUES("IT810", "OD220", "BO245");
+        VALUES("IT810", "OD109", "BO469");
         
         INSERT INTO Order_Items
-        VALUES("IT811", "OD207", "BO071");
+        VALUES("IT811", "OD189", "BO423");
         
         INSERT INTO Order_Items
-        VALUES("IT812", "OD068", "BO566");
+        VALUES("IT812", "OD006", "BO273");
         
         INSERT INTO Order_Items
-        VALUES("IT813", "OD198", "BO846");
+        VALUES("IT813", "OD049", "BO049");
         
         INSERT INTO Order_Items
-        VALUES("IT814", "OD226", "BO749");
+        VALUES("IT814", "OD000", "BO709");
         
         INSERT INTO Order_Items
-        VALUES("IT815", "OD227", "BO377");
+        VALUES("IT815", "OD209", "BO234");
         
         INSERT INTO Order_Items
-        VALUES("IT816", "OD088", "BO105");
+        VALUES("IT816", "OD124", "BO927");
         
         INSERT INTO Order_Items
-        VALUES("IT817", "OD216", "BO764");
+        VALUES("IT817", "OD017", "BO778");
         
         INSERT INTO Order_Items
-        VALUES("IT818", "OD173", "BO763");
+        VALUES("IT818", "OD105", "BO618");
         
         INSERT INTO Order_Items
-        VALUES("IT819", "OD043", "BO561");
+        VALUES("IT819", "OD079", "BO338");
         
         INSERT INTO Order_Items
-        VALUES("IT820", "OD147", "BO027");
+        VALUES("IT820", "OD174", "BO663");
         
         INSERT INTO Order_Items
-        VALUES("IT821", "OD003", "BO352");
+        VALUES("IT821", "OD175", "BO892");
         
         INSERT INTO Order_Items
-        VALUES("IT822", "OD239", "BO360");
+        VALUES("IT822", "OD229", "BO084");
         
         INSERT INTO Order_Items
-        VALUES("IT823", "OD115", "BO167");
+        VALUES("IT823", "OD231", "BO168");
         
         INSERT INTO Order_Items
-        VALUES("IT824", "OD054", "BO334");
+        VALUES("IT824", "OD060", "BO341");
         
         INSERT INTO Order_Items
-        VALUES("IT825", "OD206", "BO613");
+        VALUES("IT825", "OD050", "BO381");
         
         INSERT INTO Order_Items
-        VALUES("IT826", "OD095", "BO692");
+        VALUES("IT826", "OD198", "BO345");
         
         INSERT INTO Order_Items
-        VALUES("IT827", "OD038", "BO767");
+        VALUES("IT827", "OD165", "BO973");
         
         INSERT INTO Order_Items
-        VALUES("IT828", "OD036", "BO000");
+        VALUES("IT828", "OD179", "BO543");
         
         INSERT INTO Order_Items
-        VALUES("IT829", "OD104", "BO557");
+        VALUES("IT829", "OD237", "BO704");
         
         INSERT INTO Order_Items
-        VALUES("IT830", "OD140", "BO641");
+        VALUES("IT830", "OD106", "BO531");
         
         INSERT INTO Order_Items
-        VALUES("IT831", "OD097", "BO509");
+        VALUES("IT831", "OD010", "BO646");
         
         INSERT INTO Order_Items
-        VALUES("IT832", "OD067", "BO240");
+        VALUES("IT832", "OD049", "BO218");
         
         INSERT INTO Order_Items
-        VALUES("IT833", "OD040", "BO592");
+        VALUES("IT833", "OD053", "BO547");
         
         INSERT INTO Order_Items
-        VALUES("IT834", "OD144", "BO040");
+        VALUES("IT834", "OD223", "BO395");
         
         INSERT INTO Order_Items
-        VALUES("IT835", "OD112", "BO600");
+        VALUES("IT835", "OD083", "BO000");
         
         INSERT INTO Order_Items
-        VALUES("IT836", "OD223", "BO888");
+        VALUES("IT836", "OD220", "BO764");
         
         INSERT INTO Order_Items
-        VALUES("IT837", "OD028", "BO246");
+        VALUES("IT837", "OD015", "BO876");
         
         INSERT INTO Order_Items
-        VALUES("IT838", "OD077", "BO765");
+        VALUES("IT838", "OD242", "BO066");
         
         INSERT INTO Order_Items
-        VALUES("IT839", "OD208", "BO230");
+        VALUES("IT839", "OD024", "BO876");
         
         INSERT INTO Order_Items
-        VALUES("IT840", "OD155", "BO172");
+        VALUES("IT840", "OD193", "BO845");
         
         INSERT INTO Order_Items
-        VALUES("IT841", "OD062", "BO431");
+        VALUES("IT841", "OD045", "BO127");
         
         INSERT INTO Order_Items
-        VALUES("IT842", "OD013", "BO015");
+        VALUES("IT842", "OD187", "BO670");
         
         INSERT INTO Order_Items
-        VALUES("IT843", "OD032", "BO048");
+        VALUES("IT843", "OD223", "BO939");
         
         INSERT INTO Order_Items
-        VALUES("IT844", "OD220", "BO870");
+        VALUES("IT844", "OD106", "BO501");
         
         INSERT INTO Order_Items
-        VALUES("IT845", "OD080", "BO194");
+        VALUES("IT845", "OD072", "BO466");
         
         INSERT INTO Order_Items
-        VALUES("IT846", "OD225", "BO807");
+        VALUES("IT846", "OD045", "BO481");
         
         INSERT INTO Order_Items
-        VALUES("IT847", "OD152", "BO620");
+        VALUES("IT847", "OD070", "BO566");
         
         INSERT INTO Order_Items
-        VALUES("IT848", "OD193", "BO488");
+        VALUES("IT848", "OD117", "BO873");
         
         INSERT INTO Order_Items
-        VALUES("IT849", "OD115", "BO104");
+        VALUES("IT849", "OD177", "BO206");
         
         INSERT INTO Order_Items
-        VALUES("IT850", "OD026", "BO084");
+        VALUES("IT850", "OD014", "BO332");
         
         INSERT INTO Order_Items
-        VALUES("IT851", "OD240", "BO259");
+        VALUES("IT851", "OD075", "BO145");
         
         INSERT INTO Order_Items
-        VALUES("IT852", "OD211", "BO067");
+        VALUES("IT852", "OD112", "BO176");
         
         INSERT INTO Order_Items
-        VALUES("IT853", "OD101", "BO341");
+        VALUES("IT853", "OD120", "BO444");
         
         INSERT INTO Order_Items
-        VALUES("IT854", "OD222", "BO679");
+        VALUES("IT854", "OD235", "BO096");
         
         INSERT INTO Order_Items
-        VALUES("IT855", "OD011", "BO644");
+        VALUES("IT855", "OD061", "BO200");
         
         INSERT INTO Order_Items
-        VALUES("IT856", "OD173", "BO187");
+        VALUES("IT856", "OD224", "BO354");
         
         INSERT INTO Order_Items
-        VALUES("IT857", "OD177", "BO531");
+        VALUES("IT857", "OD008", "BO899");
         
         INSERT INTO Order_Items
-        VALUES("IT858", "OD151", "BO089");
+        VALUES("IT858", "OD084", "BO317");
         
         INSERT INTO Order_Items
-        VALUES("IT859", "OD212", "BO525");
+        VALUES("IT859", "OD190", "BO392");
         
         INSERT INTO Order_Items
-        VALUES("IT860", "OD101", "BO867");
+        VALUES("IT860", "OD089", "BO381");
         
         INSERT INTO Order_Items
-        VALUES("IT861", "OD027", "BO169");
+        VALUES("IT861", "OD081", "BO619");
         
         INSERT INTO Order_Items
-        VALUES("IT862", "OD107", "BO483");
+        VALUES("IT862", "OD101", "BO609");
         
         INSERT INTO Order_Items
-        VALUES("IT863", "OD074", "BO663");
+        VALUES("IT863", "OD206", "BO104");
         
         INSERT INTO Order_Items
-        VALUES("IT864", "OD086", "BO147");
+        VALUES("IT864", "OD168", "BO260");
         
         INSERT INTO Order_Items
-        VALUES("IT865", "OD099", "BO355");
+        VALUES("IT865", "OD084", "BO774");
         
         INSERT INTO Order_Items
-        VALUES("IT866", "OD010", "BO936");
+        VALUES("IT866", "OD138", "BO180");
         
         INSERT INTO Order_Items
-        VALUES("IT867", "OD213", "BO647");
+        VALUES("IT867", "OD024", "BO217");
         
         INSERT INTO Order_Items
-        VALUES("IT868", "OD102", "BO853");
+        VALUES("IT868", "OD160", "BO186");
         
         INSERT INTO Order_Items
-        VALUES("IT869", "OD124", "BO594");
+        VALUES("IT869", "OD193", "BO056");
         
         INSERT INTO Order_Items
-        VALUES("IT870", "OD114", "BO855");
+        VALUES("IT870", "OD056", "BO744");
         
         INSERT INTO Order_Items
-        VALUES("IT871", "OD106", "BO915");
+        VALUES("IT871", "OD156", "BO164");
         
         INSERT INTO Order_Items
-        VALUES("IT872", "OD018", "BO585");
+        VALUES("IT872", "OD066", "BO154");
         
         INSERT INTO Order_Items
-        VALUES("IT873", "OD041", "BO168");
+        VALUES("IT873", "OD187", "BO489");
         
         INSERT INTO Order_Items
-        VALUES("IT874", "OD127", "BO089");
+        VALUES("IT874", "OD101", "BO542");
         
         INSERT INTO Order_Items
-        VALUES("IT875", "OD111", "BO157");
+        VALUES("IT875", "OD201", "BO910");
         
         INSERT INTO Order_Items
-        VALUES("IT876", "OD038", "BO365");
+        VALUES("IT876", "OD202", "BO654");
         
         INSERT INTO Order_Items
-        VALUES("IT877", "OD084", "BO683");
+        VALUES("IT877", "OD205", "BO451");
         
         INSERT INTO Order_Items
-        VALUES("IT878", "OD117", "BO102");
+        VALUES("IT878", "OD126", "BO381");
         
         INSERT INTO Order_Items
-        VALUES("IT879", "OD155", "BO888");
+        VALUES("IT879", "OD105", "BO124");
         
         INSERT INTO Order_Items
-        VALUES("IT880", "OD020", "BO491");
+        VALUES("IT880", "OD110", "BO065");
         
         INSERT INTO Order_Items
-        VALUES("IT881", "OD117", "BO157");
+        VALUES("IT881", "OD222", "BO999");
         
         INSERT INTO Order_Items
-        VALUES("IT882", "OD078", "BO701");
+        VALUES("IT882", "OD108", "BO867");
         
         INSERT INTO Order_Items
-        VALUES("IT883", "OD052", "BO909");
+        VALUES("IT883", "OD076", "BO755");
         
         INSERT INTO Order_Items
-        VALUES("IT884", "OD186", "BO102");
+        VALUES("IT884", "OD092", "BO530");
         
         INSERT INTO Order_Items
-        VALUES("IT885", "OD186", "BO211");
+        VALUES("IT885", "OD059", "BO556");
         
         INSERT INTO Order_Items
-        VALUES("IT886", "OD193", "BO339");
+        VALUES("IT886", "OD173", "BO924");
         
         INSERT INTO Order_Items
-        VALUES("IT887", "OD151", "BO979");
+        VALUES("IT887", "OD220", "BO957");
         
         INSERT INTO Order_Items
-        VALUES("IT888", "OD149", "BO247");
+        VALUES("IT888", "OD068", "BO655");
         
         INSERT INTO Order_Items
-        VALUES("IT889", "OD151", "BO410");
+        VALUES("IT889", "OD165", "BO673");
         
         INSERT INTO Order_Items
-        VALUES("IT890", "OD016", "BO703");
+        VALUES("IT890", "OD209", "BO905");
         
         INSERT INTO Order_Items
-        VALUES("IT891", "OD236", "BO648");
+        VALUES("IT891", "OD162", "BO472");
         
         INSERT INTO Order_Items
-        VALUES("IT892", "OD192", "BO457");
+        VALUES("IT892", "OD102", "BO949");
         
         INSERT INTO Order_Items
-        VALUES("IT893", "OD034", "BO921");
+        VALUES("IT893", "OD237", "BO585");
         
         INSERT INTO Order_Items
-        VALUES("IT894", "OD155", "BO275");
+        VALUES("IT894", "OD147", "BO039");
         
         INSERT INTO Order_Items
-        VALUES("IT895", "OD106", "BO661");
+        VALUES("IT895", "OD148", "BO968");
         
         INSERT INTO Order_Items
-        VALUES("IT896", "OD003", "BO369");
+        VALUES("IT896", "OD197", "BO841");
         
         INSERT INTO Order_Items
-        VALUES("IT897", "OD004", "BO427");
+        VALUES("IT897", "OD096", "BO014");
         
         INSERT INTO Order_Items
-        VALUES("IT898", "OD016", "BO086");
+        VALUES("IT898", "OD196", "BO227");
         
         INSERT INTO Order_Items
-        VALUES("IT899", "OD157", "BO421");
+        VALUES("IT899", "OD246", "BO548");
         
         INSERT INTO Order_Items
-        VALUES("IT900", "OD045", "BO130");
+        VALUES("IT900", "OD076", "BO449");
         
         INSERT INTO Order_Items
-        VALUES("IT901", "OD062", "BO092");
+        VALUES("IT901", "OD249", "BO486");
         
         INSERT INTO Order_Items
-        VALUES("IT902", "OD158", "BO631");
+        VALUES("IT902", "OD210", "BO097");
         
         INSERT INTO Order_Items
-        VALUES("IT903", "OD135", "BO463");
+        VALUES("IT903", "OD236", "BO999");
         
         INSERT INTO Order_Items
-        VALUES("IT904", "OD156", "BO362");
+        VALUES("IT904", "OD169", "BO623");
         
         INSERT INTO Order_Items
-        VALUES("IT905", "OD059", "BO796");
+        VALUES("IT905", "OD163", "BO794");
         
         INSERT INTO Order_Items
-        VALUES("IT906", "OD157", "BO950");
+        VALUES("IT906", "OD160", "BO942");
         
         INSERT INTO Order_Items
-        VALUES("IT907", "OD212", "BO605");
+        VALUES("IT907", "OD118", "BO575");
         
         INSERT INTO Order_Items
-        VALUES("IT908", "OD233", "BO323");
+        VALUES("IT908", "OD246", "BO620");
         
         INSERT INTO Order_Items
-        VALUES("IT909", "OD147", "BO930");
+        VALUES("IT909", "OD168", "BO387");
         
         INSERT INTO Order_Items
-        VALUES("IT910", "OD080", "BO552");
+        VALUES("IT910", "OD163", "BO600");
         
         INSERT INTO Order_Items
-        VALUES("IT911", "OD208", "BO544");
+        VALUES("IT911", "OD104", "BO373");
         
         INSERT INTO Order_Items
-        VALUES("IT912", "OD037", "BO296");
+        VALUES("IT912", "OD094", "BO552");
         
         INSERT INTO Order_Items
-        VALUES("IT913", "OD195", "BO421");
+        VALUES("IT913", "OD166", "BO238");
         
         INSERT INTO Order_Items
-        VALUES("IT914", "OD003", "BO510");
+        VALUES("IT914", "OD010", "BO157");
         
         INSERT INTO Order_Items
-        VALUES("IT915", "OD063", "BO366");
+        VALUES("IT915", "OD023", "BO849");
         
         INSERT INTO Order_Items
-        VALUES("IT916", "OD145", "BO466");
+        VALUES("IT916", "OD234", "BO397");
         
         INSERT INTO Order_Items
-        VALUES("IT917", "OD071", "BO283");
+        VALUES("IT917", "OD069", "BO187");
         
         INSERT INTO Order_Items
-        VALUES("IT918", "OD093", "BO827");
+        VALUES("IT918", "OD243", "BO991");
         
         INSERT INTO Order_Items
-        VALUES("IT919", "OD044", "BO727");
+        VALUES("IT919", "OD170", "BO314");
         
         INSERT INTO Order_Items
-        VALUES("IT920", "OD135", "BO524");
+        VALUES("IT920", "OD047", "BO443");
         
         INSERT INTO Order_Items
-        VALUES("IT921", "OD232", "BO514");
+        VALUES("IT921", "OD005", "BO496");
         
         INSERT INTO Order_Items
-        VALUES("IT922", "OD225", "BO066");
+        VALUES("IT922", "OD212", "BO310");
         
         INSERT INTO Order_Items
-        VALUES("IT923", "OD043", "BO515");
+        VALUES("IT923", "OD055", "BO783");
         
         INSERT INTO Order_Items
-        VALUES("IT924", "OD039", "BO054");
+        VALUES("IT924", "OD179", "BO690");
         
         INSERT INTO Order_Items
-        VALUES("IT925", "OD057", "BO241");
+        VALUES("IT925", "OD010", "BO745");
         
         INSERT INTO Order_Items
-        VALUES("IT926", "OD070", "BO922");
+        VALUES("IT926", "OD209", "BO109");
         
         INSERT INTO Order_Items
-        VALUES("IT927", "OD024", "BO840");
+        VALUES("IT927", "OD222", "BO192");
         
         INSERT INTO Order_Items
-        VALUES("IT928", "OD153", "BO311");
+        VALUES("IT928", "OD028", "BO818");
         
         INSERT INTO Order_Items
-        VALUES("IT929", "OD232", "BO398");
+        VALUES("IT929", "OD097", "BO722");
         
         INSERT INTO Order_Items
-        VALUES("IT930", "OD034", "BO034");
+        VALUES("IT930", "OD081", "BO292");
         
         INSERT INTO Order_Items
-        VALUES("IT931", "OD189", "BO907");
+        VALUES("IT931", "OD151", "BO887");
         
         INSERT INTO Order_Items
-        VALUES("IT932", "OD246", "BO769");
+        VALUES("IT932", "OD087", "BO536");
         
         INSERT INTO Order_Items
-        VALUES("IT933", "OD136", "BO776");
+        VALUES("IT933", "OD033", "BO779");
         
         INSERT INTO Order_Items
-        VALUES("IT934", "OD048", "BO519");
+        VALUES("IT934", "OD217", "BO847");
         
         INSERT INTO Order_Items
-        VALUES("IT935", "OD201", "BO353");
+        VALUES("IT935", "OD161", "BO571");
         
         INSERT INTO Order_Items
-        VALUES("IT936", "OD141", "BO166");
+        VALUES("IT936", "OD235", "BO696");
         
         INSERT INTO Order_Items
-        VALUES("IT937", "OD053", "BO908");
+        VALUES("IT937", "OD202", "BO649");
         
         INSERT INTO Order_Items
-        VALUES("IT938", "OD169", "BO333");
+        VALUES("IT938", "OD131", "BO978");
         
         INSERT INTO Order_Items
-        VALUES("IT939", "OD148", "BO466");
+        VALUES("IT939", "OD074", "BO330");
         
         INSERT INTO Order_Items
-        VALUES("IT940", "OD163", "BO036");
+        VALUES("IT940", "OD124", "BO834");
         
         INSERT INTO Order_Items
-        VALUES("IT941", "OD002", "BO912");
+        VALUES("IT941", "OD209", "BO837");
         
         INSERT INTO Order_Items
-        VALUES("IT942", "OD094", "BO549");
+        VALUES("IT942", "OD191", "BO882");
         
         INSERT INTO Order_Items
-        VALUES("IT943", "OD153", "BO405");
+        VALUES("IT943", "OD186", "BO311");
         
         INSERT INTO Order_Items
-        VALUES("IT944", "OD029", "BO109");
+        VALUES("IT944", "OD166", "BO880");
         
         INSERT INTO Order_Items
-        VALUES("IT945", "OD128", "BO124");
+        VALUES("IT945", "OD153", "BO084");
         
         INSERT INTO Order_Items
-        VALUES("IT946", "OD233", "BO794");
+        VALUES("IT946", "OD162", "BO204");
         
         INSERT INTO Order_Items
-        VALUES("IT947", "OD140", "BO408");
+        VALUES("IT947", "OD241", "BO509");
         
         INSERT INTO Order_Items
-        VALUES("IT948", "OD244", "BO883");
+        VALUES("IT948", "OD118", "BO434");
         
         INSERT INTO Order_Items
-        VALUES("IT949", "OD242", "BO762");
+        VALUES("IT949", "OD231", "BO004");
         
         INSERT INTO Order_Items
-        VALUES("IT950", "OD178", "BO279");
+        VALUES("IT950", "OD172", "BO961");
         
         INSERT INTO Order_Items
-        VALUES("IT951", "OD069", "BO447");
+        VALUES("IT951", "OD058", "BO686");
         
         INSERT INTO Order_Items
-        VALUES("IT952", "OD126", "BO716");
+        VALUES("IT952", "OD163", "BO571");
         
         INSERT INTO Order_Items
-        VALUES("IT953", "OD065", "BO349");
+        VALUES("IT953", "OD087", "BO276");
         
         INSERT INTO Order_Items
-        VALUES("IT954", "OD150", "BO973");
+        VALUES("IT954", "OD022", "BO726");
         
         INSERT INTO Order_Items
-        VALUES("IT955", "OD248", "BO062");
+        VALUES("IT955", "OD177", "BO616");
         
         INSERT INTO Order_Items
-        VALUES("IT956", "OD112", "BO805");
+        VALUES("IT956", "OD045", "BO256");
         
         INSERT INTO Order_Items
-        VALUES("IT957", "OD055", "BO432");
+        VALUES("IT957", "OD181", "BO804");
         
         INSERT INTO Order_Items
-        VALUES("IT958", "OD023", "BO778");
+        VALUES("IT958", "OD203", "BO214");
         
         INSERT INTO Order_Items
-        VALUES("IT959", "OD133", "BO088");
+        VALUES("IT959", "OD154", "BO825");
         
         INSERT INTO Order_Items
-        VALUES("IT960", "OD236", "BO832");
+        VALUES("IT960", "OD088", "BO247");
         
         INSERT INTO Order_Items
-        VALUES("IT961", "OD179", "BO668");
+        VALUES("IT961", "OD176", "BO320");
         
         INSERT INTO Order_Items
-        VALUES("IT962", "OD224", "BO778");
+        VALUES("IT962", "OD182", "BO586");
         
         INSERT INTO Order_Items
-        VALUES("IT963", "OD032", "BO181");
+        VALUES("IT963", "OD039", "BO612");
         
         INSERT INTO Order_Items
-        VALUES("IT964", "OD074", "BO553");
+        VALUES("IT964", "OD151", "BO542");
         
         INSERT INTO Order_Items
-        VALUES("IT965", "OD221", "BO029");
+        VALUES("IT965", "OD158", "BO450");
         
         INSERT INTO Order_Items
-        VALUES("IT966", "OD076", "BO680");
+        VALUES("IT966", "OD091", "BO355");
         
         INSERT INTO Order_Items
-        VALUES("IT967", "OD017", "BO064");
+        VALUES("IT967", "OD201", "BO415");
         
         INSERT INTO Order_Items
-        VALUES("IT968", "OD110", "BO422");
+        VALUES("IT968", "OD243", "BO971");
         
         INSERT INTO Order_Items
-        VALUES("IT969", "OD197", "BO933");
+        VALUES("IT969", "OD192", "BO542");
         
         INSERT INTO Order_Items
-        VALUES("IT970", "OD053", "BO674");
+        VALUES("IT970", "OD207", "BO968");
         
         INSERT INTO Order_Items
-        VALUES("IT971", "OD145", "BO547");
+        VALUES("IT971", "OD124", "BO047");
         
         INSERT INTO Order_Items
-        VALUES("IT972", "OD249", "BO340");
+        VALUES("IT972", "OD145", "BO562");
         
         INSERT INTO Order_Items
-        VALUES("IT973", "OD080", "BO219");
+        VALUES("IT973", "OD050", "BO723");
         
         INSERT INTO Order_Items
-        VALUES("IT974", "OD156", "BO177");
+        VALUES("IT974", "OD078", "BO459");
         
         INSERT INTO Order_Items
-        VALUES("IT975", "OD029", "BO853");
+        VALUES("IT975", "OD164", "BO043");
         
         INSERT INTO Order_Items
-        VALUES("IT976", "OD056", "BO754");
+        VALUES("IT976", "OD058", "BO904");
         
         INSERT INTO Order_Items
-        VALUES("IT977", "OD249", "BO586");
+        VALUES("IT977", "OD103", "BO876");
         
         INSERT INTO Order_Items
-        VALUES("IT978", "OD236", "BO714");
+        VALUES("IT978", "OD125", "BO955");
         
         INSERT INTO Order_Items
-        VALUES("IT979", "OD243", "BO151");
+        VALUES("IT979", "OD232", "BO507");
         
         INSERT INTO Order_Items
-        VALUES("IT980", "OD031", "BO075");
+        VALUES("IT980", "OD008", "BO991");
         
         INSERT INTO Order_Items
-        VALUES("IT981", "OD065", "BO132");
+        VALUES("IT981", "OD235", "BO917");
         
         INSERT INTO Order_Items
-        VALUES("IT982", "OD055", "BO907");
+        VALUES("IT982", "OD012", "BO599");
         
         INSERT INTO Order_Items
-        VALUES("IT983", "OD208", "BO934");
+        VALUES("IT983", "OD088", "BO771");
         
         INSERT INTO Order_Items
-        VALUES("IT984", "OD071", "BO602");
+        VALUES("IT984", "OD219", "BO093");
         
         INSERT INTO Order_Items
-        VALUES("IT985", "OD101", "BO840");
+        VALUES("IT985", "OD080", "BO791");
         
         INSERT INTO Order_Items
-        VALUES("IT986", "OD005", "BO634");
+        VALUES("IT986", "OD018", "BO800");
         
         INSERT INTO Order_Items
-        VALUES("IT987", "OD243", "BO082");
+        VALUES("IT987", "OD194", "BO216");
         
         INSERT INTO Order_Items
-        VALUES("IT988", "OD154", "BO594");
+        VALUES("IT988", "OD092", "BO212");
         
         INSERT INTO Order_Items
-        VALUES("IT989", "OD081", "BO007");
+        VALUES("IT989", "OD063", "BO185");
         
         INSERT INTO Order_Items
-        VALUES("IT990", "OD043", "BO467");
+        VALUES("IT990", "OD107", "BO022");
         
         INSERT INTO Order_Items
-        VALUES("IT991", "OD223", "BO534");
+        VALUES("IT991", "OD024", "BO550");
         
         INSERT INTO Order_Items
-        VALUES("IT992", "OD045", "BO144");
+        VALUES("IT992", "OD115", "BO165");
         
         INSERT INTO Order_Items
-        VALUES("IT993", "OD156", "BO161");
+        VALUES("IT993", "OD235", "BO314");
         
         INSERT INTO Order_Items
-        VALUES("IT994", "OD089", "BO720");
+        VALUES("IT994", "OD010", "BO439");
         
         INSERT INTO Order_Items
-        VALUES("IT995", "OD207", "BO570");
+        VALUES("IT995", "OD170", "BO812");
         
         INSERT INTO Order_Items
-        VALUES("IT996", "OD006", "BO177");
+        VALUES("IT996", "OD092", "BO333");
         
         INSERT INTO Order_Items
-        VALUES("IT997", "OD181", "BO626");
+        VALUES("IT997", "OD219", "BO061");
         
         INSERT INTO Order_Items
-        VALUES("IT998", "OD132", "BO769");
+        VALUES("IT998", "OD143", "BO283");
         
         INSERT INTO Order_Items
-        VALUES("IT999", "OD012", "BO618");
+        VALUES("IT999", "OD107", "BO377");
         
         INSERT INTO Returns
-        VALUES("RT000", "IT808", STR_TO_DATE("2015-12-3", "%Y-%m-%d"));
+        VALUES("RT000", "IT536", STR_TO_DATE("2005-1-28", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT001", "IT060", STR_TO_DATE("2019-3-22", "%Y-%m-%d"));
+        VALUES("RT001", "IT049", STR_TO_DATE("2017-7-26", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT002", "IT885", STR_TO_DATE("2018-2-13", "%Y-%m-%d"));
+        VALUES("RT002", "IT277", STR_TO_DATE("2007-6-25", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT003", "IT872", STR_TO_DATE("2013-7-21", "%Y-%m-%d"));
+        VALUES("RT003", "IT353", STR_TO_DATE("2002-4-25", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT004", "IT520", STR_TO_DATE("2005-11-17", "%Y-%m-%d"));
+        VALUES("RT004", "IT493", STR_TO_DATE("2020-1-18", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT005", "IT610", STR_TO_DATE("2004-7-8", "%Y-%m-%d"));
+        VALUES("RT005", "IT966", STR_TO_DATE("2003-11-15", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT006", "IT894", STR_TO_DATE("2014-7-5", "%Y-%m-%d"));
+        VALUES("RT006", "IT164", STR_TO_DATE("2019-12-2", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT007", "IT922", STR_TO_DATE("2017-6-24", "%Y-%m-%d"));
+        VALUES("RT007", "IT528", STR_TO_DATE("2011-1-15", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT008", "IT175", STR_TO_DATE("2009-7-20", "%Y-%m-%d"));
+        VALUES("RT008", "IT344", STR_TO_DATE("2008-3-1", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT009", "IT914", STR_TO_DATE("2019-7-12", "%Y-%m-%d"));
+        VALUES("RT009", "IT259", STR_TO_DATE("2020-6-22", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT010", "IT199", STR_TO_DATE("2015-12-23", "%Y-%m-%d"));
+        VALUES("RT010", "IT101", STR_TO_DATE("2014-11-24", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT011", "IT611", STR_TO_DATE("2003-8-16", "%Y-%m-%d"));
+        VALUES("RT011", "IT054", STR_TO_DATE("2007-6-2", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT012", "IT229", STR_TO_DATE("2015-5-17", "%Y-%m-%d"));
+        VALUES("RT012", "IT587", STR_TO_DATE("2014-7-20", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT013", "IT487", STR_TO_DATE("2003-10-27", "%Y-%m-%d"));
+        VALUES("RT013", "IT869", STR_TO_DATE("2020-1-12", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT014", "IT383", STR_TO_DATE("2002-6-9", "%Y-%m-%d"));
+        VALUES("RT014", "IT417", STR_TO_DATE("2018-10-3", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT015", "IT645", STR_TO_DATE("2015-12-26", "%Y-%m-%d"));
+        VALUES("RT015", "IT416", STR_TO_DATE("2009-12-18", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT016", "IT814", STR_TO_DATE("2003-12-12", "%Y-%m-%d"));
+        VALUES("RT016", "IT952", STR_TO_DATE("2019-1-24", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT017", "IT880", STR_TO_DATE("2019-8-13", "%Y-%m-%d"));
+        VALUES("RT017", "IT096", STR_TO_DATE("2006-2-16", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT018", "IT769", STR_TO_DATE("2018-11-23", "%Y-%m-%d"));
+        VALUES("RT018", "IT796", STR_TO_DATE("2008-8-17", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT019", "IT520", STR_TO_DATE("2005-11-17", "%Y-%m-%d"));
+        VALUES("RT019", "IT538", STR_TO_DATE("2020-5-17", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT020", "IT748", STR_TO_DATE("2007-10-27", "%Y-%m-%d"));
+        VALUES("RT020", "IT772", STR_TO_DATE("2000-11-16", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT021", "IT261", STR_TO_DATE("2003-11-14", "%Y-%m-%d"));
+        VALUES("RT021", "IT383", STR_TO_DATE("2012-12-20", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT022", "IT391", STR_TO_DATE("2015-6-15", "%Y-%m-%d"));
+        VALUES("RT022", "IT230", STR_TO_DATE("2000-12-28", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT023", "IT652", STR_TO_DATE("2008-2-27", "%Y-%m-%d"));
+        VALUES("RT023", "IT613", STR_TO_DATE("2017-8-23", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT024", "IT460", STR_TO_DATE("2020-4-24", "%Y-%m-%d"));
+        VALUES("RT024", "IT248", STR_TO_DATE("2020-6-26", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT025", "IT724", STR_TO_DATE("2012-10-8", "%Y-%m-%d"));
+        VALUES("RT025", "IT677", STR_TO_DATE("2007-9-18", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT026", "IT003", STR_TO_DATE("2016-8-25", "%Y-%m-%d"));
+        VALUES("RT026", "IT628", STR_TO_DATE("2013-12-26", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT027", "IT641", STR_TO_DATE("2002-10-20", "%Y-%m-%d"));
+        VALUES("RT027", "IT611", STR_TO_DATE("2003-3-28", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT028", "IT174", STR_TO_DATE("2015-4-15", "%Y-%m-%d"));
+        VALUES("RT028", "IT660", STR_TO_DATE("2015-12-1", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT029", "IT748", STR_TO_DATE("2007-12-27", "%Y-%m-%d"));
+        VALUES("RT029", "IT532", STR_TO_DATE("2012-10-17", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT030", "IT089", STR_TO_DATE("2018-5-20", "%Y-%m-%d"));
+        VALUES("RT030", "IT642", STR_TO_DATE("2020-8-3", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT031", "IT049", STR_TO_DATE("2017-2-20", "%Y-%m-%d"));
+        VALUES("RT031", "IT781", STR_TO_DATE("2011-4-4", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT032", "IT187", STR_TO_DATE("2015-4-18", "%Y-%m-%d"));
+        VALUES("RT032", "IT653", STR_TO_DATE("2005-6-23", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT033", "IT908", STR_TO_DATE("2020-5-12", "%Y-%m-%d"));
+        VALUES("RT033", "IT329", STR_TO_DATE("2007-4-16", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT034", "IT910", STR_TO_DATE("2007-10-27", "%Y-%m-%d"));
+        VALUES("RT034", "IT459", STR_TO_DATE("2002-12-2", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT035", "IT507", STR_TO_DATE("2010-5-26", "%Y-%m-%d"));
+        VALUES("RT035", "IT790", STR_TO_DATE("2006-11-3", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT036", "IT327", STR_TO_DATE("2019-12-18", "%Y-%m-%d"));
+        VALUES("RT036", "IT997", STR_TO_DATE("2014-11-27", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT037", "IT111", STR_TO_DATE("2018-11-25", "%Y-%m-%d"));
+        VALUES("RT037", "IT419", STR_TO_DATE("2020-9-24", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT038", "IT129", STR_TO_DATE("2005-9-23", "%Y-%m-%d"));
+        VALUES("RT038", "IT879", STR_TO_DATE("2003-12-6", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT039", "IT058", STR_TO_DATE("2020-4-17", "%Y-%m-%d"));
+        VALUES("RT039", "IT832", STR_TO_DATE("2019-10-14", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT040", "IT735", STR_TO_DATE("2014-8-4", "%Y-%m-%d"));
+        VALUES("RT040", "IT531", STR_TO_DATE("2015-6-24", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT041", "IT114", STR_TO_DATE("2020-7-19", "%Y-%m-%d"));
+        VALUES("RT041", "IT597", STR_TO_DATE("2018-8-6", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT042", "IT915", STR_TO_DATE("2014-6-23", "%Y-%m-%d"));
+        VALUES("RT042", "IT542", STR_TO_DATE("2007-12-9", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT043", "IT677", STR_TO_DATE("2009-10-16", "%Y-%m-%d"));
+        VALUES("RT043", "IT096", STR_TO_DATE("2006-2-22", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT044", "IT117", STR_TO_DATE("2008-11-1", "%Y-%m-%d"));
+        VALUES("RT044", "IT941", STR_TO_DATE("2020-7-22", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT045", "IT864", STR_TO_DATE("2005-12-23", "%Y-%m-%d"));
+        VALUES("RT045", "IT919", STR_TO_DATE("2012-11-17", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT046", "IT252", STR_TO_DATE("2009-12-10", "%Y-%m-%d"));
+        VALUES("RT046", "IT346", STR_TO_DATE("2020-7-18", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT047", "IT545", STR_TO_DATE("2017-7-5", "%Y-%m-%d"));
+        VALUES("RT047", "IT768", STR_TO_DATE("2011-12-13", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT048", "IT846", STR_TO_DATE("2017-3-27", "%Y-%m-%d"));
+        VALUES("RT048", "IT968", STR_TO_DATE("2006-11-18", "%Y-%m-%d"));
         
         INSERT INTO Returns
-        VALUES("RT049", "IT144", STR_TO_DATE("2018-12-23", "%Y-%m-%d"));
+        VALUES("RT049", "IT087", STR_TO_DATE("2016-6-28", "%Y-%m-%d"));
         
         ALTER TABLE Books
         ADD FOREIGN KEY(PublisherID)  
         REFERENCES Publishers(PublisherID);
-
         ALTER TABLE Orders
         ADD FOREIGN KEY(CustomerID)
         REFERENCES Customers(CustomerID);
-
         ALTER TABLE Order_Items
         ADD FOREIGN KEY(OrderID) REFERENCES Orders(OrderID);
-
         ALTER TABLE Order_Items
         ADD FOREIGN KEY(BookID) REFERENCES Books(BookID);
-
         ALTER TABLE Returns
         ADD FOREIGN KEY(ItemID) REFERENCES Order_Items(ItemID);
         

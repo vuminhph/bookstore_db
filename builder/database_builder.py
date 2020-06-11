@@ -10,17 +10,14 @@ def driver():
         # Build tables
         query = '''
             CREATE DATABASE bookstore;
-
             USE bookstore;
-
             CREATE TABLE Publishers(
-                PublisherID varchar(10) NOT NULL primary key,
+                PublisherID varchar(10) primary key,
                 Name varchar(30) NOT NULL,
                 Email varchar(55)
             );
-
             CREATE TABLE Books(
-                BookID varchar(10) NOT NULL primary key,
+                BookID varchar(10) primary key,
                 Title varchar(55) NOT NULL,
                 Author varchar(30),
                 PublisherID varchar(10) NOT NULL,
@@ -29,30 +26,26 @@ def driver():
                 Price float(2),
                 Rating float(1)
             );
-
             CREATE TABLE Customers(
-                CustomerID varchar(10) NOT NULL primary key,
+                CustomerID varchar(10) primary key,
                 First_name varchar(15),
                 Last_name varchar(15),
                 Credit_card_no varchar(20),
                 Email varchar(55),
                 Phone varchar(20)
             );
-
             CREATE TABLE Orders(
-                OrderID varchar(10) NOT NULL primary key,
+                OrderID varchar(10) primary key,
                 CustomerID varchar(10) NOT NULL,
                 Order_date date
             );
-
             CREATE TABLE Order_Items(
-                ItemID varchar(10) NOT NULL primary key,
+                ItemID varchar(10) primary key,
                 OrderID varchar(10) NOT NULL,
                 BookID varchar(10) NOT NULL
             );
-
             CREATE TABLE Returns(
-                ReturnID varchar(10) NOT NULL primary key,
+                ReturnID varchar(10) primary key,
                 ItemID varchar(10) NOT NULL,
                 Return_date date
             );
@@ -74,17 +67,13 @@ def driver():
         ALTER TABLE Books
         ADD FOREIGN KEY(PublisherID)  
         REFERENCES Publishers(PublisherID);
-
         ALTER TABLE Orders
         ADD FOREIGN KEY(CustomerID)
         REFERENCES Customers(CustomerID);
-
         ALTER TABLE Order_Items
         ADD FOREIGN KEY(OrderID) REFERENCES Orders(OrderID);
-
         ALTER TABLE Order_Items
         ADD FOREIGN KEY(BookID) REFERENCES Books(BookID);
-
         ALTER TABLE Returns
         ADD FOREIGN KEY(ItemID) REFERENCES Order_Items(ItemID);
         '''
