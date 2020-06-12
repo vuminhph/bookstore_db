@@ -14,7 +14,7 @@ def driver():
             CREATE TABLE Publishers(
                 PublisherID varchar(10) primary key,
                 Name varchar(30) NOT NULL,
-                Email varchar(55)
+                P_Email varchar(55)
             );
             CREATE TABLE Books(
                 BookID varchar(10) primary key,
@@ -23,15 +23,15 @@ def driver():
                 PublisherID varchar(10) NOT NULL,
                 Published_year int,
                 Pages_num int,
-                Price float(2),
-                Rating float(1)
+                Price decimal(6,2),
+                Rating decimal(6,1)
             );
             CREATE TABLE Customers(
                 CustomerID varchar(10) primary key,
                 First_name varchar(15),
                 Last_name varchar(15),
                 Credit_card_no varchar(20),
-                Email varchar(55),
+                C_Email varchar(55),
                 Phone varchar(20)
             );
             CREATE TABLE Orders(
@@ -45,9 +45,10 @@ def driver():
                 BookID varchar(10) NOT NULL
             );
             CREATE TABLE Returns(
-                ReturnID varchar(10) primary key,
-                ItemID varchar(10) NOT NULL,
-                Return_date date
+                ReturnID varchar(10),
+                ItemID varchar(10),
+                Return_date date,
+                PRIMARY KEY(ReturnID, ItemID)
             );
         '''
 
@@ -156,9 +157,15 @@ def write_order_items(writer, books, orders):
 
 MAX_RETURNS = 50
 def write_returns(writer, orders, items):
+    returns = []
+
     for i in range(MAX_RETURNS):
-        random_item = "IT" + str(ri(0,MAX_ITEMS - 1)).zfill(3)
-        
+        while True:
+            random_item = "IT" + str(ri(0,MAX_ITEMS - 1)).zfill(3)
+            if random_item not in returns:
+                returns.append(random_item)
+                break
+
         order_date = orders[items[random_item]]
         order_time = order_date.split('-')
         
@@ -176,6 +183,6 @@ def write_returns(writer, orders, items):
         '''
 
         writer.write(insert_query)
-        
+    
 if __name__ == '__main__':
     driver()

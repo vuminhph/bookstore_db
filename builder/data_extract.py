@@ -2,7 +2,7 @@ import json
 import csv
 import random
 
-MAX_BOOKS = 1000
+MAX_BOOKS = 100
 INPUT_PATH = '../raw data/'
 OUTPUT_PATH = '../processed data/'
 
