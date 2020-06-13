@@ -22,6 +22,7 @@ def driver():
                 Author varchar(30),
                 PublisherID varchar(10) NOT NULL,
                 Published_year int,
+                Category varchar(20),
                 Pages_num int,
                 Price decimal(6,2),
                 Rating decimal(6,1)
@@ -82,12 +83,25 @@ def driver():
         writer.write(constraints)
 
 def write_books(writer):
+    categories = {
+        1: 'Non fiction', 
+        2: 'Fiction', 
+        3: 'Horror',
+        4: 'Mystery', 
+        5: 'Thriller',
+        6: 'Drama',
+        7: 'Short Story',
+        8: 'Young Adult',
+        9: 'Scifi',
+        10: 'History',
+        }
+
     with open(INPUT_PATH + 'books.json') as json_file:
         books = json.load(json_file)
         for book in books:
             insert_query = f'''
             INSERT INTO Books
-            VALUES ("{book['id']}", "{book['title']}", "{book['author']}", "{book['PublisherID']}", {book['published_year']}, {book['pages']}, {book['price']}, {book['rating']});
+            VALUES ("{book['id']}", "{book['title']}", "{book['author']}", "{book['PublisherID']}", {book['published_year']}, "{categories[ri(1,10)]}", {book['pages']}, {book['price']}, {book['rating']});
             '''
             writer.write(insert_query)
         

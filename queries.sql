@@ -152,7 +152,7 @@ group by CustomerID;
 select c.* 
 from Customers c natural join Orders natural join Order_Items natural join Returns
 where year(return_date) = year(order_date)
-and month(return_date) = month(return_date);
+and month(return_date) = month(order_date);
 
 -- 16. Find books that get returned the quickest
 select Title, datediff(return_date, order_date) days
@@ -162,10 +162,31 @@ having days <= all (select datediff(return_date, order_date)
                     from Orders natural join Order_Items natural join Returns
                     group by BookID);
 
--- 17. Customers who make the most orders in the latest month
+-- 17. Customers who make the most orders in the latest year
 select Customers.*
 from Customers natural join Orders o1
-where year(o1.order_date) = (select max(year(order_date)) lastest_year
-                            from Orders)
-and month 
-having count(OrderID) >= 
+where year(order_date) = (select max(year(order_date))
+                        from Orders)
+group by CustomerID
+having count(OrderID) >= all (select count(OrderID)
+                            from Orders o2
+                            where year(o2.order_date) = (select max(year(order_date))
+                                                        from Orders)
+                            group by CustomerID);
+
+-- 18. Find value (Price per number of pages) of the 10 highest rated books (?)
+select Title, rating, round(price / pages_num, 2) value
+from Books
+order by rating desc
+limit 10;
+
+-- 19. Find the average rating of each year
+select Published_year, round(avg(rating), 1) 'Average rating'
+from Books
+group by Published_year ;
+
+-- 20. Find the purchase rate (number of successful purchases / total titles) of each year
+select Published_year, round(count(ItemID) / count(distinct BookID), 1) 'Purchase rate'
+from Books natural join Order_Items
+where ItemID not in (select ItemID from Returns)
+group by Published_year;
