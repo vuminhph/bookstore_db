@@ -106,8 +106,9 @@ def customer_extracter():
                     first_seq = random.randint(1000, 9999)
                     second_seq = random.randint(1000, 9999)
                     third_seq = random.randint(1000, 9999)
+                    forth_seq = random.randint(1000, 9999)
 
-                    card_no = f'{first_seq}-{second_seq}-{third_seq}'
+                    card_no = f'{first_seq}-{second_seq}-{third_seq}-{forth_seq}'
                     
                     if card_no not in used_credit_nums:
                         info.update({'Credit_card_no':card_no})

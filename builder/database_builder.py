@@ -25,7 +25,7 @@ def driver():
                 Category varchar(20),
                 Pages_num int,
                 Price decimal(6,2),
-                Rating decimal(6,1)
+                Rating decimal(2,1)
             );
             CREATE TABLE Customers(
                 CustomerID varchar(10) primary key,
@@ -41,7 +41,7 @@ def driver():
                 Order_date date
             );
             CREATE TABLE Order_Items(
-                ItemID varchar(10) primary key,
+                ItemID varchar(10) PRIMARY KEY,
                 OrderID varchar(10) NOT NULL,
                 BookID varchar(10) NOT NULL
             );
